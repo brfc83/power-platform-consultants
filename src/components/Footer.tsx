@@ -13,8 +13,8 @@ const Footer = () => {
               className="h-8 w-auto mb-4"
             />
             <p className="text-secondary-foreground/80 leading-relaxed">
-              Transform your business with expert consulting and automation solutions. 
-              We help organizations streamline operations and drive growth.
+              Microsoft Power Platform specialists helping organizations build scalable 
+              solutions with Power Apps, SharePoint, Dynamics 365, and automation expertise.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-secondary-foreground/60 hover:text-primary transition-colors">
@@ -33,11 +33,11 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Services</h3>
             <ul className="space-y-2">
-              <li><a href="#" className="text-secondary-foreground/80 hover:text-primary transition-colors">Process Automation</a></li>
-              <li><a href="#" className="text-secondary-foreground/80 hover:text-primary transition-colors">Data Analytics</a></li>
-              <li><a href="#" className="text-secondary-foreground/80 hover:text-primary transition-colors">Digital Transformation</a></li>
-              <li><a href="#" className="text-secondary-foreground/80 hover:text-primary transition-colors">Organizational Consulting</a></li>
-              <li><a href="#" className="text-secondary-foreground/80 hover:text-primary transition-colors">Risk Management</a></li>
+              <li><a href="#" className="text-secondary-foreground/80 hover:text-primary transition-colors">Power Apps Development</a></li>
+              <li><a href="#" className="text-secondary-foreground/80 hover:text-primary transition-colors">Power Automate Flows</a></li>
+              <li><a href="#" className="text-secondary-foreground/80 hover:text-primary transition-colors">SharePoint Integration</a></li>
+              <li><a href="#" className="text-secondary-foreground/80 hover:text-primary transition-colors">Dynamics 365 Implementation</a></li>
+              <li><a href="#" className="text-secondary-foreground/80 hover:text-primary transition-colors">Power BI Analytics</a></li>
             </ul>
           </div>
 

@@ -6,26 +6,26 @@ const Testimonials = () => {
     {
       name: "Sarah Johnson",
       company: "TechFlow Solutions",
-      role: "CEO",
+      role: "IT Director",
       image: "https://images.unsplash.com/photo-1494790108755-2616b612b5e4?w=80&h=80&fit=crop&crop=face",
       rating: 5,
-      text: "Forma Automate transformed our entire workflow. We saw a 60% increase in productivity within just 3 months. Their expertise in automation is unmatched."
+      text: "The Power Apps solution transformed our field operations. Our technicians now have real-time access to work orders and can update job status instantly. Productivity increased by 60%."
     },
     {
       name: "Michael Chen",
-      company: "Global Dynamics",
+      company: "Global Manufacturing Inc",
       role: "Operations Director",
       image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=80&h=80&fit=crop&crop=face",
       rating: 5,
-      text: "The digital transformation project exceeded all our expectations. The team's strategic approach and attention to detail made the process seamless."
+      text: "Their Dynamics 365 implementation was flawless. The integration with our existing SharePoint and the custom Power Automate flows eliminated manual processes entirely."
     },
     {
       name: "Emily Rodriguez",
-      company: "InnovaCorp",
+      company: "FinanceFirst Corp",
       role: "CTO",
       image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=80&h=80&fit=crop&crop=face",
       rating: 5,
-      text: "Outstanding results! Our operational costs decreased by 35% while improving service quality. Forma Automate delivers on their promises."
+      text: "The Power BI dashboards provide real-time insights that drive our decision-making. The Dataverse integration ensures data accuracy across all our Power Platform solutions."
     },
     {
       name: "David Thompson",
@@ -33,23 +33,23 @@ const Testimonials = () => {
       role: "VP of Operations",
       image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop&crop=face",
       rating: 5,
-      text: "The business process optimization was game-changing. We eliminated bottlenecks we didn't even know existed. Highly recommended!"
+      text: "The SharePoint and Teams integration revolutionized our collaboration. Document approval workflows now happen seamlessly within Teams using Power Automate."
     },
     {
       name: "Lisa Wang",
-      company: "FinanceFirst",
-      role: "Managing Partner",
+      company: "Healthcare Plus",
+      role: "Digital Transformation Lead",
       image: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=80&h=80&fit=crop&crop=face",
       rating: 5,
-      text: "Professional, knowledgeable, and results-driven. The ROI from their consulting services has been exceptional. We're planning our next project with them."
+      text: "Their Canvas apps for patient management are intuitive and powerful. The integration with our SQL databases through Dataverse made data access seamless for our staff."
     },
     {
       name: "Robert Kim",
-      company: "ManufacturePro",
-      role: "Plant Manager",
+      company: "LogisticsPro",
+      role: "IT Manager",
       image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=80&h=80&fit=crop&crop=face",
       rating: 5,
-      text: "The automation solutions reduced our manual processing time by 80%. The implementation was smooth and the training was comprehensive."
+      text: "The Power Automate flows connecting our warehouse systems with Dynamics 365 eliminated 80% of manual data entry. The expert team made implementation smooth."
     }
   ];
 
@@ -58,11 +58,11 @@ const Testimonials = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-            What Our <span className="text-primary">Clients Say</span>
+            Power Platform <span className="text-primary">Success Stories</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Don't just take our word for it. See what business leaders say about 
-            their transformation journey with Forma Automate.
+            See how organizations transformed their operations with our Microsoft Power Platform, 
+            SharePoint, and Dynamics 365 solutions.
           </p>
         </div>
 

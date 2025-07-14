@@ -9,14 +9,14 @@ const Hero = () => {
           <div className="space-y-8">
             <div className="space-y-4">
               <h1 className="text-4xl md:text-6xl font-bold leading-tight">
-                Transform Your
+                Microsoft Power Platform
                 <span className="text-primary-light block">
-                  Business Operations
+                  & Business Automation
                 </span>
               </h1>
               <p className="text-xl md:text-2xl text-primary-foreground/90 leading-relaxed">
-                Streamline processes, boost efficiency, and drive growth with our expert 
-                consulting and automation solutions.
+                Streamline your enterprise operations with Power Platform, SharePoint, 
+                Dynamics 365, and custom automation solutions that scale with your business.
               </p>
             </div>
             
@@ -55,8 +55,8 @@ const Hero = () => {
                     <div className="w-6 h-6 bg-primary-foreground rounded opacity-80"></div>
                   </div>
                   <div>
-                    <div className="font-semibold text-foreground">Process Automation</div>
-                    <div className="text-muted-foreground">Efficiency increased by 85%</div>
+                    <div className="font-semibold text-foreground">Power Platform Implementation</div>
+                    <div className="text-muted-foreground">Process efficiency increased by 85%</div>
                   </div>
                 </div>
                 <div className="w-full bg-muted rounded-full h-2">

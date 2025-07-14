@@ -1,58 +1,58 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { 
-  Cog, 
-  BarChart3, 
+  Smartphone, 
+  Database, 
   Users, 
-  Laptop, 
-  Shield, 
+  BarChart3, 
   Workflow,
+  Settings,
   ArrowRight
 } from "lucide-react";
 
 const Services = () => {
   const services = [
     {
+      icon: Smartphone,
+      title: "Power Apps Development",
+      description: "Custom Canvas and Model-driven apps for enterprise needs, built on Dataverse with responsive design.",
+      features: ["Canvas App Development", "Model-driven Apps", "Custom Connectors", "Mobile-first Design"],
+      price: "Starting at $8,000"
+    },
+    {
       icon: Workflow,
-      title: "Process Automation",
-      description: "Automate repetitive tasks and workflows to increase efficiency and reduce human error.",
-      features: ["Workflow Design", "System Integration", "Task Automation", "Performance Monitoring"],
+      title: "Power Automate Solutions",
+      description: "Sophisticated business process automation connecting SharePoint, Dynamics, and third-party systems.",
+      features: ["Process Automation", "System Integration", "Approval Workflows", "Document Management"],
       price: "Starting at $5,000"
     },
     {
       icon: BarChart3,
-      title: "Data Analytics & BI",
-      description: "Transform your data into actionable insights with advanced analytics and reporting.",
-      features: ["Data Visualization", "Predictive Analytics", "Custom Dashboards", "Real-time Reporting"],
-      price: "Starting at $8,000"
+      title: "Power BI Analytics",
+      description: "Enterprise dashboards and reporting solutions with real-time data from multiple sources.",
+      features: ["Custom Dashboards", "Real-time Analytics", "Data Modeling", "Report Automation"],
+      price: "Starting at $6,000"
     },
     {
-      icon: Users,
-      title: "Organizational Consulting",
-      description: "Optimize your team structure and processes for maximum productivity and growth.",
-      features: ["Team Optimization", "Process Mapping", "Change Management", "Training Programs"],
+      icon: Database,
+      title: "SharePoint & Dataverse",
+      description: "Design and implement robust data architectures with SharePoint lists, libraries, and Dataverse.",
+      features: ["Data Architecture", "SharePoint Solutions", "Dataverse Design", "SQL Integration"],
       price: "Starting at $10,000"
     },
     {
-      icon: Laptop,
-      title: "Digital Transformation",
-      description: "Modernize your business with digital solutions and cloud-based technologies.",
-      features: ["Cloud Migration", "System Modernization", "Digital Strategy", "Technology Roadmap"],
-      price: "Starting at $15,000"
+      icon: Users,
+      title: "Dynamics 365 Implementation",
+      description: "Full-service Dynamics 365 implementation with our certified expert teams and custom integrations.",
+      features: ["D365 Implementation", "Custom Integrations", "User Training", "Ongoing Support"],
+      price: "Starting at $25,000"
     },
     {
-      icon: Shield,
-      title: "Risk Management",
-      description: "Identify, assess, and mitigate business risks to protect your operations.",
-      features: ["Risk Assessment", "Compliance Audits", "Security Reviews", "Risk Mitigation Plans"],
+      icon: Settings,
+      title: "Microsoft Teams Integration",
+      description: "Enhance collaboration with custom Teams apps, bots, and SharePoint integration solutions.",
+      features: ["Teams App Development", "Bot Integration", "SharePoint Sync", "Workflow Automation"],
       price: "Starting at $7,000"
-    },
-    {
-      icon: Cog,
-      title: "Custom Solutions",
-      description: "Tailored consulting solutions designed specifically for your unique business needs.",
-      features: ["Custom Development", "Bespoke Strategies", "Dedicated Support", "Ongoing Optimization"],
-      price: "Contact for pricing"
     }
   ];
 
@@ -61,11 +61,11 @@ const Services = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-            Our <span className="text-primary">Services</span>
+            Microsoft Power Platform <span className="text-primary">Services</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Comprehensive consulting services designed to transform your business 
-            operations and drive sustainable growth.
+            Comprehensive Power Platform solutions including Power Apps, Power Automate, 
+            SharePoint integration, and Dynamics 365 implementations with expert teams.
           </p>
         </div>
 

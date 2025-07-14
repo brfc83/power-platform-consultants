@@ -1,31 +1,43 @@
-import { CheckCircle, TrendingUp, Zap, Target } from "lucide-react";
+import { CheckCircle, Database, Zap, Users, Settings, BarChart3 } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
 const Expertise = () => {
   const expertiseAreas = [
     {
-      icon: TrendingUp,
-      title: "Business Process Optimization",
-      description: "Streamline workflows and eliminate inefficiencies to maximize productivity and reduce operational costs.",
-      metrics: "Average 40% efficiency gain"
-    },
-    {
       icon: Zap,
-      title: "Digital Transformation",
-      description: "Modernize your business with cutting-edge technology solutions and digital strategies.",
-      metrics: "Digital readiness improved by 60%"
+      title: "Power Platform Development",
+      description: "Build scalable Power Apps (Canvas & Model-driven), Power Automate flows, and Power BI dashboards for enterprise solutions.",
+      metrics: "500+ apps deployed"
     },
     {
-      icon: Target,
-      title: "Strategic Planning",
-      description: "Develop comprehensive strategies aligned with your business goals and market opportunities.",
-      metrics: "ROI increased by 150%"
+      icon: Database,
+      title: "SharePoint & Dataverse",
+      description: "Design robust data architectures using SharePoint, Dataverse, and SQL Server integrations for seamless data flow.",
+      metrics: "Enterprise data solutions"
+    },
+    {
+      icon: Users,
+      title: "Dynamics 365 Integration",
+      description: "Leverage our expert teams to implement and customize Dynamics 365 solutions that align with your business processes.",
+      metrics: "Complete D365 ecosystems"
+    },
+    {
+      icon: Settings,
+      title: "Business Process Automation",
+      description: "Create sophisticated Power Automate flows that connect systems, eliminate manual tasks, and ensure compliance.",
+      metrics: "95% process automation success"
+    },
+    {
+      icon: BarChart3,
+      title: "Enterprise Analytics",
+      description: "Transform business data into actionable insights with Power BI, custom dashboards, and real-time reporting solutions.",
+      metrics: "Data-driven decision making"
     },
     {
       icon: CheckCircle,
-      title: "Change Management",
-      description: "Guide your organization through seamless transitions with minimal disruption.",
-      metrics: "95% successful implementation rate"
+      title: "Microsoft Teams Integration",
+      description: "Enhance collaboration with custom Teams apps, SharePoint integration, and workflow automation within Teams.",
+      metrics: "Seamless collaboration tools"
     }
   ];
 
@@ -34,16 +46,16 @@ const Expertise = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-            Business Transformation
+            Microsoft Power Platform
             <span className="text-primary block">Expertise</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            We specialize in transforming businesses through strategic consulting, 
-            process optimization, and innovative automation solutions.
+            We specialize in Microsoft Power Platform solutions, SharePoint integration, 
+            Dynamics 365 implementation, and enterprise automation with our expert teams.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {expertiseAreas.map((area, index) => (
             <Card key={index} className="group hover:shadow-elegant transition-all duration-300 hover:-translate-y-2 border-primary/10">
               <CardContent className="p-8 text-center">
