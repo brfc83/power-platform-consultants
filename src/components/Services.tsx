@@ -89,9 +89,11 @@ const Services = () => {
                 </div>
                 
                 <div className="pt-4">
-                  <Button variant="outline" size="sm" className="group/btn">
-                    Learn More
-                    <ArrowRight className="h-4 w-4 group-hover/btn:translate-x-1 transition-transform" />
+                  <Button variant="outline" size="sm" className="group/btn" asChild>
+                    <a href="#contact">
+                      Learn More
+                      <ArrowRight className="h-4 w-4 group-hover/btn:translate-x-1 transition-transform" />
+                    </a>
                   </Button>
                 </div>
               </CardContent>
@@ -99,12 +101,6 @@ const Services = () => {
           ))}
         </div>
 
-        <div className="text-center mt-16">
-          <Button variant="hero" size="xl">
-            View All Services
-            <ArrowRight className="h-5 w-5" />
-          </Button>
-        </div>
       </div>
     </section>
   );

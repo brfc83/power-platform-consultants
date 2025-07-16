@@ -25,23 +25,15 @@ const Hero = () => {
                 Start Your Transformation
                 <ArrowRight className="group-hover:translate-x-1 transition-transform" />
               </Button>
-              <Button variant="outline" size="xl" className="bg-background/10 border-primary-foreground/20 text-primary-foreground hover:bg-background/20">
-                <Play className="mr-2 h-5 w-5" />
-                Watch Demo
-              </Button>
             </div>
             
             <div className="flex items-center space-x-8 pt-8">
               <div className="text-center">
-                <div className="text-3xl font-bold">500+</div>
+                <div className="text-3xl font-bold">50+</div>
                 <div className="text-primary-foreground/80">Projects Completed</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold">98%</div>
-                <div className="text-primary-foreground/80">Client Satisfaction</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold">15+</div>
+                <div className="text-3xl font-bold">20+</div>
                 <div className="text-primary-foreground/80">Years Experience</div>
               </div>
             </div>

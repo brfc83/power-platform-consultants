@@ -9,7 +9,7 @@ const Header = () => {
             <img 
               src="/lovable-uploads/ad6165c0-d9f7-4ddf-92dd-b6a041855b49.png" 
               alt="Forma Automate" 
-              className="h-8 w-auto"
+              className="h-12 w-auto"
             />
           </div>
           
