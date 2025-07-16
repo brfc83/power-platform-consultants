@@ -45,7 +45,7 @@ const TrustedBy = () => {
                 <img
                   src={client.logo}
                   alt={client.name}
-                  className="max-h-12 max-w-32 object-contain filter grayscale hover:grayscale-0 transition-all duration-300"
+                  className="max-h-12 max-w-32 object-contain"
                 />
               </div>
             ))}

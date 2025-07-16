@@ -47,7 +47,7 @@ const ContactForm = () => {
 
   const handleWhatsApp = () => {
     const message = `Hi! I'm interested in learning more about Forma Automate's consulting services.`;
-    const whatsappUrl = `https://wa.me/1234567890?text=${encodeURIComponent(message)}`;
+    const whatsappUrl = `https://wa.me/447970291460?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
   };
 
@@ -84,7 +84,7 @@ const ContactForm = () => {
                 </div>
                 <div>
                   <div className="font-semibold text-foreground">Phone</div>
-                  <div className="text-muted-foreground">+1 (555) 123-4567</div>
+                  <div className="text-muted-foreground">+447970291460</div>
                 </div>
               </div>
 
@@ -98,15 +98,6 @@ const ContactForm = () => {
                 </div>
               </div>
 
-              <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 bg-gradient-primary rounded-lg flex items-center justify-center">
-                  <MapPin className="h-6 w-6 text-primary-foreground" />
-                </div>
-                <div>
-                  <div className="font-semibold text-foreground">Office</div>
-                  <div className="text-muted-foreground">123 Business Ave, Suite 100<br />New York, NY 10001</div>
-                </div>
-              </div>
 
               <div className="flex items-center space-x-4">
                 <div className="w-12 h-12 bg-gradient-primary rounded-lg flex items-center justify-center">
