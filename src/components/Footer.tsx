@@ -1,4 +1,4 @@
-import { Mail, Phone, MapPin, Linkedin, Twitter, Facebook } from "lucide-react";
+import { Mail, Phone } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -16,28 +16,17 @@ const Footer = () => {
               Microsoft Power Platform specialists helping organizations build scalable 
               solutions with Power Apps, SharePoint, Dynamics 365, and automation expertise.
             </p>
-            <div className="flex space-x-4">
-              <a href="#" className="text-secondary-foreground/60 hover:text-primary transition-colors">
-                <Linkedin className="h-5 w-5" />
-              </a>
-              <a href="#" className="text-secondary-foreground/60 hover:text-primary transition-colors">
-                <Twitter className="h-5 w-5" />
-              </a>
-              <a href="#" className="text-secondary-foreground/60 hover:text-primary transition-colors">
-                <Facebook className="h-5 w-5" />
-              </a>
-            </div>
           </div>
 
           {/* Services */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Services</h3>
             <ul className="space-y-2">
-              <li><a href="#" className="text-secondary-foreground/80 hover:text-primary transition-colors">Power Apps Development</a></li>
-              <li><a href="#" className="text-secondary-foreground/80 hover:text-primary transition-colors">Power Automate Flows</a></li>
-              <li><a href="#" className="text-secondary-foreground/80 hover:text-primary transition-colors">SharePoint Integration</a></li>
-              <li><a href="#" className="text-secondary-foreground/80 hover:text-primary transition-colors">Dynamics 365 Implementation</a></li>
-              <li><a href="#" className="text-secondary-foreground/80 hover:text-primary transition-colors">Power BI Analytics</a></li>
+              <li><a href="#services" className="text-secondary-foreground/80 hover:text-primary transition-colors">Power Apps Development</a></li>
+              <li><a href="#services" className="text-secondary-foreground/80 hover:text-primary transition-colors">Power Automate Flows</a></li>
+              <li><a href="#services" className="text-secondary-foreground/80 hover:text-primary transition-colors">SharePoint Integration</a></li>
+              <li><a href="#services" className="text-secondary-foreground/80 hover:text-primary transition-colors">Dynamics 365 Implementation</a></li>
+              <li><a href="#services" className="text-secondary-foreground/80 hover:text-primary transition-colors">Power BI Analytics</a></li>
             </ul>
           </div>
 
@@ -45,11 +34,9 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Company</h3>
             <ul className="space-y-2">
-              <li><a href="#" className="text-secondary-foreground/80 hover:text-primary transition-colors">About Us</a></li>
-              <li><a href="#" className="text-secondary-foreground/80 hover:text-primary transition-colors">Our Team</a></li>
-              <li><a href="#" className="text-secondary-foreground/80 hover:text-primary transition-colors">Case Studies</a></li>
-              <li><a href="#" className="text-secondary-foreground/80 hover:text-primary transition-colors">Careers</a></li>
-              <li><a href="#" className="text-secondary-foreground/80 hover:text-primary transition-colors">Blog</a></li>
+              <li><a href="#expertise" className="text-secondary-foreground/80 hover:text-primary transition-colors">About Us</a></li>
+              <li><a href="#services" className="text-secondary-foreground/80 hover:text-primary transition-colors">Our Team</a></li>
+              <li><a href="#contact" className="text-secondary-foreground/80 hover:text-primary transition-colors">Case Studies</a></li>
             </ul>
           </div>
 
@@ -63,14 +50,7 @@ const Footer = () => {
               </li>
               <li className="flex items-center space-x-3">
                 <Phone className="h-4 w-4 text-primary" />
-                <span className="text-secondary-foreground/80">+1 (555) 123-4567</span>
-              </li>
-              <li className="flex items-start space-x-3">
-                <MapPin className="h-4 w-4 text-primary mt-1" />
-                <span className="text-secondary-foreground/80">
-                  123 Business Ave, Suite 100<br />
-                  New York, NY 10001
-                </span>
+                <span className="text-secondary-foreground/80">+447970291460</span>
               </li>
             </ul>
           </div>
