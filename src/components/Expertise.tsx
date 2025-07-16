@@ -50,8 +50,10 @@ const Expertise = () => {
             <span className="text-primary block">Expertise</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            We specialize in Microsoft Power Platform solutions, SharePoint integration, 
-            Dynamics 365 implementation, and enterprise automation with our expert teams.
+            Tailored automation and design solutions that help teams work smarter, faster, and with clarity — powered by Power Platform and built with the end-user in mind.
+          </p>
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto mt-4">
+            While our focus is rooted in Power Platform, we collaborate with trusted Dynamics specialists to offer scalable solutions across Microsoft's ecosystem when needed.
           </p>
         </div>
 
@@ -85,12 +87,9 @@ const Expertise = () => {
           <p className="text-xl text-primary-foreground/90 mb-8 max-w-2xl mx-auto">
             Join hundreds of successful companies that have revolutionized their operations with our expertise.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex justify-center">
             <button className="bg-background text-primary px-8 py-4 rounded-lg font-semibold hover:bg-background/90 transition-colors">
               Schedule Consultation
-            </button>
-            <button className="border-2 border-primary-foreground/20 text-primary-foreground px-8 py-4 rounded-lg font-semibold hover:bg-primary-foreground/10 transition-colors">
-              Download Case Studies
             </button>
           </div>
         </div>

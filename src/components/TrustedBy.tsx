@@ -40,7 +40,7 @@ const TrustedBy = () => {
             {[...clients, ...clients].map((client, index) => (
               <div
                 key={index}
-                className="flex-shrink-0 h-20 w-40 flex items-center justify-center bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300"
+                className="flex-shrink-0 h-20 w-40 flex items-center justify-center bg-transparent rounded-lg hover:scale-105 transition-transform duration-300"
               >
                 <img
                   src={client.logo}
