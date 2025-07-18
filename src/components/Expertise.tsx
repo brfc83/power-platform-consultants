@@ -18,7 +18,7 @@ const Expertise = () => {
     {
       icon: Users,
       title: "Dynamics 365 Integration",
-      description: "Leverage our expert teams to implement and customize Dynamics 365 solutions that align with your business processes.",
+      description: "Leverage our expert teams to implement and customise Dynamics 365 solutions that align with your business processes.",
       metrics: "Complete D365 ecosystems"
     },
     {

@@ -61,7 +61,7 @@ const Testimonials = () => {
             Power Platform <span className="text-primary">Success Stories</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            See how organizations transformed their operations with our Microsoft Power Platform, 
+            See how organisations transformed their operations with our Microsoft Power Platform, 
             SharePoint, and Dynamics 365 solutions.
           </p>
         </div>
