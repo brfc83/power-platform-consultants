@@ -7,7 +7,7 @@ const WhoWeAre = () => {
             <img 
               src="/lovable-uploads/86947ffc-d1e4-4618-ba23-49394bf11bd8.png" 
               alt="Forma Automate" 
-              className="h-16 w-auto mx-auto mb-8"
+              className="h-32 w-auto mx-auto mb-8"
             />
           </div>
           
