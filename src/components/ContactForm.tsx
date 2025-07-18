@@ -207,34 +207,22 @@ const ContactForm = () => {
                   />
                 </div>
 
-                <div className="grid md:grid-cols-2 gap-4">
-                  <Button 
-                    type="submit" 
-                    variant="hero" 
-                    size="lg" 
-                    className="w-full"
-                    disabled={isLoading}
-                  >
-                    {isLoading ? (
-                      "Sending..."
-                    ) : (
-                      <>
-                        <Send className="mr-2 h-5 w-5" />
-                        Send Message
-                      </>
-                    )}
-                  </Button>
-                  
-                  <Button 
-                    type="button"
-                    onClick={handleWhatsApp}
-                    className="w-full bg-green-600 hover:bg-green-700 text-white"
-                    size="lg"
-                  >
-                    <MessageSquare className="mr-2 h-5 w-5" />
-                    Start WhatsApp Chat
-                  </Button>
-                </div>
+                <Button 
+                  type="submit" 
+                  variant="hero" 
+                  size="lg" 
+                  className="w-full"
+                  disabled={isLoading}
+                >
+                  {isLoading ? (
+                    "Sending..."
+                  ) : (
+                    <>
+                      <Send className="mr-2 h-5 w-5" />
+                      Send Message
+                    </>
+                  )}
+                </Button>
               </form>
             </CardContent>
           </Card>

@@ -10,7 +10,7 @@ const Footer = () => {
             <img 
               src="/lovable-uploads/86947ffc-d1e4-4618-ba23-49394bf11bd8.png" 
               alt="Forma Automate" 
-              className="h-8 w-auto mb-4"
+              className="h-8 w-auto mb-4 brightness-0 invert"
             />
             <p className="text-secondary-foreground/80 leading-relaxed">
               Microsoft Power Platform specialists helping organizations build scalable 
