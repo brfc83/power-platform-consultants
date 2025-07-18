@@ -5,7 +5,7 @@ const WhoWeAre = () => {
         <div className="max-w-4xl mx-auto text-center">
           <div className="mb-12">
             <img 
-              src="/lovable-uploads/ad6165c0-d9f7-4ddf-92dd-b6a041855b49.png" 
+              src="/lovable-uploads/86947ffc-d1e4-4618-ba23-49394bf11bd8.png" 
               alt="Forma Automate" 
               className="h-16 w-auto mx-auto mb-8"
             />

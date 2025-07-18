@@ -8,7 +8,7 @@ const Footer = () => {
           {/* Company Info */}
           <div className="space-y-4">
             <img 
-              src="/lovable-uploads/ad6165c0-d9f7-4ddf-92dd-b6a041855b49.png" 
+              src="/lovable-uploads/86947ffc-d1e4-4618-ba23-49394bf11bd8.png" 
               alt="Forma Automate" 
               className="h-8 w-auto mb-4"
             />
