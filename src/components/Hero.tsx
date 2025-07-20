@@ -9,9 +9,9 @@ const Hero = () => {
           <div className="space-y-8">
             <div className="space-y-4">
               <h1 className="text-4xl md:text-6xl font-bold leading-tight">
-                Build Smarter Systems — From Apps
+                Build Smarter Systems
                 <span className="text-primary-light block">
-                  to Dashboards
+                  From Apps to Dashboards
                 </span>
               </h1>
               <p className="text-xl md:text-2xl text-primary-foreground/90 leading-relaxed">
