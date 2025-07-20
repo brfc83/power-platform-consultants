@@ -21,7 +21,7 @@ const Services = () => {
     {
       icon: Workflow,
       title: "Power Automate Solutions",
-      description: "Sophisticated business process automation connecting SharePoint, Dynamics, and third-party systems.",
+      description: "Business process automation connecting SharePoint, Dynamics, and third-party systems seamlessly.",
       features: ["Process Automation", "System Integration", "Approval Workflows", "Document Management"]
     },
     {

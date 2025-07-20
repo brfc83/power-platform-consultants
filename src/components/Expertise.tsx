@@ -85,7 +85,7 @@ const Expertise = () => {
             Ready to Transform Your Business?
           </h3>
           <p className="text-xl text-primary-foreground/90 mb-8 max-w-2xl mx-auto">
-            Join hundreds of successful companies that have revolutionized their operations with our expertise.
+            Automation shouldn't be confusing. We design systems that actually make life easier — for teams, clients, and leadership.
           </p>
           <div className="flex justify-center">
             <a 
@@ -94,7 +94,7 @@ const Expertise = () => {
               rel="noopener noreferrer"
               className="bg-background text-primary px-8 py-4 rounded-lg font-semibold hover:bg-background/90 transition-colors inline-block"
             >
-              Schedule Consultation
+              Book Your Free Strategy Call
             </a>
           </div>
         </div>
