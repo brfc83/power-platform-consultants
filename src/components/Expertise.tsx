@@ -7,7 +7,7 @@ const Expertise = () => {
       icon: Zap,
       title: "Power Platform Development",
       description: "Build scalable Power Apps (Canvas & Model-driven), Power Automate flows, and Power BI dashboards for enterprise solutions.",
-      metrics: "500+ apps deployed"
+      metrics: "Developed and deployed 40+ tailored apps across Power Platform and beyond"
     },
     {
       icon: Database,
