@@ -116,10 +116,10 @@ const ContactForm = () => {
               </div>
             </div>
 
-            <div className="flex items-end h-full">
+            <div className="pt-8 mt-auto">
               <Button 
                 onClick={handleWhatsApp}
-                className="w-full bg-green-600 hover:bg-green-700 text-white mt-8"
+                className="w-full bg-green-600 hover:bg-green-700 text-white"
                 size="lg"
               >
                 <MessageSquare className="mr-2 h-5 w-5" />
