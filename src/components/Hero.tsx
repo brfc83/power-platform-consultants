@@ -9,14 +9,14 @@ const Hero = () => {
           <div className="space-y-8">
             <div className="space-y-4">
               <h1 className="text-4xl md:text-6xl font-bold leading-tight">
-                Microsoft Power Platform
+                Build Smarter Systems — From Apps
                 <span className="text-primary-light block">
-                  & Business Automation
+                  to Dashboards
                 </span>
               </h1>
               <p className="text-xl md:text-2xl text-primary-foreground/90 leading-relaxed">
-                Streamline your enterprise operations with Power Platform, SharePoint, 
-                Dynamics 365, and custom automation solutions that scale with your business.
+                We craft low-code solutions with Power Apps, Power Automate, Power BI, SharePoint, 
+                and Dynamics 365 that make workflows intuitive, scalable, and ready to grow with your business.
               </p>
             </div>
             
