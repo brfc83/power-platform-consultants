@@ -88,9 +88,14 @@ const Expertise = () => {
             Join hundreds of successful companies that have revolutionized their operations with our expertise.
           </p>
           <div className="flex justify-center">
-            <button className="bg-background text-primary px-8 py-4 rounded-lg font-semibold hover:bg-background/90 transition-colors">
+            <a 
+              href="https://calendly.com/arif-formaautomate/30min?month=2025-07" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="bg-background text-primary px-8 py-4 rounded-lg font-semibold hover:bg-background/90 transition-colors inline-block"
+            >
               Schedule Consultation
-            </button>
+            </a>
           </div>
         </div>
       </div>
