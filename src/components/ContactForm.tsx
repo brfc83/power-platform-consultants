@@ -5,9 +5,11 @@ import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { MessageSquare, Phone, Mail, MapPin, Send } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { contactFormSchema, ContactFormData } from "@/lib/validation";
+import { z } from "zod";
 
 const ContactForm = () => {
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<ContactFormData>({
     name: "",
     email: "",
     company: "",
@@ -15,34 +17,68 @@ const ContactForm = () => {
     message: ""
   });
   const [isLoading, setIsLoading] = useState(false);
+  const [errors, setErrors] = useState<Partial<ContactFormData>>({});
   const { toast } = useToast();
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    
+    // Clear previous error for this field
+    if (errors[name as keyof ContactFormData]) {
+      setErrors(prev => ({ ...prev, [name]: undefined }));
+    }
+    
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [name]: value
     });
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
+    setErrors({});
 
-    // Simulate form submission
-    setTimeout(() => {
-      toast({
-        title: "Message Sent!",
-        description: "Thank you for your inquiry. We'll get back to you within 24 hours.",
-      });
-      setFormData({
-        name: "",
-        email: "",
-        company: "",
-        phone: "",
-        message: ""
-      });
+    try {
+      // Validate form data
+      const validatedData = contactFormSchema.parse(formData);
+      
+      // Simulate form submission
+      setTimeout(() => {
+        toast({
+          title: "Message Sent!",
+          description: "Thank you for your inquiry. We'll get back to you within 24 hours.",
+        });
+        setFormData({
+          name: "",
+          email: "",
+          company: "",
+          phone: "",
+          message: ""
+        });
+        setIsLoading(false);
+      }, 1000);
+      
+    } catch (error) {
       setIsLoading(false);
-    }, 1000);
+      
+      if (error instanceof z.ZodError) {
+        const fieldErrors: Partial<ContactFormData> = {};
+        error.errors.forEach((err) => {
+          if (err.path.length > 0) {
+            const field = err.path[0] as keyof ContactFormData;
+            fieldErrors[field] = err.message;
+          }
+        });
+        setErrors(fieldErrors);
+        
+        toast({
+          title: "Validation Error",
+          description: "Please check the form for errors and try again.",
+          variant: "destructive",
+        });
+      }
+    }
   };
 
   const handleWhatsApp = () => {
@@ -149,7 +185,11 @@ const ContactForm = () => {
                       onChange={handleInputChange}
                       required
                       placeholder="Your full name"
+                      className={errors.name ? "border-destructive" : ""}
                     />
+                    {errors.name && (
+                      <p className="text-sm text-destructive mt-1">{errors.name}</p>
+                    )}
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-foreground mb-2">
@@ -162,7 +202,11 @@ const ContactForm = () => {
                       onChange={handleInputChange}
                       required
                       placeholder="your@email.com"
+                      className={errors.email ? "border-destructive" : ""}
                     />
+                    {errors.email && (
+                      <p className="text-sm text-destructive mt-1">{errors.email}</p>
+                    )}
                   </div>
                 </div>
 
@@ -176,7 +220,11 @@ const ContactForm = () => {
                       value={formData.company}
                       onChange={handleInputChange}
                       placeholder="Your company name"
+                      className={errors.company ? "border-destructive" : ""}
                     />
+                    {errors.company && (
+                      <p className="text-sm text-destructive mt-1">{errors.company}</p>
+                    )}
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-foreground mb-2">
@@ -188,7 +236,11 @@ const ContactForm = () => {
                       value={formData.phone}
                       onChange={handleInputChange}
                       placeholder="Your phone number"
+                      className={errors.phone ? "border-destructive" : ""}
                     />
+                    {errors.phone && (
+                      <p className="text-sm text-destructive mt-1">{errors.phone}</p>
+                    )}
                   </div>
                 </div>
 
@@ -203,8 +255,11 @@ const ContactForm = () => {
                     required
                     rows={5}
                     placeholder="Tell us about your project and how we can help..."
-                    className="resize-none"
+                    className={`resize-none ${errors.message ? "border-destructive" : ""}`}
                   />
+                  {errors.message && (
+                    <p className="text-sm text-destructive mt-1">{errors.message}</p>
+                  )}
                 </div>
 
                 <Button 
