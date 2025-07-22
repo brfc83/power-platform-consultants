@@ -99,14 +99,14 @@ export default {
 					}
 				},
 				scroll: {
-					'0%': { transform: 'translateX(0)' },
-					'100%': { transform: 'translateX(-50%)' }
+					'0%': { transform: 'translate3d(0, 0, 0)' },
+					'100%': { transform: 'translate3d(-50%, 0, 0)' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
-				scroll: 'scroll 30s linear infinite'
+				scroll: 'scroll 25s linear infinite'
 			}
 		}
 	},

@@ -36,7 +36,7 @@ const TrustedBy = () => {
         </div>
 
         <div className="relative overflow-hidden">
-          <div className="flex animate-scroll space-x-16">
+          <div className="flex animate-scroll space-x-16 will-change-transform">
             {[...clients, ...clients].map((client, index) => (
               <div
                 key={index}
