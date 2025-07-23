@@ -4,6 +4,7 @@ import WhoWeAre from "@/components/WhoWeAre";
 import Expertise from "@/components/Expertise";
 import Services from "@/components/Services";
 import TrustedBy from "@/components/TrustedBy";
+import LogoConcepts from "@/components/LogoConcepts";
 import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -17,6 +18,7 @@ const Index = () => {
       <Services />
       <WhoWeAre />
       <TrustedBy />
+      <LogoConcepts />
       
       <ContactForm />
       <Footer />
