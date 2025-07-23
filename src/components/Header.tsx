@@ -3,13 +3,13 @@ import { Button } from "@/components/ui/button";
 const Header = () => {
   return (
     <header className="fixed top-0 w-full bg-background/95 backdrop-blur-sm border-b z-50">
-      <div className="container mx-auto px-4 py-2">
+      <div className="container mx-auto px-4 py-1">
         <div className="flex items-center justify-between">
           <div className="flex items-center">
             <img 
               src="/lovable-uploads/86947ffc-d1e4-4618-ba23-49394bf11bd8.png" 
               alt="Forma Automate" 
-              className="h-16 w-auto -my-2"
+              className="h-20 w-auto -my-4 object-contain"
             />
           </div>
           
