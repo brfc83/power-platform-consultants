@@ -45,7 +45,7 @@ const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-center space-x-3">
                 <Mail className="h-4 w-4 text-primary" />
-                <span className="text-secondary-foreground/80">hello@formautomate.com</span>
+                <span className="text-secondary-foreground/80">hello@formaautomate.com</span>
               </li>
               <li className="flex items-center space-x-3">
                 <Phone className="h-4 w-4 text-primary" />

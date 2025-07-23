@@ -130,7 +130,7 @@ const ContactForm = () => {
                 </div>
                 <div>
                   <div className="font-semibold text-foreground">Email</div>
-                  <div className="text-muted-foreground">hello@formautomate.com</div>
+                  <div className="text-muted-foreground">hello@formaautomate.com</div>
                 </div>
               </div>
 
