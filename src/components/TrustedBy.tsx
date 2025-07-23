@@ -1,3 +1,4 @@
+
 const TrustedBy = () => {
   const clients = [
     {
@@ -36,16 +37,16 @@ const TrustedBy = () => {
         </div>
 
         <div className="relative overflow-hidden">
-          <div className="flex animate-scroll space-x-16 will-change-transform">
+          <div className="flex animate-scroll space-x-8 md:space-x-16 will-change-transform">
             {[...clients, ...clients].map((client, index) => (
               <div
                 key={index}
-                className="flex-shrink-0 h-20 w-40 flex items-center justify-center bg-transparent rounded-lg hover:scale-105 transition-transform duration-300"
+                className="flex-shrink-0 h-20 w-32 md:w-40 flex items-center justify-center bg-transparent rounded-lg hover:scale-105 transition-transform duration-300"
               >
                 <img
                   src={client.logo}
                   alt={client.name}
-                  className="max-h-12 max-w-32 object-contain"
+                  className="max-h-12 max-w-28 md:max-w-32 object-contain"
                 />
               </div>
             ))}
