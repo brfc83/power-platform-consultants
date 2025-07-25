@@ -17,7 +17,7 @@ const CaseStudies = () => {
       results: ["Reduced meeting setup time by 90%", "Zero formatting errors across all invites", "Standardised messaging = better stakeholder engagement", "<15 seconds from trigger to scheduled invite"],
       duration: "1 week",
       teamSize: "1 person",
-      image: "/lovable-uploads/9c6c8ca3-0a14-43f4-baed-0e3efaf1885e.png",
+      image: "/lovable-uploads/ab5e3ff6-7f05-40c4-9d9c-9cade87d5d42.png",
       tags: ["Power Automate", "Microsoft Teams", "Power Apps"]
     },
     {
