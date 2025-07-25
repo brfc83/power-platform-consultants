@@ -74,13 +74,13 @@ const CaseStudies = () => {
               <Card key={study.id} className="overflow-hidden hover:shadow-elegant transition-all duration-300">
                 <div className="grid md:grid-cols-2 gap-0">
                   {/* Image */}
-                  <div className="relative h-64 md:h-auto">
+                  <div className="relative h-64 md:h-auto bg-muted/50 flex items-center justify-center p-4">
                     <img 
                       src={study.image} 
                       alt={study.title}
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-contain"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-transparent"></div>
+                    <div className="absolute inset-0 bg-gradient-to-r from-primary/10 to-transparent"></div>
                   </div>
                   
                   {/* Content */}
