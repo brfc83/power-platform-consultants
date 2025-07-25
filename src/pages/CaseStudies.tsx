@@ -23,6 +23,19 @@ const CaseStudies = () => {
     },
     {
       id: 2,
+      title: "Compliance & IT Hygiene Automation",
+      client: "Internal Ops – HR & IT",
+      sector: "Public Sector / Governance",
+      challenge: "Disabled accounts were still showing as 'Active' in internal resource lists, creating risks for data misuse, compliance issues, and confusion across teams.",
+      solution: "Built a Power Automate flow to run monthly checks on user accounts, compare SharePoint Status fields with directory-level disabled accounts, flag discrepancies automatically, and log exceptions for investigation and cleanup.",
+      results: ["100% account status accuracy", "Eliminated compliance risks", "Automated monthly audits", "Streamlined exception handling"],
+      duration: "2 weeks",
+      teamSize: "2 people",
+      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&h=400&fit=crop",
+      tags: ["Power Automate", "Entra ID", "SharePoint", "Compliance"]
+    },
+    {
+      id: 3,
       title: "Manufacturing Process Optimization",
       client: "Tech Manufacturing Ltd",
       sector: "Commercial",
@@ -35,7 +48,7 @@ const CaseStudies = () => {
       tags: ["Power BI", "Power Automate", "Dataverse"]
     },
     {
-      id: 3,
+      id: 4,
       title: "Healthcare Patient Management System",
       client: "Regional Health Trust",
       sector: "Healthcare",
