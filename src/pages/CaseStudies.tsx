@@ -11,7 +11,7 @@ const CaseStudies = () => {
       id: 1,
       title: "Power Automate Meeting Scheduling Automation",
       client: "Portfolio Governance Team",
-      sector: "Public Sector / Internal Ops",
+      sector: "Aviation",
       challenge: "Manual meeting scheduling was inefficient and inconsistent. PMO staff had to draft Teams invites, copy stakeholders, format HTML emails, and set meeting times — all manually after project reviews.",
       solution: "Built a Power Automate flow triggered from Power Apps that created Teams calendar invites, sent HTML-formatted meeting bodies, dynamically inserted project info and stakeholder emails, set fixed 10AM next-day slots, and created a consistent experience across all triage sessions.",
       results: ["Reduced meeting setup time by 90%", "Zero formatting errors across all invites", "Standardised messaging = better stakeholder engagement", "<15 seconds from trigger to scheduled invite"],
