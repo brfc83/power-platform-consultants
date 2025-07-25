@@ -9,16 +9,16 @@ const CaseStudies = () => {
   const caseStudies = [
     {
       id: 1,
-      title: "Local Council Digital Transformation",
-      client: "City Council",
-      sector: "Public Sector",
-      challenge: "Manual paper-based processes causing delays and inefficiencies",
-      solution: "Implemented Power Apps and Power Automate to digitize workflows",
-      results: ["70% reduction in processing time", "90% improvement in citizen satisfaction", "£50k annual savings"],
-      duration: "3 months",
-      teamSize: "5 people",
-      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&h=400&fit=crop",
-      tags: ["Power Apps", "Power Automate", "SharePoint"]
+      title: "Power Automate Meeting Scheduling Automation",
+      client: "Portfolio Governance Team",
+      sector: "Public Sector / Internal Ops",
+      challenge: "Manual meeting scheduling was inefficient and inconsistent. PMO staff had to draft Teams invites, copy stakeholders, format HTML emails, and set meeting times — all manually after project reviews.",
+      solution: "Built a Power Automate flow triggered from Power Apps that created Teams calendar invites, sent HTML-formatted meeting bodies, dynamically inserted project info and stakeholder emails, set fixed 10AM next-day slots, and created a consistent experience across all triage sessions.",
+      results: ["Reduced meeting setup time by 90%", "Zero formatting errors across all invites", "Standardised messaging = better stakeholder engagement", "<15 seconds from trigger to scheduled invite"],
+      duration: "1 week",
+      teamSize: "1 person",
+      image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=800&h=400&fit=crop",
+      tags: ["Power Automate", "Microsoft Teams", "Power Apps"]
     },
     {
       id: 2,
