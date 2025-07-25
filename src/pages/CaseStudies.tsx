@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowRight, Calendar, Users, Target, TrendingUp } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const CaseStudies = () => {
   // Placeholder case studies data - you'll replace these with real ones
@@ -153,10 +154,12 @@ const CaseStudies = () => {
           <p className="text-xl text-primary-foreground/90 mb-8 max-w-2xl mx-auto">
             Let's discuss how we can help you achieve similar results with custom Power Platform solutions
           </p>
-          <Button variant="secondary" size="xl" className="group">
-            Start Your Project
-            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-          </Button>
+          <Link to="/#contact">
+            <Button variant="secondary" size="xl" className="group">
+              Start Your Project
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </Button>
+          </Link>
         </div>
       </section>
       
