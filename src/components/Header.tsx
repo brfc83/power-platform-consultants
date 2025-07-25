@@ -1,7 +1,21 @@
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Header = () => {
+  const location = useLocation();
+  
+  const handleSectionClick = (sectionId: string) => {
+    if (location.pathname === '/') {
+      // If on home page, scroll to section
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else {
+      // If on other page, navigate to home page with hash
+      window.location.href = `/#${sectionId}`;
+    }
+  };
   return (
     <header className="fixed top-0 w-full bg-background/95 backdrop-blur-sm border-b z-50">
       <div className="container mx-auto px-4 py-1">
@@ -15,25 +29,37 @@ const Header = () => {
           </Link>
           
           <nav className="hidden md:flex items-center space-x-8">
-            <Link to="/#services" className="text-foreground hover:text-primary transition-colors">
+            <button 
+              onClick={() => handleSectionClick('services')} 
+              className="text-foreground hover:text-primary transition-colors"
+            >
               Services
-            </Link>
-            <Link to="/#expertise" className="text-foreground hover:text-primary transition-colors">
+            </button>
+            <button 
+              onClick={() => handleSectionClick('expertise')} 
+              className="text-foreground hover:text-primary transition-colors"
+            >
               Expertise
-            </Link>
+            </button>
             <Link to="/case-studies" className="text-foreground hover:text-primary transition-colors">
               Case Studies
             </Link>
-            <Link to="/#contact" className="text-foreground hover:text-primary transition-colors">
+            <button 
+              onClick={() => handleSectionClick('contact')} 
+              className="text-foreground hover:text-primary transition-colors"
+            >
               Contact
-            </Link>
+            </button>
           </nav>
           
-          <Link to="/#contact">
-            <Button variant="cta" size="lg" className="hidden md:inline-flex">
-              Get Started
-            </Button>
-          </Link>
+          <Button 
+            variant="cta" 
+            size="lg" 
+            className="hidden md:inline-flex"
+            onClick={() => handleSectionClick('contact')}
+          >
+            Get Started
+          </Button>
         </div>
       </div>
     </header>

@@ -22,11 +22,11 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Services</h3>
             <ul className="space-y-2">
-              <li><a href="#services" className="text-secondary-foreground/80 hover:text-primary transition-colors">Power Apps Development</a></li>
-              <li><a href="#services" className="text-secondary-foreground/80 hover:text-primary transition-colors">Power Automate Flows</a></li>
-              <li><a href="#services" className="text-secondary-foreground/80 hover:text-primary transition-colors">SharePoint Integration</a></li>
-              <li><a href="#services" className="text-secondary-foreground/80 hover:text-primary transition-colors">Dynamics 365 Implementation</a></li>
-              <li><a href="#services" className="text-secondary-foreground/80 hover:text-primary transition-colors">Power BI Analytics</a></li>
+              <li><a href="/#services" className="text-secondary-foreground/80 hover:text-primary transition-colors">Power Apps Development</a></li>
+              <li><a href="/#services" className="text-secondary-foreground/80 hover:text-primary transition-colors">Power Automate Flows</a></li>
+              <li><a href="/#services" className="text-secondary-foreground/80 hover:text-primary transition-colors">SharePoint Integration</a></li>
+              <li><a href="/#services" className="text-secondary-foreground/80 hover:text-primary transition-colors">Dynamics 365 Implementation</a></li>
+              <li><a href="/#services" className="text-secondary-foreground/80 hover:text-primary transition-colors">Power BI Analytics</a></li>
             </ul>
           </div>
 
@@ -34,8 +34,8 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Company</h3>
             <ul className="space-y-2">
-              <li><a href="#expertise" className="text-secondary-foreground/80 hover:text-primary transition-colors">About Us</a></li>
-              <li><a href="#services" className="text-secondary-foreground/80 hover:text-primary transition-colors">Our Team</a></li>
+              <li><a href="/#expertise" className="text-secondary-foreground/80 hover:text-primary transition-colors">About Us</a></li>
+              <li><a href="/#services" className="text-secondary-foreground/80 hover:text-primary transition-colors">Our Team</a></li>
             </ul>
           </div>
 
