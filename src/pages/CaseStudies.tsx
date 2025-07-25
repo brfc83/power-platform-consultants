@@ -31,7 +31,7 @@ const CaseStudies = () => {
       results: ["100% account status accuracy", "Eliminated compliance risks", "Automated monthly audits", "Streamlined exception handling"],
       duration: "2 weeks",
       teamSize: "2 people",
-      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&h=400&fit=crop",
+      image: "/lovable-uploads/1a72af24-1722-40de-9f20-6b35b8994d72.png",
       tags: ["Power Automate", "Entra ID", "SharePoint", "Compliance"]
     },
     {
