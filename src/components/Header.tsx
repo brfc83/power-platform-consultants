@@ -1,8 +1,9 @@
 import { Button } from "@/components/ui/button";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 const Header = () => {
   const location = useLocation();
+  const navigate = useNavigate();
   
   const handleSectionClick = (sectionId: string) => {
     if (location.pathname === '/') {
@@ -13,7 +14,7 @@ const Header = () => {
       }
     } else {
       // If on other page, navigate to home page with hash
-      window.location.href = `/#${sectionId}`;
+      navigate(`/#${sectionId}`);
     }
   };
   return (
