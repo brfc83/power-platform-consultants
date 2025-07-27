@@ -15,7 +15,7 @@ const Hero = () => {
                 </span>
               </h1>
               <p className="text-xl md:text-2xl text-primary-foreground/90 leading-relaxed">
-                Trusted by Dentons, TfL, and easyJet — Forma Automate builds scalable solutions for aviation, legal, public sector & beyond.
+                Trusted by Dentons, TfL, and easyJet, Forma Automate delivers scalable solutions that simplify operations and reclaim time across sectors.
               </p>
             </div>
             
