@@ -47,7 +47,11 @@ const Header = () => {
             >
               Expertise
             </button>
-            <Link to="/case-studies" className="text-foreground hover:text-primary transition-colors">
+            <Link 
+              to="/case-studies" 
+              className="text-foreground hover:text-primary transition-colors"
+              onClick={() => window.scrollTo(0, 0)}
+            >
               Case Studies
             </Link>
             <button 
@@ -92,7 +96,10 @@ const Header = () => {
                   <Link 
                     to="/case-studies" 
                     className="text-left text-lg text-foreground hover:text-primary transition-colors"
-                    onClick={() => setIsOpen(false)}
+                    onClick={() => {
+                      setIsOpen(false);
+                      window.scrollTo(0, 0);
+                    }}
                   >
                     Case Studies
                   </Link>
