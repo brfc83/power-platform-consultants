@@ -9,15 +9,13 @@ const Hero = () => {
           <div className="space-y-8">
             <div className="space-y-4">
               <h1 className="text-4xl md:text-6xl font-bold leading-tight">
-                Power Platform Consulting
+                Power Platform Consulting For Aviation, Legal, Public Sector
                 <span className="text-primary-light block">
-                  For Aviation, Legal & Public Sector
+                  — and Transformation Anywhere
                 </span>
               </h1>
               <p className="text-xl md:text-2xl text-primary-foreground/90 leading-relaxed">
-                Microsoft Power Platform specialists helping organisations like Dentons, TfL, and Crossrail 
-                build scalable Power Apps, Power Automate workflows, and Power BI dashboards that transform 
-                operations across aviation, legal, and public sector industries.
+                Trusted by Dentons, TfL, and easyJet — Forma Automate builds scalable solutions for aviation, legal, public sector & beyond.
               </p>
             </div>
             
