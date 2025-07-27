@@ -33,32 +33,6 @@ const CaseStudies = () => {
       teamSize: "2 people",
       image: "/lovable-uploads/1a72af24-1722-40de-9f20-6b35b8994d72.png",
       tags: ["Power Automate", "Entra ID", "SharePoint", "Compliance"]
-    },
-    {
-      id: 3,
-      title: "Manufacturing Process Optimization",
-      client: "Tech Manufacturing Ltd",
-      sector: "Commercial",
-      challenge: "Disconnected systems and manual reporting across production lines",
-      solution: "Created integrated Power BI dashboards and automated reporting",
-      results: ["40% faster decision making", "25% reduction in downtime", "Real-time visibility across operations"],
-      duration: "4 months",
-      teamSize: "3 people",
-      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=800&h=400&fit=crop",
-      tags: ["Power BI", "Power Automate", "Dataverse"]
-    },
-    {
-      id: 4,
-      title: "Healthcare Patient Management System",
-      client: "Regional Health Trust",
-      sector: "Healthcare",
-      challenge: "Fragmented patient data across multiple systems",
-      solution: "Unified patient portal using Power Platform and Microsoft 365",
-      results: ["60% improvement in patient experience", "35% reduction in admin overhead", "Enhanced data security"],
-      duration: "6 months",
-      teamSize: "7 people",
-      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&h=400&fit=crop",
-      tags: ["Power Apps", "SharePoint", "Teams Integration"]
     }
   ];
 

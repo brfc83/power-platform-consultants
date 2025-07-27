@@ -1,11 +1,16 @@
 import { Button } from "@/components/ui/button";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Menu } from "lucide-react";
+import { useState } from "react";
 
 const Header = () => {
   const location = useLocation();
   const navigate = useNavigate();
+  const [isOpen, setIsOpen] = useState(false);
   
   const handleSectionClick = (sectionId: string) => {
+    setIsOpen(false); // Close mobile menu
     if (location.pathname === '/') {
       // If on home page, scroll to section
       const element = document.getElementById(sectionId);
@@ -53,14 +58,62 @@ const Header = () => {
             </button>
           </nav>
           
-          <Button 
-            variant="cta" 
-            size="lg" 
-            className="hidden md:inline-flex"
-            onClick={() => handleSectionClick('contact')}
-          >
-            Get Started
-          </Button>
+          <div className="flex items-center gap-4">
+            <Button 
+              variant="cta" 
+              size="lg" 
+              className="hidden md:inline-flex"
+              onClick={() => handleSectionClick('contact')}
+            >
+              Get Started
+            </Button>
+            
+            {/* Mobile Menu */}
+            <Sheet open={isOpen} onOpenChange={setIsOpen}>
+              <SheetTrigger asChild>
+                <Button variant="ghost" size="icon" className="md:hidden">
+                  <Menu className="h-6 w-6" />
+                </Button>
+              </SheetTrigger>
+              <SheetContent side="right" className="w-[300px]">
+                <nav className="flex flex-col space-y-6 mt-8">
+                  <button 
+                    onClick={() => handleSectionClick('services')} 
+                    className="text-left text-lg text-foreground hover:text-primary transition-colors"
+                  >
+                    Services
+                  </button>
+                  <button 
+                    onClick={() => handleSectionClick('expertise')} 
+                    className="text-left text-lg text-foreground hover:text-primary transition-colors"
+                  >
+                    Expertise
+                  </button>
+                  <Link 
+                    to="/case-studies" 
+                    className="text-left text-lg text-foreground hover:text-primary transition-colors"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    Case Studies
+                  </Link>
+                  <button 
+                    onClick={() => handleSectionClick('contact')} 
+                    className="text-left text-lg text-foreground hover:text-primary transition-colors"
+                  >
+                    Contact
+                  </button>
+                  <Button 
+                    variant="cta" 
+                    size="lg" 
+                    className="mt-4"
+                    onClick={() => handleSectionClick('contact')}
+                  >
+                    Get Started
+                  </Button>
+                </nav>
+              </SheetContent>
+            </Sheet>
+          </div>
         </div>
       </div>
     </header>
