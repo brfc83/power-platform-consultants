@@ -13,8 +13,9 @@ const Footer = () => {
               className="h-16 w-auto mb-4 brightness-0 invert"
             />
             <p className="text-secondary-foreground/80 leading-relaxed">
-              Microsoft Power Platform specialists helping organisations build scalable 
-              solutions with Power Apps, SharePoint, Dynamics 365, and automation expertise.
+              Microsoft Power Platform specialists trusted by Dentons, TfL, Crossrail, and easyJet. 
+              Expert Power Apps, Power Automate, SharePoint, and Dynamics 365 solutions for aviation, 
+              legal, and public sector organisations across the UK.
             </p>
           </div>
 

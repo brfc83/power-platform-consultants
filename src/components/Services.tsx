@@ -15,37 +15,37 @@ const Services = () => {
     {
       icon: Smartphone,
       title: "Power Apps Development",
-      description: "Custom Canvas and Model-driven apps for enterprise needs, built on Dataverse with responsive design.",
+      description: "Custom Canvas and Model-driven Power Apps for aviation, legal, and public sector enterprises. Trusted by organisations like Dentons and TfL for mission-critical applications.",
       features: ["Canvas App Development", "Model-driven Apps", "Custom Connectors", "Mobile-first Design"],
     },
     {
       icon: Workflow,
       title: "Power Automate Solutions",
-      description: "Business process automation connecting SharePoint, Dynamics, and third-party systems seamlessly.",
+      description: "Business process automation for aviation, transport, and legal sectors. Streamline workflows connecting SharePoint, Dynamics, and third-party systems seamlessly.",
       features: ["Process Automation", "System Integration", "Approval Workflows", "Document Management"]
     },
     {
       icon: BarChart3,
       title: "Power BI Analytics",
-      description: "Enterprise dashboards and reporting solutions with real-time data from multiple sources.",
+      description: "Enterprise Power BI dashboards and reporting solutions for aviation, transport, and public sector organisations with real-time data insights.",
       features: ["Custom Dashboards", "Real-time Analytics", "Data Modeling", "Report Automation"]
     },
     {
       icon: Database,
       title: "SharePoint & Dataverse",
-      description: "Design and implement robust data architectures with SharePoint lists, libraries, and Dataverse.",
+      description: "Robust SharePoint and Dataverse architectures for large organisations. Proven expertise with public sector and aviation clients requiring secure data solutions.",
       features: ["Data Architecture", "SharePoint Solutions", "Dataverse Design", "SQL Integration"]
     },
     {
       icon: Users,
       title: "Dynamics 365 Implementation",
-      description: "Full-service Dynamics 365 implementation with our certified expert teams and custom integrations.",
+      description: "Full-service Dynamics 365 implementation for legal, aviation, and transport sectors. Expert teams delivering certified solutions with seamless integrations.",
       features: ["D365 Implementation", "Custom Integrations", "User Training", "Ongoing Support"]
     },
     {
       icon: Settings,
       title: "Microsoft Teams Integration",
-      description: "Enhance collaboration with custom Teams apps, bots, and SharePoint integration solutions.",
+      description: "Microsoft Teams collaboration solutions for enterprise organisations. Custom Teams apps, bots, and SharePoint integration trusted by aviation and public sector clients.",
       features: ["Teams App Development", "Bot Integration", "SharePoint Sync", "Workflow Automation"]
     }
   ];
@@ -55,11 +55,12 @@ const Services = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-            Microsoft Power Platform <span className="text-primary">Services</span>
+            Microsoft Power Platform <span className="text-primary">Consulting Services</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Comprehensive Power Platform solutions including Power Apps, Power Automate, 
-            SharePoint integration, and Dynamics 365 implementations with expert teams.
+            Comprehensive Power Platform solutions trusted by leading organisations including Dentons, 
+            Transport for London, and Crossrail. Expert Power Apps development, Power Automate workflows, 
+            SharePoint integration, and Dynamics 365 implementations for aviation, legal, and public sector clients.
           </p>
         </div>
 

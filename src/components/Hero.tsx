@@ -9,14 +9,15 @@ const Hero = () => {
           <div className="space-y-8">
             <div className="space-y-4">
               <h1 className="text-4xl md:text-6xl font-bold leading-tight">
-                Build Smarter Systems
+                Power Platform Consulting
                 <span className="text-primary-light block">
-                  From Apps to Dashboards
+                  For Aviation, Legal & Public Sector
                 </span>
               </h1>
               <p className="text-xl md:text-2xl text-primary-foreground/90 leading-relaxed">
-                We craft low-code solutions with Power Apps, Power Automate, Power BI, SharePoint, 
-                and Dynamics 365 that make workflows intuitive, scalable, and ready to grow with your business.
+                Microsoft Power Platform specialists helping organisations like Dentons, TfL, and Crossrail 
+                build scalable Power Apps, Power Automate workflows, and Power BI dashboards that transform 
+                operations across aviation, legal, and public sector industries.
               </p>
             </div>
             
