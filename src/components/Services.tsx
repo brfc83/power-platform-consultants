@@ -65,7 +65,7 @@ const Services = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
-            <Card key={index} className="group hover:shadow-elegant transition-all duration-300 hover:-translate-y-1 border-primary/10">
+            <Card key={index} id={service.title.toLowerCase().replace(/\s+/g, '-').replace(/&/g, '')} className="group hover:shadow-elegant transition-all duration-300 hover:-translate-y-1 border-primary/10">
               <CardHeader>
                 <div className="w-14 h-14 bg-gradient-primary rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                   <service.icon className="h-7 w-7 text-primary-foreground" />
