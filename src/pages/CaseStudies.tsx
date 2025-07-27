@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowRight, Calendar, Users, Target, TrendingUp } from "lucide-react";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 const CaseStudies = () => {
   // Placeholder case studies data - you'll replace these with real ones
@@ -38,6 +39,14 @@ const CaseStudies = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>Case Studies | Forma Automate - Power Platform Success Stories</title>
+        <meta name="description" content="Real-world automation wins with Dentons, TfL, and more — see how Forma Automate delivers results through Power Platform and digital transformation." />
+        <meta property="og:title" content="Case Studies | Forma Automate - Power Platform Success Stories" />
+        <meta property="og:description" content="Real-world automation wins with Dentons, TfL, and more — see how Forma Automate delivers results through Power Platform and digital transformation." />
+        <meta name="twitter:title" content="Case Studies | Forma Automate - Power Platform Success Stories" />
+        <meta name="twitter:description" content="Real-world automation wins with Dentons, TfL, and more — see how Forma Automate delivers results through Power Platform and digital transformation." />
+      </Helmet>
       <Header />
       
       {/* Hero Section */}
