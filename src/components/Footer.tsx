@@ -22,11 +22,11 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Services</h3>
             <ul className="space-y-2">
-              <li><a href="/#power-apps-development" className="text-secondary-foreground/80 hover:text-primary transition-colors">Power Apps Development</a></li>
-              <li><a href="/#power-automate-solutions" className="text-secondary-foreground/80 hover:text-primary transition-colors">Power Automate Solutions</a></li>
-              <li><a href="/#sharepoint--dataverse" className="text-secondary-foreground/80 hover:text-primary transition-colors">SharePoint & Dataverse</a></li>
-              <li><a href="/#dynamics-365-implementation" className="text-secondary-foreground/80 hover:text-primary transition-colors">Dynamics 365 Implementation</a></li>
-              <li><a href="/#power-bi-analytics" className="text-secondary-foreground/80 hover:text-primary transition-colors">Power BI Analytics</a></li>
+              <li><a href="/#services" className="text-secondary-foreground/80 hover:text-primary transition-colors">Power Apps Development</a></li>
+              <li><a href="/#services" className="text-secondary-foreground/80 hover:text-primary transition-colors">Power Automate Solutions</a></li>
+              <li><a href="/#services" className="text-secondary-foreground/80 hover:text-primary transition-colors">SharePoint & Dataverse</a></li>
+              <li><a href="/#services" className="text-secondary-foreground/80 hover:text-primary transition-colors">Dynamics 365 Implementation</a></li>
+              <li><a href="/#services" className="text-secondary-foreground/80 hover:text-primary transition-colors">Power BI Analytics</a></li>
             </ul>
           </div>
 
