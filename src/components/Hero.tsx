@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Play } from "lucide-react";
+import heroImage from "@/assets/hero-abstract-tech.jpg";
 
 const Hero = () => {
   return (
@@ -42,20 +43,11 @@ const Hero = () => {
           
           <div className="relative">
             <div className="bg-gradient-primary rounded-2xl p-8 shadow-glow">
-              <div className="bg-background rounded-xl p-6 space-y-4">
-                <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center">
-                    <div className="w-6 h-6 bg-primary-foreground rounded opacity-80"></div>
-                  </div>
-                  <div>
-                    <div className="font-semibold text-foreground">Power Platform Implementation</div>
-                    <div className="text-muted-foreground">Process efficiency increased by 85%</div>
-                  </div>
-                </div>
-                <div className="w-full bg-muted rounded-full h-2">
-                  <div className="bg-primary h-2 rounded-full w-[85%] transition-all duration-1000"></div>
-                </div>
-              </div>
+              <img 
+                src={heroImage} 
+                alt="Forma Automate - Abstract data visualization showing Power Platform automation and integration workflows for aviation, legal, and public sector digital transformation"
+                className="w-full h-auto rounded-xl object-cover"
+              />
             </div>
           </div>
         </div>
