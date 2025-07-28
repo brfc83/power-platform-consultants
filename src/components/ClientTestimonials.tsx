@@ -76,14 +76,6 @@ const ClientTestimonials = () => {
           </Card>
         </div>
 
-        {/* What Our Clients Say Section */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-            What Our <span className="text-primary">Clients Say.</span>
-          </h2>
-        </div>
-
-        {/* Crossrail Testimonial */}
         <div className="max-w-4xl mx-auto">
           <Card className="group hover:shadow-elegant transition-all duration-300 hover:-translate-y-1 border-primary/10">
             <CardContent className="p-8 md:p-12">
