@@ -28,7 +28,7 @@ const Header = () => {
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center">
             <img 
-              src="/lovable-uploads/86947ffc-d1e4-4618-ba23-49394bf11bd8.png" 
+              src="/fa-uploads/86947ffc-d1e4-4618-ba23-49394bf11bd8.png"
               alt="Forma Automate" 
               className="h-20 w-auto -my-4 object-contain cursor-pointer hover:opacity-80 transition-opacity"
             />

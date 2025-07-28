@@ -19,7 +19,7 @@ const CaseStudies = () => {
       results: ["Reduced meeting setup time by 90%", "Zero formatting errors across all invites", "Standardised messaging = better stakeholder engagement", "<15 seconds from trigger to scheduled invite"],
       duration: "1 week",
       teamSize: "1 person",
-      image: "/lovable-uploads/ab5e3ff6-7f05-40c4-9d9c-9cade87d5d42.png",
+      image: "/fa-uploads/ab5e3ff6-7f05-40c4-9d9c-9cade87d5d42.png",
       tags: ["Power Automate", "Microsoft Teams", "Power Apps"]
     },
     {
@@ -32,7 +32,7 @@ const CaseStudies = () => {
       results: ["100% account status accuracy", "Eliminated compliance risks", "Automated monthly audits", "Streamlined exception handling"],
       duration: "2 weeks",
       teamSize: "2 people",
-      image: "/lovable-uploads/1a72af24-1722-40de-9f20-6b35b8994d72.png",
+      image: "/fa-uploads/1a72af24-1722-40de-9f20-6b35b8994d72.png",
       tags: ["Power Automate", "Entra ID", "SharePoint", "Compliance"]
     }
   ];
