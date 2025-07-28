@@ -3,27 +3,27 @@ const TrustedBy = () => {
   const clients = [
     {
       name: "Crossrail",
-      logo: "/fa-uploads/18f154c3-8fe1-45f2-9da1-3d3053ae17d2.png"
+      logo: "/fa-uploads/crossrail-logo.png"
     },
     {
       name: "Dentons",
-      logo: "/fa-uploads/dde2f0e4-7b08-4669-8bfd-8a1fe0c05c2a.png"
+      logo: "/fa-uploads/dentons-logo.png"
     },
     {
       name: "easyJet",
-      logo: "/fa-uploads/5db575a2-f7a1-43e2-a46c-d5bb8d9720ab.png"
+      logo: "/fa-uploads/easyJet-logo.png"
     },
     {
       name: "Office of Rail and Road",
-      logo: "/fa-uploads/ab33787b-fdac-4b9a-ba6a-45b2187efeb8.png"
+      logo: "/fa-uploads/orr-logo.png"
     },
     {
       name: "QinetiQ",
-      logo: "/fa-uploads/314e024c-888e-4755-9227-ec2793b88f4a.png"
+      logo: "/fa-uploads/QinetiQ-logo.png"
     },
     {
       name: "Transport for London",
-      logo: "/fa-uploads/74bb5967-f658-4fb9-ab8f-2ae8f50ff475.png"
+      logo: "/fa-uploads/TfL-logo.png"
     }
   ];
 
