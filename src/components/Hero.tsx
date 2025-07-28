@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Play } from "lucide-react";
-import heroImage from "@/assets/hero-abstract-tech.jpg";
+import heroImage from "@/assets/hero-dashboard-mockup.jpg";
 
 const Hero = () => {
   return (
@@ -45,7 +45,7 @@ const Hero = () => {
             <div className="bg-gradient-primary rounded-2xl p-8 shadow-glow">
               <img 
                 src={heroImage} 
-                alt="Forma Automate - Abstract data visualization showing Power Platform automation and integration workflows for aviation, legal, and public sector digital transformation"
+                alt="Forma Automate - Power Platform dashboard interface showing efficiency metrics and automation workflows for aviation, legal, and public sector digital transformation"
                 className="w-full h-auto rounded-xl object-cover"
               />
             </div>
