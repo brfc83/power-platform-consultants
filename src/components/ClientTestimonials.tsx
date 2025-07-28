@@ -32,7 +32,7 @@ const ClientTestimonials = () => {
                 <Quote className="h-12 w-12 text-primary/60 flex-shrink-0 mr-4" />
                 <div className="flex-1">
                   <p className="text-lg text-foreground leading-relaxed mb-8">
-                    "I had the pleasure of working with Arif during his time with Forma Automate as principal consultant, where he made significant contributions to the development and enhancement of our PPM tool, built using Microsoft's Power Platform. Arif played a key role in designing and deploying several enhancements, leveraging Power Automate to streamline internal processes. His automation solutions improved efficiency throughout a project lifecycle, including resourcing. He was instrumental in optimizing the app's performance by replacing legacy code with more efficient solutions, resulting in a noticeably faster and more responsive user experience. Arif also introduced the team to Application Lifecycle Management, setting up Dev {'>'}  UAT {'>'} Prod environments and transitioning the team to Microsoft best practices — marking a major step forward in our development maturity. In addition to his technical expertise, Arif delivered comprehensive documentation and configured supporting SharePoint lists to ensure long-term sustainability and clarity around the implemented solutions. His attention to detail and commitment to maintainability meant the team could easily carry forward the work after his departure. I would welcome the opportunity to work with Arif again."
+                    "I had the pleasure of working with Arif (Forma Automate) during his time as a consultant within our Delivery & Change Team, where he made significant contributions to the development and enhancement of our PPM tool, built using Microsoft's Power Platform. Arif played a key role in designing and deploying several enhancements, leveraging Power Automate to streamline internal processes. His automation solutions improved efficiency throughout a project lifecycle, including resourcing. He was instrumental in optimizing the app's performance by replacing legacy code with more efficient solutions, resulting in a noticeably faster and more responsive user experience. Arif also introduced the team to Application Lifecycle Management, setting up Dev {'>'}  UAT {'>'} Prod environments and transitioning the team to Microsoft best practices, this marked a major step forward in our development maturity. In addition to his technical expertise, Arif delivered comprehensive documentation and configured supporting SharePoint lists to ensure long-term sustainability and clarity around the implemented solutions. His attention to detail and commitment to maintainability meant the team could easily carry forward the work after his departure. I would welcome the opportunity to work with Arif again in the future."
                   </p>
                 </div>
               </div>
@@ -60,16 +60,17 @@ const ClientTestimonials = () => {
                   size="lg"
                   className="w-full md:w-auto"
                 >
-                  Let's talk about transforming your workflow
+                  Let's talk about driving real efficiency
                 </Button>
               </div>
               
               {/* SEO Tags */}
-              <div className="mt-6 flex flex-wrap gap-2" aria-label="Technologies: Power Platform, SharePoint, ALM">
+              <div className="mt-6 flex flex-wrap gap-2" aria-label="Technologies: Power Platform, SharePoint, ALM, Power Apps">
                 <span className="text-xs bg-primary/10 text-primary px-2 py-1 rounded-full">Power Platform</span>
                 <span className="text-xs bg-primary/10 text-primary px-2 py-1 rounded-full">SharePoint</span>
                 <span className="text-xs bg-primary/10 text-primary px-2 py-1 rounded-full">ALM</span>
                 <span className="text-xs bg-primary/10 text-primary px-2 py-1 rounded-full">Power Automate</span>
+                <span className="text-xs bg-primary/10 text-primary px-2 py-1 rounded-full">Power Apps</span>
               </div>
             </CardContent>
           </Card>
@@ -95,20 +96,38 @@ const ClientTestimonials = () => {
                 </div>
               </div>
               
-              <div className="flex items-center space-x-4">
-                <img 
-                  src="/fa-uploads/crossrail-logo.png" 
-                  alt="Crossrail logo – client testimonial"
-                  className="h-8 w-auto"
-                />
-                <div>
-                  <div className="font-semibold text-foreground">
-                    Tim L. | Senior Programme Manager
-                  </div>
-                  <div className="text-sm text-muted-foreground">
-                    Crossrail (Elizabeth Line)
+              <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+                <div className="flex items-center space-x-4">
+                  <img 
+                    src="/fa-uploads/crossrail-logo.png" 
+                    alt="Crossrail logo – client testimonial"
+                    className="h-8 w-auto"
+                  />
+                  <div>
+                    <div className="font-semibold text-foreground">
+                      Tim L. | Senior Programme Manager
+                    </div>
+                    <div className="text-sm text-muted-foreground">
+                      Crossrail (Elizabeth Line)
+                    </div>
                   </div>
                 </div>
+                
+                <Button 
+                  onClick={scrollToContact}
+                  variant="cta" 
+                  size="lg"
+                  className="w-full md:w-auto"
+                >
+                  Let's talk about driving real efficiency
+                </Button>
+              </div>
+              
+              {/* SEO Tags */}
+              <div className="mt-6 flex flex-wrap gap-2" aria-label="Technologies: SharePoint, Automation, User Training">
+                <span className="text-xs bg-primary/10 text-primary px-2 py-1 rounded-full">SharePoint</span>
+                <span className="text-xs bg-primary/10 text-primary px-2 py-1 rounded-full">Automation</span>
+                <span className="text-xs bg-primary/10 text-primary px-2 py-1 rounded-full">User Training</span>
               </div>
             </CardContent>
           </Card>
