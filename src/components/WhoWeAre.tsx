@@ -6,7 +6,7 @@ const WhoWeAre = () => {
           <div className="mb-12">
             <img 
               src="/fa-uploads/forma-automate-brand-logo.png"
-              alt="Forma Automate" 
+              alt="Forma Automate brand identity — workflow and Power Platform consultancy"
               className="h-32 w-auto mx-auto mb-8"
             />
           </div>

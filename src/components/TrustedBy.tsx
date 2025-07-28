@@ -48,7 +48,15 @@ const TrustedBy = () => {
               >
                 <img
                   src={client.logo}
-                  alt={`${client.name} - Power Platform consulting client for Microsoft 365 and automation solutions`}
+                  alt={
+                    client.name === "Crossrail" ? "Crossrail logo — Forma Automate transport automation client" :
+                    client.name === "Dentons" ? "Dentons logo — legal sector transformation using Power Apps and automation" :
+                    client.name === "easyJet" ? "EasyJet logo — Forma Automate Power Platform project in airline sector" :
+                    client.name === "Office of Rail and Road" ? "Office of Rail and Road logo — sector collaboration with Forma Automate" :
+                    client.name === "QinetiQ" ? "QinetiQ logo — Forma Automate client in advanced engineering services" :
+                    client.name === "Transport for London" ? "TfL logo — Forma Automate Power Platform work in public transport" :
+                    `${client.name} - Power Platform consulting client for Microsoft 365 and automation solutions`
+                  }
                   className="max-h-12 max-w-28 md:max-w-32 object-contain"
                 />
               </div>

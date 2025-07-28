@@ -29,7 +29,7 @@ const Header = () => {
           <Link to="/" className="flex items-center">
             <img 
               src="/fa-uploads/forma-automate-brand-logo.png"
-              alt="Forma Automate" 
+              alt="Forma Automate brand identity — workflow and Power Platform consultancy"
               className="h-20 w-auto -my-4 object-contain cursor-pointer hover:opacity-80 transition-opacity"
             />
           </Link>

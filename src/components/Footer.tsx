@@ -9,7 +9,7 @@ const Footer = () => {
           <div className="space-y-4">
             <img 
               src="/fa-uploads/forma-automate-brand-logo.png"
-              alt="Forma Automate" 
+              alt="Forma Automate brand identity — workflow and Power Platform consultancy"
               className="h-16 w-auto mb-4 brightness-0 invert"
             />
             <p className="text-secondary-foreground/80 leading-relaxed">
