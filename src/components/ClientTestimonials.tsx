@@ -26,7 +26,7 @@ const ClientTestimonials = () => {
     {
       id: 1,
       quote: "I had the pleasure of working with Arif (Forma Automate) during his time as a consultant within our Delivery & Change Team, where he made significant contributions to the development and enhancement of our PPM tool, built using Microsoft's Power Platform. Arif played a key role in designing and deploying several enhancements, leveraging Power Automate to streamline internal processes. His automation solutions improved efficiency throughout a project lifecycle, including resourcing. He was instrumental in optimizing the app's performance by replacing legacy code with more efficient solutions, resulting in a noticeably faster and more responsive user experience. Arif also introduced the team to Application Lifecycle Management, setting up Dev > UAT > Prod environments and transitioning the team to Microsoft best practices, this marked a major step forward in our development maturity. In addition to his technical expertise, Arif delivered comprehensive documentation and configured supporting SharePoint lists to ensure long-term sustainability and clarity around the implemented solutions. His attention to detail and commitment to maintainability meant the team could easily carry forward the work after his departure. I would welcome the opportunity to work with Arif again in the future.",
-      name: "Senior Portfolio Analyst",
+      name: "Becky M. | Senior Portfolio Analyst",
       company: "easyJet",
       logo: "/fa-uploads/easyJet-logo.png",
       logoAlt: "EasyJet logo — Forma Automate Power Platform project in airline sector",
