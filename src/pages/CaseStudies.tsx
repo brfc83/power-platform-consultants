@@ -32,8 +32,21 @@ const CaseStudies = () => {
       results: ["100% account status accuracy", "Eliminated compliance risks", "Automated monthly audits", "Streamlined exception handling"],
       duration: "2 weeks",
       teamSize: "2 people",
-      image: "/fa-uploads/1a72af24-1722-40de-9f20-6b35b8994d72.png",
+      image: "/fa-uploads/easyJet-workflow-optimisation.png",
       tags: ["Power Automate", "Entra ID", "SharePoint", "Compliance"]
+    },
+    {
+      id: 3,
+      title: "Cross-Region Billing Automation",
+      client: "Global Finance Team",
+      sector: "Legal",
+      challenge: "Manual cross-region billing created inefficiencies and compliance risks. Cost allocations between offices lacked consistency, and approval chains were misaligned with jurisdictional requirements — leading to delays and discrepancies in financial reporting.",
+      solution: "Designed and deployed a region-aware billing solution using Power Apps, Power Automate, and SQL Server. The platform streamlined submission, automated multi-stage approvals, applied tax logic per region, and routed charges based on jurisdictional rules and hierarchies — all from a single, auditable interface.",
+      results: ["Improved billing accuracy across 20+ offices", "Cut processing delays by over 80%", "Streamlined routing and compliance logic", "Unified dashboards = better financial oversight"],
+      duration: "4 months",
+      teamSize: "1 person",
+      image: "/lovable-uploads/dcc2000a-27b4-4ee7-bc03-8275800402d6.png",
+      tags: ["Power Apps", "Power Automate", "SQL Server"]
     }
   ];
 
