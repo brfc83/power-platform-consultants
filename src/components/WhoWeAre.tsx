@@ -31,6 +31,15 @@ const WhoWeAre = () => {
             <p>
               We don't just implement tools — we help businesses think smarter and operate smoother. Every solution is tailored, tested, and refined to reflect your team's real-world needs.
             </p>
+            
+            <div className="mt-12 bg-muted/50 rounded-lg p-8 border">
+              <p className="text-foreground italic text-lg mb-4">
+                "The team at Forma Automate brought clarity to our complex workflows. Their attention to detail and user-focused approach made all the difference."
+              </p>
+              <div className="text-sm text-muted-foreground">
+                — Transport Operations Director
+              </div>
+            </div>
           </div>
         </div>
       </div>
