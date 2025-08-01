@@ -39,15 +39,6 @@ const Hero = () => {
                 <div className="text-primary-foreground/80">Years Experience</div>
               </div>
             </div>
-            
-            <div className="bg-primary-foreground/10 rounded-lg p-6 border border-primary-foreground/20">
-              <p className="text-primary-foreground/90 italic mb-3">
-                "Forma Automate delivered exceptional Power Platform solutions that transformed our operations and saved countless hours."
-              </p>
-              <div className="text-sm text-primary-foreground/70">
-                — Leading Global Law Firm
-              </div>
-            </div>
           </div>
           
           <div className="relative">
