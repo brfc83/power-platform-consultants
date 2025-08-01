@@ -25,7 +25,7 @@ const WhoWeAre = () => {
             </p>
             
             <p>
-              Founded with a belief that technology should feel intuitive, we specialise in Power Platform solutions that combine strategic insight with thoughtful design. Whether it's streamlining workflows or crafting bespoke interfaces, our focus is always on clarity, functionality, and trust.
+              Founded with a belief that technology should feel intuitive, we specialise in Power Platform solutions, digital transformation, and operational automation that combine strategic insight with thoughtful design. Whether it's streamlining workflows or crafting bespoke interfaces, our focus is always on clarity, functionality, and trust.
             </p>
             
             <p>
