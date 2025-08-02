@@ -100,7 +100,7 @@ export default {
 				},
 				scroll: {
 					'0%': { transform: 'translate3d(0, 0, 0)' },
-					'100%': { transform: 'translate3d(-33.33%, 0, 0)' }
+					'100%': { transform: 'translate3d(-83.33%, 0, 0)' }
 				}
 			},
 			animation: {
