@@ -1,22 +1,23 @@
-# Welcome to your Lovable project
+# Forma Automate - Power Platform Consultancy
 
 ## Project info
 
-**URL**: https://lovable.dev/projects/48e4f3b1-2db4-4082-b4e3-64a739d1b819
+**Company**: Forma Automate - Power Platform Consulting Specialists
+**Website**: https://www.formaautomate.com
 
 ## How can I edit this code?
 
 There are several ways of editing your application.
 
-**Use Lovable**
+**Use the development environment**
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/48e4f3b1-2db4-4082-b4e3-64a739d1b819) and start prompting.
+You can edit this repo using your preferred development tools.
 
-Changes made via Lovable will be committed automatically to this repo.
+Changes made will be reflected in the live application.
 
 **Use your preferred IDE**
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+If you want to work locally using your own IDE, you can clone this repo and push changes.
 
 The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
 
@@ -62,12 +63,10 @@ This project is built with:
 
 ## How can I deploy this project?
 
-Simply open [Lovable](https://lovable.dev/projects/48e4f3b1-2db4-4082-b4e3-64a739d1b819) and click on Share -> Publish.
+Deploy your application using your preferred hosting service.
 
-## Can I connect a custom domain to my Lovable project?
+## Custom Domain
 
-Yes, you can!
+This project is configured to run on the custom domain: https://www.formaautomate.com
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+The domain is properly configured with SEO optimization and security headers.
