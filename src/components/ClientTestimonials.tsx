@@ -43,7 +43,7 @@ const ClientTestimonials = () => {
     },
     {
       id: 3,
-      quote: "Working with Arif was always a pleasure and was instrumental in our app development and maintenance. He is highly knowledgeable and thorough in his approach to being able to apply solutions to complex issues. Highly recommended.",
+      quote: "Working with Arif (Forma Automate) was always a pleasure and was instrumental in our app development and maintenance. He is highly knowledgeable and thorough in his approach to being able to apply solutions to complex issues. Highly recommended.",
       name: "Kevin K. | Portfolio Resource",
       company: "easyJet",
       logo: "/fa-uploads/easyJet-logo.png",
