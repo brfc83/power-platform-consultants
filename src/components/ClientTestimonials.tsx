@@ -40,6 +40,15 @@ const ClientTestimonials = () => {
       logo: "/fa-uploads/crossrail-logo.png",
       logoAlt: "Crossrail logo – client testimonial",
       tags: ["SharePoint", "Automation", "User Training"]
+    },
+    {
+      id: 3,
+      quote: "Working with Arif was always a pleasure and was instrumental in our app development and maintenance. He is highly knowledgeable and thorough in his approach to being able to apply solutions to complex issues. Highly recommended.",
+      name: "Kevin K. | Portfolio Resource",
+      company: "easyJet",
+      logo: "/fa-uploads/easyJet-logo.png",
+      logoAlt: "EasyJet logo — Forma Automate Power Platform consulting testimonial",
+      tags: ["Power Platform", "SharePoint", "Power Automate", "Power Apps", "Automation"]
     }
   ];
 
