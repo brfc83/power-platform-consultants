@@ -83,18 +83,8 @@ const CaseStudies = () => {
             {caseStudies.map((study) => (
               <Card key={study.id} className="overflow-hidden hover:shadow-elegant transition-all duration-300">
                 <div className="grid md:grid-cols-2 gap-0">
-                  {/* Image */}
-                  <div className="relative h-64 md:h-auto bg-muted/50 flex items-center justify-center p-4">
-                    <img 
-                      src={study.image} 
-                      alt={study.title}
-                      className="w-full h-full object-contain"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-r from-primary/10 to-transparent"></div>
-                  </div>
-                  
                   {/* Content */}
-                  <div className="p-8">
+                  <div className="p-8 order-1 md:order-none">
                     <div className="flex flex-wrap gap-2 mb-4">
                       {study.tags.map((tag) => (
                         <span key={tag} className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">
@@ -146,6 +136,17 @@ const CaseStudies = () => {
                         </div>
                       </div>
                     </CardContent>
+                  </div>
+                  
+                  {/* Image */}
+                  <div className="relative h-64 md:h-auto bg-muted/50 flex items-center justify-center p-4 order-2 md:order-none">
+                    <img 
+                      src={study.image} 
+                      alt={`${study.title} case study visualization`}
+                      className="w-full h-full object-contain"
+                      loading="lazy"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-r from-primary/10 to-transparent"></div>
                   </div>
                 </div>
               </Card>
