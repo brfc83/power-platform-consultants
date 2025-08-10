@@ -1,6 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Quote, ChevronLeft, ChevronRight, ExternalLink } from "lucide-react";
+import { Quote, ChevronLeft, ChevronRight, ExternalLink, Shield } from "lucide-react";
 import useEmblaCarousel from 'embla-carousel-react';
 import { useCallback } from 'react';
 
@@ -30,7 +30,8 @@ const ClientTestimonials = () => {
       company: "easyJet",
       logo: "/fa-uploads/easyJet-logo.png",
       logoAlt: "EasyJet logo — Forma Automate Power Platform project in airline sector",
-      tags: ["Power Platform", "SharePoint", "ALM", "Power Automate", "Power Apps"]
+      tags: ["Power Platform", "SharePoint", "ALM", "Power Automate", "Power Apps"],
+      platform: "YunoJuno"
     },
     {
       id: 2,
@@ -39,7 +40,8 @@ const ClientTestimonials = () => {
       company: "Crossrail (Elizabeth Line)",
       logo: "/fa-uploads/crossrail-logo.png",
       logoAlt: "Crossrail logo – client testimonial",
-      tags: ["SharePoint", "Automation", "User Training"]
+      tags: ["SharePoint", "Automation", "User Training"],
+      platform: "UpWork"
     },
     {
       id: 3,
@@ -91,13 +93,21 @@ const ClientTestimonials = () => {
                             alt={testimonial.logoAlt}
                             className="h-8 w-auto"
                           />
-                          <div>
+                          <div className="flex-1">
                             <div className="font-semibold text-foreground">
                               {testimonial.name}
                             </div>
                             <div className="text-sm text-muted-foreground">
                               {testimonial.company}
                             </div>
+                            {(testimonial.platform || testimonial.googleReviewUrl) && (
+                              <div className="flex items-center gap-2 mt-1">
+                                <Shield className="h-3 w-3 text-primary" />
+                                <span className="text-xs text-primary font-medium">
+                                  {testimonial.platform ? `Verified on ${testimonial.platform}` : 'Verified on Google'}
+                                </span>
+                              </div>
+                            )}
                           </div>
                         </div>
                         
