@@ -30,7 +30,7 @@ const ClientTestimonials = () => {
       company: "easyJet",
       logo: "/fa-uploads/easyJet-logo.png",
       logoAlt: "EasyJet logo — Forma Automate Power Platform project in airline sector",
-      tags: ["Power Platform", "SharePoint", "ALM", "Power Automate", "Power Apps"],
+      tags: ["Power Platform", "SharePoint", "ALM", "Power Automate", "Power Apps", "PPM Solutions", "Performance Optimization", "Consulting"],
       platform: "YunoJuno"
     },
     {
@@ -40,7 +40,7 @@ const ClientTestimonials = () => {
       company: "Crossrail (Elizabeth Line)",
       logo: "/fa-uploads/crossrail-logo.png",
       logoAlt: "Crossrail logo – client testimonial",
-      tags: ["SharePoint", "Intranet Development", "Platform Development", "Consulting", "Mission-Critical Systems", "Automation", "User Training"],
+      tags: ["SharePoint", "Intranet Development", "Platform Development", "Consulting", "Mission-Critical Systems"],
       platform: "UpWork"
     },
     {
@@ -50,7 +50,7 @@ const ClientTestimonials = () => {
       company: "easyJet",
       logo: "/fa-uploads/easyJet-logo.png",
       logoAlt: "EasyJet logo — Forma Automate Power Platform consulting testimonial",
-      tags: ["Power Platform", "SharePoint", "Power Automate", "Power Apps", "Automation"],
+      tags: ["Power Platform", "SharePoint", "Power Automate", "Power Apps", "Complex Problem Solving", "Consulting"],
       googleReviewUrl: "https://maps.app.goo.gl/b5xQk6vcpRJy1MF66"
     }
   ];
