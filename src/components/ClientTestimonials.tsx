@@ -40,7 +40,7 @@ const ClientTestimonials = () => {
       company: "Crossrail (Elizabeth Line)",
       logo: "/fa-uploads/crossrail-logo.png",
       logoAlt: "Crossrail logo – client testimonial",
-      tags: ["SharePoint", "Automation", "User Training"],
+      tags: ["SharePoint", "Intranet Development", "Platform Development", "Consulting", "Mission-Critical Systems", "Automation", "User Training"],
       platform: "UpWork"
     },
     {
