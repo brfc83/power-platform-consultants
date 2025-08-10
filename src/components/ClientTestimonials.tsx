@@ -1,6 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Quote, ChevronLeft, ChevronRight } from "lucide-react";
+import { Quote, ChevronLeft, ChevronRight, ExternalLink } from "lucide-react";
 import useEmblaCarousel from 'embla-carousel-react';
 import { useCallback } from 'react';
 
@@ -48,7 +48,8 @@ const ClientTestimonials = () => {
       company: "easyJet",
       logo: "/fa-uploads/easyJet-logo.png",
       logoAlt: "EasyJet logo — Forma Automate Power Platform consulting testimonial",
-      tags: ["Power Platform", "SharePoint", "Power Automate", "Power Apps", "Automation"]
+      tags: ["Power Platform", "SharePoint", "Power Automate", "Power Apps", "Automation"],
+      googleReviewUrl: "https://maps.app.goo.gl/b5xQk6vcpRJy1MF66"
     }
   ];
 
@@ -109,6 +110,21 @@ const ClientTestimonials = () => {
                           Let's talk about driving real efficiency
                         </Button>
                       </div>
+                      
+                      {/* Google Review Link (if available) */}
+                      {testimonial.googleReviewUrl && (
+                        <div className="mt-6 mb-4">
+                          <a 
+                            href={testimonial.googleReviewUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-2 text-sm text-primary hover:text-primary/80 transition-colors"
+                          >
+                            <ExternalLink className="h-4 w-4" />
+                            View on Google Reviews
+                          </a>
+                        </div>
+                      )}
                       
                       {/* SEO Tags */}
                       <div className="mt-6 flex flex-wrap gap-2" aria-label={`Technologies: ${testimonial.tags.join(', ')}`}>
