@@ -201,20 +201,20 @@ const ClientTestimonials = () => {
           {/* Navigation Buttons */}
           <Button
             variant="outline"
-            size="icon"
-            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-background/80 backdrop-blur-sm border-primary/20 hover:bg-primary hover:text-primary-foreground"
+            size="lg"
+            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-6 md:-translate-x-4 bg-background/95 backdrop-blur-sm border-primary/30 hover:bg-primary hover:text-primary-foreground shadow-lg hover:shadow-xl transition-all duration-200 w-12 h-12 md:w-14 md:h-14"
             onClick={scrollPrev}
           >
-            <ChevronLeft className="h-4 w-4" />
+            <ChevronLeft className="h-6 w-6 md:h-7 md:w-7" />
           </Button>
           
           <Button
             variant="outline"
-            size="icon"
-            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 bg-background/80 backdrop-blur-sm border-primary/20 hover:bg-primary hover:text-primary-foreground"
+            size="lg"
+            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-6 md:translate-x-4 bg-background/95 backdrop-blur-sm border-primary/30 hover:bg-primary hover:text-primary-foreground shadow-lg hover:shadow-xl transition-all duration-200 w-12 h-12 md:w-14 md:h-14"
             onClick={scrollNext}
           >
-            <ChevronRight className="h-4 w-4" />
+            <ChevronRight className="h-6 w-6 md:h-7 md:w-7" />
           </Button>
         </div>
       </div>
