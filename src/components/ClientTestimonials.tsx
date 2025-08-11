@@ -1,11 +1,13 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Quote, ChevronLeft, ChevronRight, ExternalLink, Shield } from "lucide-react";
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
+import { Quote, ChevronLeft, ChevronRight, ExternalLink, Shield, ChevronDown } from "lucide-react";
 import useEmblaCarousel from 'embla-carousel-react';
-import { useCallback } from 'react';
+import { useCallback, useState } from 'react';
 
 const ClientTestimonials = () => {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
+  const [expandedTestimonials, setExpandedTestimonials] = useState<Record<number, boolean>>({});
 
   const scrollToContact = () => {
     const contactElement = document.getElementById('contact');
@@ -21,6 +23,25 @@ const ClientTestimonials = () => {
   const scrollNext = useCallback(() => {
     if (emblaApi) emblaApi.scrollNext();
   }, [emblaApi]);
+
+  const toggleExpanded = (id: number) => {
+    setExpandedTestimonials(prev => ({
+      ...prev,
+      [id]: !prev[id]
+    }));
+  };
+
+  const getTruncatedQuote = (quote: string, id: number) => {
+    // Target length based on Tim's testimonial (id: 2)
+    const targetLength = 380; // Approximate character count for Tim's testimonial
+    
+    if (quote.length <= targetLength) {
+      return { truncated: quote, needsExpansion: false };
+    }
+    
+    const truncated = quote.substring(0, targetLength).trim() + '...';
+    return { truncated, needsExpansion: true };
+  };
 
   const testimonials = [
     {
@@ -79,11 +100,37 @@ const ClientTestimonials = () => {
                     <CardContent className="p-8 md:p-12">
                       <div className="flex items-start mb-6">
                         <Quote className="h-12 w-12 text-primary/60 flex-shrink-0 mr-4" />
-                        <div className="flex-1">
-                          <p className="text-lg text-foreground leading-relaxed mb-8">
-                            "{testimonial.quote}"
-                          </p>
-                        </div>
+                         <div className="flex-1">
+                           {(() => {
+                             const { truncated, needsExpansion } = getTruncatedQuote(testimonial.quote, testimonial.id);
+                             const isExpanded = expandedTestimonials[testimonial.id];
+                             
+                             return (
+                               <div className="mb-8">
+                                 <p className="text-lg text-foreground leading-relaxed">
+                                   "{isExpanded ? testimonial.quote : truncated}"
+                                 </p>
+                                 {needsExpansion && (
+                                   <Collapsible>
+                                     <CollapsibleTrigger asChild>
+                                       <Button
+                                         variant="ghost"
+                                         size="sm"
+                                         className="mt-2 p-0 h-auto text-primary hover:text-primary/80"
+                                         onClick={() => toggleExpanded(testimonial.id)}
+                                       >
+                                         <span className="mr-1">
+                                           {isExpanded ? 'Read less' : 'Read more'}
+                                         </span>
+                                         <ChevronDown className={`h-4 w-4 transition-transform ${isExpanded ? 'rotate-180' : ''}`} />
+                                       </Button>
+                                     </CollapsibleTrigger>
+                                   </Collapsible>
+                                 )}
+                               </div>
+                             );
+                           })()}
+                         </div>
                       </div>
                       
                       <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
