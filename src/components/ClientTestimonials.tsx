@@ -56,7 +56,7 @@ const ClientTestimonials = () => {
   ];
 
   return (
-    <section className="py-20 bg-muted/30">
+    <section className="py-12 md:py-20 bg-muted/30">
       <div className="container mx-auto px-4">
         {/* Real Stories. Real Impact Section */}
         <div className="text-center mb-16">
@@ -75,9 +75,9 @@ const ClientTestimonials = () => {
             <div className="flex">
               {testimonials.map((testimonial) => (
                 <div key={testimonial.id} className="flex-[0_0_100%] min-w-0">
-                  <Card className="group hover:shadow-elegant transition-all duration-300 hover:-translate-y-1 border-primary/10 mx-4 h-full">
-                    <CardContent className="p-6 md:p-12 h-full flex flex-col">
-                      <div className="flex items-start mb-6 flex-grow">
+                  <Card className="group hover:shadow-elegant transition-all duration-300 hover:-translate-y-1 border-primary/10 mx-4">
+                    <CardContent className="p-6 md:p-12">
+                      <div className="flex items-start mb-6">
                         <Quote className="h-12 w-12 text-primary/60 flex-shrink-0 mr-4" />
                         <div className="flex-1">
                           <p className="text-lg text-foreground leading-relaxed mb-8">
@@ -86,7 +86,7 @@ const ClientTestimonials = () => {
                         </div>
                       </div>
                       
-                      <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6 mt-auto">
+                      <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
                         <div className="flex items-center space-x-4">
                           <img 
                             src={testimonial.logo}
