@@ -2,11 +2,10 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Quote, ChevronLeft, ChevronRight, ExternalLink, Shield } from "lucide-react";
 import useEmblaCarousel from 'embla-carousel-react';
-import { useCallback, useEffect, useState } from 'react';
+import { useCallback } from 'react';
 
 const ClientTestimonials = () => {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
-  const [selectedIndex, setSelectedIndex] = useState(0);
 
   const scrollToContact = () => {
     const contactElement = document.getElementById('contact');
@@ -22,18 +21,6 @@ const ClientTestimonials = () => {
   const scrollNext = useCallback(() => {
     if (emblaApi) emblaApi.scrollNext();
   }, [emblaApi]);
-
-  const onSelect = useCallback(() => {
-    if (!emblaApi) return;
-    setSelectedIndex(emblaApi.selectedScrollSnap());
-  }, [emblaApi, setSelectedIndex]);
-
-  useEffect(() => {
-    if (!emblaApi) return;
-    onSelect();
-    emblaApi.on('select', onSelect);
-    emblaApi.on('reInit', onSelect);
-  }, [emblaApi, onSelect]);
 
   const testimonials = [
     {
@@ -68,19 +55,8 @@ const ClientTestimonials = () => {
     }
   ];
 
-  // Calculate dynamic spacing based on active testimonial length
-  const getDynamicSpacing = () => {
-    const currentTestimonial = testimonials[selectedIndex];
-    const quoteLength = currentTestimonial?.quote.length || 0;
-    
-    // Becky's testimonial is ~1240 chars (longest), Tim's is ~550, Kevin's is ~220
-    if (quoteLength > 1000) return 'mb-8'; // Long testimonial - less bottom margin
-    if (quoteLength > 400) return 'mb-16'; // Medium testimonial - medium margin  
-    return 'mb-24'; // Short testimonial - more bottom margin
-  };
-
   return (
-    <section className="py-12 md:py-20 bg-muted/30">
+    <section className="py-20 bg-muted/30">
       <div className="container mx-auto px-4">
         {/* Real Stories. Real Impact Section */}
         <div className="text-center mb-16">
@@ -94,13 +70,13 @@ const ClientTestimonials = () => {
         </div>
 
         {/* Testimonials Carousel */}
-        <div className={`max-w-4xl mx-auto relative transition-all duration-500 ease-in-out ${getDynamicSpacing()}`}>
+        <div className="max-w-4xl mx-auto relative">
           <div className="overflow-hidden" ref={emblaRef}>
             <div className="flex">
               {testimonials.map((testimonial) => (
                 <div key={testimonial.id} className="flex-[0_0_100%] min-w-0">
                   <Card className="group hover:shadow-elegant transition-all duration-300 hover:-translate-y-1 border-primary/10 mx-4">
-                    <CardContent className="p-6 md:p-12">
+                    <CardContent className="p-8 md:p-12">
                       <div className="flex items-start mb-6">
                         <Quote className="h-12 w-12 text-primary/60 flex-shrink-0 mr-4" />
                         <div className="flex-1">
@@ -179,19 +155,19 @@ const ClientTestimonials = () => {
           <Button
             variant="outline"
             size="icon"
-            className="absolute left-2 md:left-0 top-1/2 -translate-y-1/2 md:-translate-x-4 bg-primary/90 backdrop-blur-sm border-primary/20 hover:bg-primary text-primary-foreground shadow-lg w-10 h-10 md:w-8 md:h-8"
+            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-background/80 backdrop-blur-sm border-primary/20 hover:bg-primary hover:text-primary-foreground"
             onClick={scrollPrev}
           >
-            <ChevronLeft className="h-5 w-5 md:h-4 md:w-4" />
+            <ChevronLeft className="h-4 w-4" />
           </Button>
           
           <Button
             variant="outline"
             size="icon"
-            className="absolute right-2 md:right-0 top-1/2 -translate-y-1/2 md:translate-x-4 bg-primary/90 backdrop-blur-sm border-primary/20 hover:bg-primary text-primary-foreground shadow-lg w-10 h-10 md:w-8 md:h-8"
+            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 bg-background/80 backdrop-blur-sm border-primary/20 hover:bg-primary hover:text-primary-foreground"
             onClick={scrollNext}
           >
-            <ChevronRight className="h-5 w-5 md:h-4 md:w-4" />
+            <ChevronRight className="h-4 w-4" />
           </Button>
         </div>
       </div>
