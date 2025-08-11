@@ -75,9 +75,9 @@ const ClientTestimonials = () => {
             <div className="flex">
               {testimonials.map((testimonial) => (
                 <div key={testimonial.id} className="flex-[0_0_100%] min-w-0">
-                  <Card className="group hover:shadow-elegant transition-all duration-300 hover:-translate-y-1 border-primary/10 mx-4">
-                    <CardContent className="p-8 md:p-12">
-                      <div className="flex items-start mb-6">
+                  <Card className="group hover:shadow-elegant transition-all duration-300 hover:-translate-y-1 border-primary/10 mx-4 h-full">
+                    <CardContent className="p-6 md:p-12 h-full flex flex-col">
+                      <div className="flex items-start mb-6 flex-grow">
                         <Quote className="h-12 w-12 text-primary/60 flex-shrink-0 mr-4" />
                         <div className="flex-1">
                           <p className="text-lg text-foreground leading-relaxed mb-8">
@@ -86,7 +86,7 @@ const ClientTestimonials = () => {
                         </div>
                       </div>
                       
-                      <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+                      <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6 mt-auto">
                         <div className="flex items-center space-x-4">
                           <img 
                             src={testimonial.logo}
@@ -155,19 +155,19 @@ const ClientTestimonials = () => {
           <Button
             variant="outline"
             size="icon"
-            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-background/80 backdrop-blur-sm border-primary/20 hover:bg-primary hover:text-primary-foreground"
+            className="absolute left-2 md:left-0 top-1/2 -translate-y-1/2 md:-translate-x-4 bg-primary/90 backdrop-blur-sm border-primary/20 hover:bg-primary text-primary-foreground shadow-lg w-10 h-10 md:w-8 md:h-8"
             onClick={scrollPrev}
           >
-            <ChevronLeft className="h-4 w-4" />
+            <ChevronLeft className="h-5 w-5 md:h-4 md:w-4" />
           </Button>
           
           <Button
             variant="outline"
             size="icon"
-            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 bg-background/80 backdrop-blur-sm border-primary/20 hover:bg-primary hover:text-primary-foreground"
+            className="absolute right-2 md:right-0 top-1/2 -translate-y-1/2 md:translate-x-4 bg-primary/90 backdrop-blur-sm border-primary/20 hover:bg-primary text-primary-foreground shadow-lg w-10 h-10 md:w-8 md:h-8"
             onClick={scrollNext}
           >
-            <ChevronRight className="h-4 w-4" />
+            <ChevronRight className="h-5 w-5 md:h-4 md:w-4" />
           </Button>
         </div>
       </div>
