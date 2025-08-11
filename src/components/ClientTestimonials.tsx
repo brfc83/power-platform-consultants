@@ -2,10 +2,11 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Quote, ChevronLeft, ChevronRight, ExternalLink, Shield } from "lucide-react";
 import useEmblaCarousel from 'embla-carousel-react';
-import { useCallback } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 
 const ClientTestimonials = () => {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
+  const [selectedIndex, setSelectedIndex] = useState(0);
 
   const scrollToContact = () => {
     const contactElement = document.getElementById('contact');
@@ -21,6 +22,18 @@ const ClientTestimonials = () => {
   const scrollNext = useCallback(() => {
     if (emblaApi) emblaApi.scrollNext();
   }, [emblaApi]);
+
+  const onSelect = useCallback(() => {
+    if (!emblaApi) return;
+    setSelectedIndex(emblaApi.selectedScrollSnap());
+  }, [emblaApi, setSelectedIndex]);
+
+  useEffect(() => {
+    if (!emblaApi) return;
+    onSelect();
+    emblaApi.on('select', onSelect);
+    emblaApi.on('reInit', onSelect);
+  }, [emblaApi, onSelect]);
 
   const testimonials = [
     {
@@ -55,6 +68,17 @@ const ClientTestimonials = () => {
     }
   ];
 
+  // Calculate dynamic spacing based on active testimonial length
+  const getDynamicSpacing = () => {
+    const currentTestimonial = testimonials[selectedIndex];
+    const quoteLength = currentTestimonial?.quote.length || 0;
+    
+    // Becky's testimonial is ~1240 chars (longest), Tim's is ~550, Kevin's is ~220
+    if (quoteLength > 1000) return 'mb-8'; // Long testimonial - less bottom margin
+    if (quoteLength > 400) return 'mb-16'; // Medium testimonial - medium margin  
+    return 'mb-24'; // Short testimonial - more bottom margin
+  };
+
   return (
     <section className="py-12 md:py-20 bg-muted/30">
       <div className="container mx-auto px-4">
@@ -70,7 +94,7 @@ const ClientTestimonials = () => {
         </div>
 
         {/* Testimonials Carousel */}
-        <div className="max-w-4xl mx-auto relative">
+        <div className={`max-w-4xl mx-auto relative transition-all duration-500 ease-in-out ${getDynamicSpacing()}`}>
           <div className="overflow-hidden" ref={emblaRef}>
             <div className="flex">
               {testimonials.map((testimonial) => (
