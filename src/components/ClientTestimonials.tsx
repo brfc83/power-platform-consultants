@@ -81,8 +81,7 @@ const ClientTestimonials = () => {
       company: "Dentons",
       logo: "/fa-uploads/dentons-logo.png",
       logoAlt: "Dentons logo — Global law firm Power Platform transformation testimonial",
-      tags: ["Power Apps", "SQL", "Power Automate", "Global Finance Transformation Programme", "Enterprise Solutions", "Consulting"],
-      googleReviewUrl: "https://maps.app.goo.gl/b5xQk6vcpRJy1MF66"
+      tags: ["Power Apps", "SQL", "Power Automate", "Global Finance Transformation Programme", "Enterprise Solutions", "Consulting"]
     }
   ];
 
