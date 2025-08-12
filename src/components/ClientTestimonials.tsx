@@ -6,6 +6,7 @@ import useEmblaCarousel from 'embla-carousel-react';
 import { useCallback, useState } from 'react';
 
 const ClientTestimonials = () => {
+  console.log('ClientTestimonials component rendering');
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
   const [expandedTestimonials, setExpandedTestimonials] = useState<Record<number, boolean>>({});
 
