@@ -57,7 +57,7 @@ const CaseStudies = () => {
       solution: "Led the migration as SharePoint Engineer, overseeing planning, remediation, and execution. Navigated broken custom solutions, missing documentation, and orphaned sites with no active stakeholders. Optimised existing on-premise resources to avoid additional server provisioning whilst ensuring business continuity.",
       results: ["All 300+ site collections successfully migrated to SharePoint 2013", "Decommissioned out-of-support licensing, saving substantial annual costs", "Avoided additional server provisioning by optimising existing on-premise resources", "Delivered a stable, supportable SharePoint environment with no business disruption"],
       duration: "6 months",
-      teamSize: "3 people",
+      teamSize: "1 person",
       image: "/lovable-uploads/d22b9415-7a13-4bb4-bd58-212d3a48e8f3.png",
       tags: ["SharePoint", "Legacy Migration", "Cost Avoidance", "Infrastructure Optimisation"]
     }
@@ -83,7 +83,7 @@ const CaseStudies = () => {
               Case Studies
             </h1>
             <p className="text-xl text-muted-foreground mb-8">
-              Discover how we've helped organizations transform their operations with innovative Power Platform solutions
+              Discover how we've helped organisations transform their operations with innovative Power Platform solutions
             </p>
           </div>
         </div>
@@ -172,7 +172,7 @@ const CaseStudies = () => {
       <section className="py-16 bg-gradient-primary">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold text-primary-foreground mb-4">
-            Ready to Transform Your Organization?
+            Ready to Transform Your Organisation?
           </h2>
           <p className="text-xl text-primary-foreground/90 mb-8 max-w-2xl mx-auto">
             Let's discuss how we can help you achieve similar results with custom Power Platform solutions
