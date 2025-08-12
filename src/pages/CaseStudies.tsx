@@ -47,6 +47,19 @@ const CaseStudies = () => {
       teamSize: "1 person",
       image: "/lovable-uploads/dcc2000a-27b4-4ee7-bc03-8275800402d6.png",
       tags: ["Power Apps", "Power Automate", "SQL Server"]
+    },
+    {
+      id: 4,
+      title: "SharePoint 2010 to 2013 On-Premise Migration",
+      client: "Global Real Estate Firm",
+      sector: "Real Estate",
+      challenge: "The client operated over 300 site collections on SharePoint 2010, many relying on undocumented custom code with no active site owners. Microsoft had marked the platform as out of support, and the client was incurring significant costs to maintain legacy licensing. Migration to SharePoint 2013 was essential to reduce risk, cut costs, and avoid further infrastructure expansion.",
+      solution: "Led the migration as SharePoint Engineer, overseeing planning, remediation, and execution. Navigated broken custom solutions, missing documentation, and orphaned sites with no active stakeholders. Optimised existing on-premise resources to avoid additional server provisioning whilst ensuring business continuity.",
+      results: ["All 300+ site collections successfully migrated to SharePoint 2013", "Decommissioned out-of-support licensing, saving substantial annual costs", "Avoided additional server provisioning by optimising existing on-premise resources", "Delivered a stable, supportable SharePoint environment with no business disruption"],
+      duration: "6 months",
+      teamSize: "3 people",
+      image: "/lovable-uploads/d22b9415-7a13-4bb4-bd58-212d3a48e8f3.png",
+      tags: ["SharePoint", "Legacy Migration", "Cost Avoidance", "Infrastructure Optimisation"]
     }
   ];
 
