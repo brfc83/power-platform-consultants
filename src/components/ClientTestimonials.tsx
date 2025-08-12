@@ -32,8 +32,8 @@ const ClientTestimonials = () => {
   };
 
   const getTruncatedQuote = (quote: string, id: number) => {
-    // Target length based on Tim's testimonial (id: 2)
-    const targetLength = 380; // Approximate character count for Tim's testimonial
+    // Target length based on Kevin's testimonial (id: 3) - now the default
+    const targetLength = 220; // Approximate character count for Kevin's testimonial
     
     if (quote.length <= targetLength) {
       return { truncated: quote, needsExpansion: false };
@@ -51,7 +51,7 @@ const ClientTestimonials = () => {
       company: "easyJet",
       logo: "/fa-uploads/easyJet-logo.png",
       logoAlt: "EasyJet logo — Forma Automate Power Platform project in airline sector",
-      tags: ["Power Platform", "SharePoint", "ALM", "Power Automate", "Power Apps", "PPM Solutions", "Performance Optimization", "Consulting"],
+      tags: ["Power Platform", "SharePoint", "ALM", "Power Automate", "Power Apps", "PPM Solutions", "Consulting"],
       platform: "YunoJuno"
     },
     {
@@ -72,6 +72,16 @@ const ClientTestimonials = () => {
       logo: "/fa-uploads/easyJet-logo.png",
       logoAlt: "EasyJet logo — Forma Automate Power Platform consulting testimonial",
       tags: ["Power Platform", "SharePoint", "Power Automate", "Power Apps", "Complex Problem Solving", "Consulting"],
+      googleReviewUrl: "https://maps.app.goo.gl/b5xQk6vcpRJy1MF66"
+    },
+    {
+      id: 4,
+      quote: "I have had the immense pleasure of working with Arif in his role of Global Power Apps Specialist, at Dentons, the largest law firm in the world, on a firmwide transformation programme, spanning across various regions. Arif has proven himself to be a subject matter expert, he never misses the detail that others cannot, which makes him extremely valuable and indispensable! Arif brings creativity to solutions to solve complex problems and is extremely diligent. Arif can work both independently and very well in a team - he listens to understand to what his team has to say, and he never lets his team down. Arif has exceptional communication skills and goes out of his way to explain patiently when others have questions. What I also value about Arif is that he will research a solution for a problem until he finds one - then bringing that back to the team and Stakeholders for all to learn from, which makes him a mentor, and a leader! Arif is always committed to excellence - I would highly recommend him for any role he wishes to tackle next - his professionalism, expertise and his calm composed nature is an asset to any client!",
+      name: "Charleen M.",
+      company: "Dentons",
+      logo: "/fa-uploads/dentons-logo.png",
+      logoAlt: "Dentons logo — Global law firm Power Platform transformation testimonial",
+      tags: ["Power Apps", "SQL", "Power Automate", "Global Finance Transformation Programme", "Enterprise Solutions", "Consulting"],
       googleReviewUrl: "https://maps.app.goo.gl/b5xQk6vcpRJy1MF66"
     }
   ];
