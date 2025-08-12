@@ -149,7 +149,7 @@ const ClientTestimonials = () => {
                           <img 
                             src={testimonial.logo}
                             alt={testimonial.logoAlt}
-                            className="h-8 w-auto"
+                            className={testimonial.company === "Dentons" ? "h-10 w-auto" : "h-8 w-auto"}
                           />
                           <div className="flex-1">
                             <div className="font-semibold text-foreground">
