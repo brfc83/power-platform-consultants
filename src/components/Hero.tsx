@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { Helmet } from "react-helmet-async";
 import heroImage from "@/assets/hero-dashboard-updated.jpg";
 
@@ -10,26 +10,24 @@ const Hero = () => {
 
   const CountUpNumber = ({ end, duration = 2000, suffix = "" }: { end: number; duration?: number; suffix?: string }) => {
     const [count, setCount] = useState(0);
-    const [hasAnimated, setHasAnimated] = useState(false);
+    const [hasStarted, setHasStarted] = useState(false);
+    const elementRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
+      if (hasStarted) return; // Never animate again once started
+
       const observer = new IntersectionObserver(
         (entries) => {
-          const entry = entries[0];
-          
-          // Only animate if we haven't animated yet AND element is intersecting
-          if (entry.isIntersecting && !hasAnimated) {
-            setHasAnimated(true);
+          if (entries[0].isIntersecting && !hasStarted) {
+            setHasStarted(true);
+            
             const startTime = Date.now();
-            const startValue = 0;
-
             const animate = () => {
               const elapsed = Date.now() - startTime;
               const progress = Math.min(elapsed / duration, 1);
               
-              // Easing function for smooth animation
               const easeOutQuart = 1 - Math.pow(1 - progress, 4);
-              const currentCount = Math.floor(startValue + (end - startValue) * easeOutQuart);
+              const currentCount = Math.floor((end - 0) * easeOutQuart);
               
               setCount(currentCount);
 
@@ -39,31 +37,24 @@ const Hero = () => {
             };
 
             animate();
-          }
-          
-          // Reset only when element is completely out of view (not intersecting at all)
-          // and we've animated before
-          if (!entry.isIntersecting && hasAnimated && entry.intersectionRatio === 0) {
-            // Add a small delay to prevent immediate reset
-            setTimeout(() => {
-              setHasAnimated(false);
-              setCount(0);
-            }, 500);
+            observer.disconnect(); // Stop observing once animation starts
           }
         },
-        { 
-          threshold: [0, 0.1, 0.5], 
-          rootMargin: '-10px 0px -10px 0px' 
-        }
+        { threshold: 0.3 }
       );
 
-      const element = document.getElementById('stats-section');
-      if (element) observer.observe(element);
+      if (elementRef.current) {
+        observer.observe(elementRef.current);
+      }
 
       return () => observer.disconnect();
-    }, [end, duration, hasAnimated]);
+    }, [end, duration, hasStarted]);
 
-    return <span>{count}{suffix}</span>;
+    return (
+      <div ref={elementRef}>
+        <span>{count}{suffix}</span>
+      </div>
+    );
   };
 
   useEffect(() => {
@@ -118,7 +109,7 @@ const Hero = () => {
                 </Button>
               </div>
               
-              <div className="flex items-center space-x-8 pt-8" id="stats-section">
+              <div className="flex items-center space-x-8 pt-8">
                 <div className="text-center">
                   <div className="text-3xl font-bold">
                     <CountUpNumber end={50} suffix="+" />
