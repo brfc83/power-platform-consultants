@@ -10,13 +10,18 @@ const Hero = () => {
 
   const CountUpNumber = ({ end, duration = 2000, suffix = "" }: { end: number; duration?: number; suffix?: string }) => {
     const hasAnimatedBefore = typeof window !== 'undefined' && sessionStorage.getItem('fa_stats_animated') === '1'
-    const [count, setCount] = useState(hasAnimatedBefore ? end : 0)
+    const [count, setCount] = useState<number>(hasAnimatedBefore ? end : 0)
+    const startedRef = (typeof window !== 'undefined' ? (window as any).__faStatsStartedRef : undefined) || { current: false }
 
     useEffect(() => {
-      if (hasAnimatedBefore) return
+      const alreadyAnimated = typeof window !== 'undefined' && sessionStorage.getItem('fa_stats_animated') === '1'
+      if (alreadyAnimated || startedRef.current) return
+      // Mark as started immediately to avoid React StrictMode double-invoke
+      startedRef.current = true
+      try { sessionStorage.setItem('fa_stats_animated', '1') } catch {}
+
       let raf = 0
       const startTime = performance.now()
-
       const animate = (now: number) => {
         const elapsed = now - startTime
         const progress = Math.min(elapsed / duration, 1)
@@ -25,13 +30,12 @@ const Hero = () => {
         if (progress < 1) {
           raf = requestAnimationFrame(animate)
         } else {
-          try { sessionStorage.setItem('fa_stats_animated', '1') } catch {}
+          setCount(end)
         }
       }
-
       raf = requestAnimationFrame(animate)
       return () => cancelAnimationFrame(raf)
-    }, [end, duration, hasAnimatedBefore])
+    }, [end, duration])
 
     return <span>{count}{suffix}</span>
   };
