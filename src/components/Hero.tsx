@@ -9,30 +9,31 @@ const Hero = () => {
   const [currentSectorIndex, setCurrentSectorIndex] = useState(0);
 
   const CountUpNumber = ({ end, duration = 2000, suffix = "" }: { end: number; duration?: number; suffix?: string }) => {
-    const [count, setCount] = useState(0);
+    const hasAnimatedBefore = typeof window !== 'undefined' && sessionStorage.getItem('fa_stats_animated') === '1'
+    const [count, setCount] = useState(hasAnimatedBefore ? end : 0)
 
     useEffect(() => {
-      const startTime = Date.now();
-      
-      const animate = () => {
-        const elapsed = Date.now() - startTime;
-        const progress = Math.min(elapsed / duration, 1);
-        
-        const easeOutQuart = 1 - Math.pow(1 - progress, 4);
-        const currentCount = Math.floor(end * easeOutQuart);
-        
-        setCount(currentCount);
+      if (hasAnimatedBefore) return
+      let raf = 0
+      const startTime = performance.now()
 
+      const animate = (now: number) => {
+        const elapsed = now - startTime
+        const progress = Math.min(elapsed / duration, 1)
+        const easeOutQuart = 1 - Math.pow(1 - progress, 4)
+        setCount(Math.floor(end * easeOutQuart))
         if (progress < 1) {
-          requestAnimationFrame(animate);
+          raf = requestAnimationFrame(animate)
+        } else {
+          try { sessionStorage.setItem('fa_stats_animated', '1') } catch {}
         }
-      };
+      }
 
-      // Start animation immediately when component mounts
-      animate();
-    }, []); // Empty dependency array - only run once on mount
+      raf = requestAnimationFrame(animate)
+      return () => cancelAnimationFrame(raf)
+    }, [end, duration, hasAnimatedBefore])
 
-    return <span>{count}{suffix}</span>;
+    return <span>{count}{suffix}</span>
   };
 
   useEffect(() => {
