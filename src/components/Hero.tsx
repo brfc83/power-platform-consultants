@@ -11,15 +11,13 @@ const Hero = () => {
   const CountUpNumber = ({ end, duration = 2000, suffix = "" }: { end: number; duration?: number; suffix?: string }) => {
     const [count, setCount] = useState(0);
     const [hasAnimated, setHasAnimated] = useState(false);
-    const [isVisible, setIsVisible] = useState(false);
 
     useEffect(() => {
       const observer = new IntersectionObserver(
         (entries) => {
           const entry = entries[0];
-          setIsVisible(entry.isIntersecting);
           
-          // Start animation when visible and hasn't animated yet
+          // Only animate if we haven't animated yet AND element is intersecting
           if (entry.isIntersecting && !hasAnimated) {
             setHasAnimated(true);
             const startTime = Date.now();
@@ -43,13 +41,20 @@ const Hero = () => {
             animate();
           }
           
-          // Reset animation when completely out of view
-          if (!entry.isIntersecting && entry.boundingClientRect.bottom < 0) {
-            setHasAnimated(false);
-            setCount(0);
+          // Reset only when element is completely out of view (not intersecting at all)
+          // and we've animated before
+          if (!entry.isIntersecting && hasAnimated && entry.intersectionRatio === 0) {
+            // Add a small delay to prevent immediate reset
+            setTimeout(() => {
+              setHasAnimated(false);
+              setCount(0);
+            }, 500);
           }
         },
-        { threshold: 0.5, rootMargin: '50px' }
+        { 
+          threshold: [0, 0.1, 0.5], 
+          rootMargin: '-10px 0px -10px 0px' 
+        }
       );
 
       const element = document.getElementById('stats-section');
