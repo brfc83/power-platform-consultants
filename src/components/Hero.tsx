@@ -33,12 +33,15 @@ const Hero = () => {
                 <div className="h-16 md:h-20 flex items-center">
                   <h2 className="text-2xl md:text-4xl font-semibold text-primary-light">
                     For{" "}
-                    <span className="inline-block min-w-[200px] md:min-w-[300px] text-left">
+                    <span className="inline-block min-w-[200px] md:min-w-[300px] text-left relative">
                       <span 
                         key={currentSectorIndex}
-                        className="animate-fade-in"
+                        className="inline-block animate-pop-in bg-gradient-primary text-primary-foreground px-4 py-2 rounded-lg shadow-glow transform transition-all duration-300 hover:scale-105 relative overflow-hidden"
                       >
-                        {sectors[currentSectorIndex]}
+                        <span className="relative z-10">
+                          {sectors[currentSectorIndex]}
+                        </span>
+                        <div className="absolute inset-0 bg-gradient-to-r from-primary-light/20 to-primary/20 opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
                       </span>
                     </span>
                   </h2>
