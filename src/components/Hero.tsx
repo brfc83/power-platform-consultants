@@ -1,24 +1,52 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Play } from "lucide-react";
+import { ArrowRight } from "lucide-react";
+import { useEffect, useState } from "react";
+import { Helmet } from "react-helmet-async";
 import heroImage from "@/assets/hero-dashboard-updated.jpg";
 
 const Hero = () => {
+  const sectors = ["Real Estate", "Defence", "Infrastructure", "Public Sector", "Legal", "Regulation", "Aviation"];
+  const [currentSectorIndex, setCurrentSectorIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSectorIndex((prev) => (prev + 1) % sectors.length);
+    }, 2000);
+
+    return () => clearInterval(interval);
+  }, [sectors.length]);
+
   return (
-    <section className="pt-24 pb-16 bg-gradient-hero text-primary-foreground">
-      <div className="container mx-auto px-4">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="space-y-8">
-            <div className="space-y-4">
-              <h1 className="text-4xl md:text-6xl font-bold leading-tight">
-                Power Platform Consulting
-                <span className="text-primary-light block">
-                  For Aviation, Legal, Public Sector — and Transformation Anywhere
-                </span>
-              </h1>
-              <p className="text-xl md:text-2xl text-primary-foreground/90 leading-relaxed">
-                We specialise in Microsoft Power Platform solutions, digital transformation, and operational automation — trusted by leading organizations to streamline workflows and build intuitive systems that teams actually want to use.
-              </p>
-            </div>
+    <>
+      <Helmet>
+        <title>Power Platform Consulting | Forma Automate</title>
+        <meta name="description" content="Forma Automate provides Power Platform consulting for Real Estate, Defence, Infrastructure, Public Sector, Legal, Regulation, and Aviation—streamlining workflows and driving digital transformation." />
+      </Helmet>
+      <section className="pt-24 pb-16 bg-gradient-hero text-primary-foreground">
+        <div className="container mx-auto px-4">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="space-y-8">
+              <div className="space-y-4">
+                <h1 className="text-4xl md:text-6xl font-bold leading-tight">
+                  Power Platform Consulting
+                </h1>
+                <div className="h-16 md:h-20 flex items-center">
+                  <h2 className="text-2xl md:text-4xl font-semibold text-primary-light">
+                    For{" "}
+                    <span className="inline-block min-w-[200px] md:min-w-[300px] text-left">
+                      <span 
+                        key={currentSectorIndex}
+                        className="animate-fade-in"
+                      >
+                        {sectors[currentSectorIndex]}
+                      </span>
+                    </span>
+                  </h2>
+                </div>
+                <p className="text-xl md:text-2xl text-primary-foreground/90 leading-relaxed">
+                  Forma Automate delivers Microsoft Power Platform solutions, digital transformation, and operational automation—trusted by sector leaders to streamline workflows, reduce manual effort, and build intuitive systems that teams actually want to use.
+                </p>
+              </div>
             
             <div className="flex flex-col sm:flex-row gap-4">
               <Button variant="hero" size="xl" className="group" asChild>
@@ -45,7 +73,7 @@ const Hero = () => {
             <div className="bg-gradient-primary rounded-2xl p-8 shadow-glow">
               <img 
                 src={heroImage} 
-                alt="Forma Automate - Power Platform dashboard interface showing efficiency metrics and automation workflows for aviation, legal, and public sector digital transformation"
+                alt="Forma Automate Power Platform consulting dashboard showing digital transformation solutions for Real Estate, Defence, Infrastructure, Public Sector, Legal, Regulation, and Aviation sectors"
                 className="w-full h-auto rounded-xl object-cover"
               />
             </div>
@@ -53,6 +81,7 @@ const Hero = () => {
         </div>
       </div>
     </section>
+    </>
   );
 };
 
