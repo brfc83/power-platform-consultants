@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState } from "react";
 import { Helmet } from "react-helmet-async";
 import heroImage from "@/assets/hero-dashboard-updated.jpg";
 
@@ -10,51 +10,29 @@ const Hero = () => {
 
   const CountUpNumber = ({ end, duration = 2000, suffix = "" }: { end: number; duration?: number; suffix?: string }) => {
     const [count, setCount] = useState(0);
-    const [hasStarted, setHasStarted] = useState(false);
-    const elementRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
-      if (hasStarted) return; // Never animate again once started
+      const startTime = Date.now();
+      
+      const animate = () => {
+        const elapsed = Date.now() - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        
+        const easeOutQuart = 1 - Math.pow(1 - progress, 4);
+        const currentCount = Math.floor(end * easeOutQuart);
+        
+        setCount(currentCount);
 
-      const observer = new IntersectionObserver(
-        (entries) => {
-          if (entries[0].isIntersecting && !hasStarted) {
-            setHasStarted(true);
-            
-            const startTime = Date.now();
-            const animate = () => {
-              const elapsed = Date.now() - startTime;
-              const progress = Math.min(elapsed / duration, 1);
-              
-              const easeOutQuart = 1 - Math.pow(1 - progress, 4);
-              const currentCount = Math.floor((end - 0) * easeOutQuart);
-              
-              setCount(currentCount);
+        if (progress < 1) {
+          requestAnimationFrame(animate);
+        }
+      };
 
-              if (progress < 1) {
-                requestAnimationFrame(animate);
-              }
-            };
+      // Start animation immediately when component mounts
+      animate();
+    }, []); // Empty dependency array - only run once on mount
 
-            animate();
-            observer.disconnect(); // Stop observing once animation starts
-          }
-        },
-        { threshold: 0.3 }
-      );
-
-      if (elementRef.current) {
-        observer.observe(elementRef.current);
-      }
-
-      return () => observer.disconnect();
-    }, [end, duration, hasStarted]);
-
-    return (
-      <div ref={elementRef}>
-        <span>{count}{suffix}</span>
-      </div>
-    );
+    return <span>{count}{suffix}</span>;
   };
 
   useEffect(() => {
