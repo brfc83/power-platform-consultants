@@ -11,13 +11,16 @@ const Hero = () => {
   const CountUpNumber = ({ end, duration = 2000, suffix = "" }: { end: number; duration?: number; suffix?: string }) => {
     const [count, setCount] = useState(0);
     const [hasAnimated, setHasAnimated] = useState(false);
+    const [isVisible, setIsVisible] = useState(false);
 
     useEffect(() => {
-      if (hasAnimated) return;
-
       const observer = new IntersectionObserver(
         (entries) => {
-          if (entries[0].isIntersecting) {
+          const entry = entries[0];
+          setIsVisible(entry.isIntersecting);
+          
+          // Start animation when visible and hasn't animated yet
+          if (entry.isIntersecting && !hasAnimated) {
             setHasAnimated(true);
             const startTime = Date.now();
             const startValue = 0;
@@ -38,10 +41,15 @@ const Hero = () => {
             };
 
             animate();
-            observer.disconnect();
+          }
+          
+          // Reset animation when completely out of view
+          if (!entry.isIntersecting && entry.boundingClientRect.bottom < 0) {
+            setHasAnimated(false);
+            setCount(0);
           }
         },
-        { threshold: 0.5 }
+        { threshold: 0.5, rootMargin: '50px' }
       );
 
       const element = document.getElementById('stats-section');
@@ -76,7 +84,7 @@ const Hero = () => {
                   Power Platform Consulting
                 </h1>
                 <div className="h-16 md:h-20 flex items-center">
-                  <h2 className="text-2xl md:text-4xl font-semibold text-primary-light flex items-center">
+                  <h2 className="text-2xl md:text-4xl font-semibold text-primary-foreground flex items-center">
                     <span className="mr-2">For</span>
                     <span className="inline-block min-w-[200px] md:min-w-[300px] text-left relative">
                       <span 
