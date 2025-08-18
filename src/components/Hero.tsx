@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { useEffect, useState } from "react";
 import { Helmet } from "react-helmet-async";
-import heroImage from "@/assets/hero-dashboard-updated.jpg";
+import heroImage from "@/assets/hero-dashboard-professional.jpg";
 
 const Hero = () => {
   const sectors = ["Real Estate", "Defence", "Infrastructure", "Public Sector", "Legal", "Regulation", "Aviation"];
