@@ -79,7 +79,7 @@ const Hero = () => {
                   </h2>
                 </div>
                 <p className="text-xl md:text-2xl text-primary-foreground/90 leading-relaxed">
-                  Forma Automate delivers Microsoft Power Platform solutions, digital transformation, and operational automation—trusted by sector leaders to streamline workflows, reduce manual effort, and build intuitive systems that teams actually want to use.
+                  Forma Automate delivers Microsoft Power Platform solutions, digital transformation and operational automation. Trusted by sector leaders, we streamline workflows, reduce manual effort and build intuitive systems that teams actually want to use.
                 </p>
               </div>
               
