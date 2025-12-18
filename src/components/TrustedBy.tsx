@@ -28,6 +28,10 @@ const TrustedBy = () => {
     {
       name: "Transport for London",
       logo: "/fa-uploads/TfL-logo.png"
+    },
+    {
+      name: "SharkNinja",
+      logo: "/fa-uploads/sharkninja-logo.svg"
     }
   ];
 
@@ -39,7 +43,7 @@ const TrustedBy = () => {
             Trusted by Leading Aviation, Legal & Public Sector Organisations
           </h2>
           <p className="text-xl text-muted-foreground text-center max-w-3xl mx-auto mb-8">
-            Power Platform solutions delivering real results for leading organisations across transport, aviation, legal, financial regulation, and government sectors
+            Power Platform solutions delivering real results for leading organisations across transport, aviation, legal, financial regulation, consumer products, and government sectors
           </p>
         </div>
 
@@ -60,6 +64,7 @@ const TrustedBy = () => {
                     client.name === "Office of Rail and Road" ? "Office of Rail and Road logo — sector collaboration with Forma Automate" :
                     client.name === "QinetiQ" ? "QinetiQ logo — Forma Automate client in advanced engineering services" :
                     client.name === "Transport for London" ? "TfL logo — Forma Automate Power Platform work in public transport" :
+                    client.name === "SharkNinja" ? "SharkNinja logo — consumer products Power Platform solutions by Forma Automate" :
                     `${client.name} - Power Platform consulting client for Microsoft 365 and automation solutions`
                   }
                   className={client.name === "Bermuda Monetary Authority" 

@@ -13,9 +13,9 @@ const Footer = () => {
               className="h-16 w-auto mb-4 brightness-0 invert"
             />
             <p className="text-secondary-foreground/80 leading-relaxed">
-              Microsoft Power Platform specialists trusted by Dentons, TfL, Crossrail, easyJet, and Bermuda Monetary Authority. 
+              Microsoft Power Platform specialists trusted by Dentons, TfL, Crossrail, easyJet, Bermuda Monetary Authority, and SharkNinja. 
               Expert Power Apps, Power Automate, SharePoint, and Dynamics 365 solutions for aviation, 
-              legal, financial regulation, and public sector organisations.
+              legal, financial regulation, consumer products, and public sector organisations.
             </p>
           </div>
 
