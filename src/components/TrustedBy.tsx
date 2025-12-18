@@ -62,7 +62,7 @@ const TrustedBy = () => {
                     client.name === "Transport for London" ? "TfL logo — Forma Automate Power Platform work in public transport" :
                     `${client.name} - Power Platform consulting client for Microsoft 365 and automation solutions`
                   }
-                  className="max-h-12 max-w-28 md:max-w-32 object-contain"
+                  className="max-h-16 max-w-32 md:max-w-40 object-contain"
                 />
               </div>
             ))}
