@@ -39,7 +39,7 @@ const TrustedBy = () => {
             Trusted by Leading Aviation, Legal & Public Sector Organisations
           </h2>
           <p className="text-xl text-muted-foreground text-center max-w-3xl mx-auto mb-8">
-            Power Platform solutions delivering real results for major UK organisations across transport, aviation, legal, and government sectors
+            Power Platform solutions delivering real results for leading organisations across transport, aviation, legal, financial regulation, and government sectors
           </p>
         </div>
 
