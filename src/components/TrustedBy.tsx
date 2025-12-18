@@ -14,6 +14,10 @@ const TrustedBy = () => {
       logo: "/fa-uploads/easyJet-logo.png"
     },
     {
+      name: "Bermuda Monetary Authority",
+      logo: "/fa-uploads/bma-logo.png"
+    },
+    {
       name: "Office of Rail and Road",
       logo: "/fa-uploads/orr-logo.png"
     },
@@ -52,6 +56,7 @@ const TrustedBy = () => {
                     client.name === "Crossrail" ? "Crossrail logo — Forma Automate transport automation client" :
                     client.name === "Dentons" ? "Dentons logo — legal sector transformation using Power Apps and automation" :
                     client.name === "easyJet" ? "EasyJet logo — Forma Automate Power Platform project in airline sector" :
+                    client.name === "Bermuda Monetary Authority" ? "Bermuda Monetary Authority logo — regulatory sector Power Platform solutions by Forma Automate" :
                     client.name === "Office of Rail and Road" ? "Office of Rail and Road logo — sector collaboration with Forma Automate" :
                     client.name === "QinetiQ" ? "QinetiQ logo — Forma Automate client in advanced engineering services" :
                     client.name === "Transport for London" ? "TfL logo — Forma Automate Power Platform work in public transport" :
