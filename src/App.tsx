@@ -6,6 +6,7 @@ import { HelmetProvider } from "react-helmet-async";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import CaseStudies from "./pages/CaseStudies";
+import EmailSignature from "./pages/EmailSignature";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
