@@ -26,7 +26,7 @@ const EmailSignature = () => {
         </tr>
         <tr>
           <td style="font-size: 13px; color: #002B3D; padding-bottom: 4px;">
-            <a href="mailto:your.email@formaautomate.com" style="color: #002B3D; text-decoration: none;">your.email@formaautomate.com</a>
+            <a href="mailto:arif@formaautomate.com" style="color: #002B3D; text-decoration: none;">arif@formaautomate.com</a>
           </td>
         </tr>
         <tr>
