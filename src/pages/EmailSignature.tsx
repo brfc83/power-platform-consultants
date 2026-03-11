@@ -6,6 +6,7 @@ const EmailSignature = () => {
   const [copied, setCopied] = useState(false);
 
   const signatureHtml = `
+<p style="font-family: Arial, Helvetica, sans-serif; color: #002B3D; font-size: 14px; margin: 0 0 16px 0;">Warm regards,</p>
 <table cellpadding="0" cellspacing="0" border="0" style="font-family: Arial, Helvetica, sans-serif; color: #002B3D;">
   <tr>
     <td style="padding-right: 20px; vertical-align: top; border-right: 3px solid #1DB9A0;">
@@ -21,6 +22,16 @@ const EmailSignature = () => {
         <tr>
           <td style="font-size: 13px; font-weight: 500; color: #1DB9A0; padding-bottom: 12px; text-transform: uppercase; letter-spacing: 0.5px;">
             Founder &amp; Director
+          </td>
+        </tr>
+        <tr>
+          <td style="font-size: 13px; color: #002B3D; padding-bottom: 4px;">
+            <a href="mailto:your.email@formaautomate.com" style="color: #002B3D; text-decoration: none;">your.email@formaautomate.com</a>
+          </td>
+        </tr>
+        <tr>
+          <td style="font-size: 13px; color: #002B3D; padding-bottom: 4px;">
+            <a href="tel:+447000000000" style="color: #002B3D; text-decoration: none;">+44 7000 000 000</a>
           </td>
         </tr>
         <tr>
