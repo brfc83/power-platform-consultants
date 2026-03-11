@@ -41,7 +41,7 @@ const EmailSignature = () => {
         </tr>
         <tr>
           <td style="padding-top: 8px;">
-            <a href="https://www.linkedin.com/company/forma-automate" style="text-decoration: none;">
+            <a href="https://www.linkedin.com/in/arifgulma/" style="text-decoration: none;">
               <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" width="20" height="20" style="display: inline-block; vertical-align: middle;" />
             </a>
           </td>
