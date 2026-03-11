@@ -26,12 +26,12 @@ const EmailSignature = () => {
         </tr>
         <tr>
           <td style="font-size: 13px; color: #002B3D; padding-bottom: 4px;">
-            <a href="mailto:your.email@formaautomate.com" style="color: #002B3D; text-decoration: none;">your.email@formaautomate.com</a>
+            <a href="mailto:arif@formaautomate.com" style="color: #002B3D; text-decoration: none;">arif@formaautomate.com</a>
           </td>
         </tr>
         <tr>
           <td style="font-size: 13px; color: #002B3D; padding-bottom: 4px;">
-            <a href="tel:+447000000000" style="color: #002B3D; text-decoration: none;">+44 7000 000 000</a>
+            <a href="tel:+447970291460" style="color: #002B3D; text-decoration: none;">+44 7970 291 460</a>
           </td>
         </tr>
         <tr>
@@ -41,7 +41,7 @@ const EmailSignature = () => {
         </tr>
         <tr>
           <td style="padding-top: 8px;">
-            <a href="https://www.linkedin.com/company/forma-automate" style="text-decoration: none;">
+            <a href="https://www.linkedin.com/in/arifgulma/" style="text-decoration: none;">
               <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" width="20" height="20" style="display: inline-block; vertical-align: middle;" />
             </a>
           </td>
