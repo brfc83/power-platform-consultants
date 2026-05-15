@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import { useEffect, useState, useMemo } from "react";
+import { useEffect, useState, useMemo, useRef } from "react";
 import { Helmet } from "react-helmet-async";
 
 const Hero = () => {
@@ -11,15 +11,12 @@ const Hero = () => {
   }, []);
 
   const CountUpNumber = ({ end, duration = 2000, suffix = "" }: { end: number; duration?: number; suffix?: string }) => {
-    const hasAnimatedBefore = typeof window !== "undefined" && sessionStorage.getItem("fa_stats_animated") === "1";
-    const [count, setCount] = useState<number>(hasAnimatedBefore ? end : 0);
-    const startedRef = (typeof window !== "undefined" ? (window as any).__faStatsStartedRef : undefined) || { current: false };
+    const [count, setCount] = useState(0);
+    const startedRef = useRef(false);
 
     useEffect(() => {
-      const alreadyAnimated = typeof window !== "undefined" && sessionStorage.getItem("fa_stats_animated") === "1";
-      if (alreadyAnimated || startedRef.current) return;
+      if (startedRef.current) return;
       startedRef.current = true;
-      try { sessionStorage.setItem("fa_stats_animated", "1"); } catch {}
 
       let raf = 0;
       const startTime = performance.now();
