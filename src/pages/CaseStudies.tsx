@@ -127,7 +127,8 @@ const CaseStudies = () => {
   const accentClasses: Record<Accent, AccentStyle> = {
     teal: {
       card: "bg-background text-foreground",
-      resBg: "bg-primary text-white",
+      resBg: "text-white",
+      resBgColor: "hsl(var(--navy-deep))",
       resFg: "text-white",
       chip: "border border-border text-muted-foreground",
       metaBorder: "border-border",
@@ -142,8 +143,8 @@ const CaseStudies = () => {
     },
     navy: {
       card: "text-white",
-      resBg: "text-white",
-      resBgColor: "hsl(var(--navy-deep))",
+      resBg: "bg-white/10 text-white",
+      resBgColor: undefined,
       resFg: "text-white",
       chip: "border border-white/20 text-white/70",
       metaBorder: "border-white/15",
@@ -203,17 +204,21 @@ const CaseStudies = () => {
                   <div className={`flex flex-col justify-between gap-8 ${flip ? "lg:order-2" : ""}`}>
                     <div>
                       <div className="flex items-center gap-4 mb-7">
-                        <img
-                          src={study.logo}
-                          alt={study.logoAlt}
-                          className={
-                            study.accent === "navy"
-                              ? "h-14 w-auto max-w-[140px] object-contain brightness-0 invert"
-                              : study.accent === "cream"
-                              ? "h-14 w-auto max-w-[140px] object-contain brightness-0 invert"
-                              : "h-14 w-auto max-w-[140px] object-contain"
-                          }
-                        />
+                        {study.accent === "navy" ? (
+                          <div className="bg-white rounded-xl px-3 py-2 inline-flex items-center">
+                            <img
+                              src={study.logo}
+                              alt={study.logoAlt}
+                              className="h-10 w-auto max-w-[120px] object-contain"
+                            />
+                          </div>
+                        ) : (
+                          <img
+                            src={study.logo}
+                            alt={study.logoAlt}
+                            className="h-14 w-auto max-w-[140px] object-contain"
+                          />
+                        )}
                         <span
                           className={`font-mono text-xs uppercase tracking-wider ${
                             study.accent === "navy" ? "text-white/60" : "text-muted-foreground"
@@ -330,8 +335,8 @@ const CaseStudies = () => {
           </p>
           <div className="flex flex-wrap gap-3 justify-center mt-8">
             <Link to="/#contact">
-              <Button variant="secondary" size="xl" className="rounded-full group bg-white text-foreground hover:bg-white/90">
-                Start Your Project
+              <Button variant="dark" size="xl" className="rounded-full group">
+                Start your project
                 <ArrowRight className="h-5 w-5 ml-1 group-hover:translate-x-1 transition-transform" />
               </Button>
             </Link>
