@@ -37,9 +37,9 @@ const Header = () => {
         <div className="flex items-center justify-between gap-4">
           <Link to="/" className="flex items-center shrink-0" onClick={() => window.scrollTo(0, 0)}>
             <img
-              src="/fa-uploads/forma-automate-brand-logo-tagline.svg"
+              src="/fa-uploads/forma-automate-brand-logo-tagline.png"
               alt="Forma Automate brand identity — workflow and Power Platform consultancy"
-              className="h-10 md:h-12 w-auto object-contain hover:opacity-80 transition-opacity"
+              className="h-12 md:h-14 w-auto object-contain hover:opacity-80 transition-opacity"
             />
           </Link>
 
@@ -83,7 +83,7 @@ const Header = () => {
               UK · Available {availability}
             </span>
             <Button
-              variant="cta"
+              variant="dark"
               size="lg"
               className="hidden md:inline-flex rounded-full"
               onClick={() => handleSectionClick("contact")}
@@ -117,7 +117,7 @@ const Header = () => {
                     </button>
                   ))}
                   <Button
-                    variant="cta"
+                    variant="dark"
                     size="lg"
                     className="mt-6 w-full rounded-full"
                     onClick={() => handleSectionClick("contact")}

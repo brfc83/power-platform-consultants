@@ -191,7 +191,7 @@ const ClientTestimonials = () => {
                             </div>
                             <Button
                               onClick={scrollToContact}
-                              variant="cta"
+                              variant="dark"
                               size="lg"
                               className="rounded-full w-full md:w-auto md:self-start"
                             >
