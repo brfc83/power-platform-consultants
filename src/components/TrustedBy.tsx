@@ -56,9 +56,9 @@ const TrustedBy = () => {
         </div>
 
         <div className="relative overflow-hidden marquee-mask">
-          {/* Duplicating once renders 12 items; CSS keyframes `scroll` translates by -83.33% */}
+          {/* Two copies — animation translates by -50% (one full set) for a seamless loop */}
           <div className="flex animate-scroll gap-10 md:gap-20 will-change-transform items-center">
-            {[...clients, ...clients, ...clients, ...clients].map((client, index) => (
+            {[...clients, ...clients].map((client, index) => (
               <div
                 key={`${client.name}-${index}`}
                 className="flex-shrink-0 h-16 md:h-20 w-32 md:w-44 flex items-center justify-center"
