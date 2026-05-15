@@ -1,78 +1,94 @@
-import { Mail, Phone } from "lucide-react";
+import { Mail, Phone, Linkedin } from "lucide-react";
 
 const Footer = () => {
+  const year = new Date().getFullYear();
   return (
-    <footer className="bg-secondary text-secondary-foreground">
-      <div className="container mx-auto px-4 py-16">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+    <footer className="bg-foreground text-white">
+      <div className="container mx-auto px-4 py-16 md:py-20">
+        <div className="grid md:grid-cols-2 lg:grid-cols-[2fr_1fr_1fr_1fr] gap-10 md:gap-12">
           {/* Company Info */}
-          <div className="space-y-4">
-            <img 
+          <div className="space-y-5">
+            <img
               src="/fa-uploads/forma-automate-brand-logo.png"
               alt="Forma Automate brand identity — workflow and Power Platform consultancy"
-              className="h-16 w-auto mb-4 brightness-0 invert"
+              className="h-14 w-auto brightness-0 invert"
             />
-            <p className="text-secondary-foreground/80 leading-relaxed">
-              Microsoft Power Platform specialists trusted by Dentons, TfL, Crossrail, easyJet, Bermuda Monetary Authority, and SharkNinja. 
-              Expert Power Apps, Power Automate, SharePoint, and Dynamics 365 solutions for aviation, 
-              legal, financial regulation, consumer products, and public sector organisations.
+            <p className="text-white/65 leading-relaxed max-w-sm text-pretty">
+              Microsoft Power Platform specialists trusted by Dentons, TfL, Crossrail, easyJet, the Bermuda
+              Monetary Authority, QinetiQ, ORR and SharkNinja. Expert Power Apps, Power Automate, SharePoint, and
+              Dynamics 365 solutions for aviation, legal, financial regulation, consumer products, and public
+              sector organisations.
             </p>
           </div>
 
           {/* Services */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Services</h3>
-            <ul className="space-y-2">
-              <li><a href="/#services" className="text-secondary-foreground/80 hover:text-primary transition-colors">Power Apps Development</a></li>
-              <li><a href="/#services" className="text-secondary-foreground/80 hover:text-primary transition-colors">Power Automate Solutions</a></li>
-              <li><a href="/#services" className="text-secondary-foreground/80 hover:text-primary transition-colors">SharePoint & Dataverse</a></li>
-              <li><a href="/#services" className="text-secondary-foreground/80 hover:text-primary transition-colors">Dynamics 365 Implementation</a></li>
-              <li><a href="/#services" className="text-secondary-foreground/80 hover:text-primary transition-colors">Power BI Analytics</a></li>
+            <h3 className="eyebrow text-white mb-5">Services</h3>
+            <ul className="space-y-2.5 text-sm">
+              <li><a href="/#services" className="text-white/65 hover:text-primary transition-colors">Power Apps</a></li>
+              <li><a href="/#services" className="text-white/65 hover:text-primary transition-colors">Power Automate</a></li>
+              <li><a href="/#services" className="text-white/65 hover:text-primary transition-colors">Power BI</a></li>
+              <li><a href="/#services" className="text-white/65 hover:text-primary transition-colors">SharePoint & Dataverse</a></li>
+              <li><a href="/#services" className="text-white/65 hover:text-primary transition-colors">Dynamics 365</a></li>
+              <li><a href="/#services" className="text-white/65 hover:text-primary transition-colors">Microsoft Teams</a></li>
             </ul>
           </div>
 
           {/* Company */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Company</h3>
-            <ul className="space-y-2">
-              <li><a href="/#who-we-are" className="text-secondary-foreground/80 hover:text-primary transition-colors">About Us</a></li>
-              <li><a href="/case-studies" className="text-secondary-foreground/80 hover:text-primary transition-colors">Case Studies</a></li>
+            <h3 className="eyebrow text-white mb-5">Company</h3>
+            <ul className="space-y-2.5 text-sm">
+              <li><a href="/#who-we-are" className="text-white/65 hover:text-primary transition-colors">About</a></li>
+              <li><a href="/#expertise" className="text-white/65 hover:text-primary transition-colors">Expertise</a></li>
+              <li><a href="/case-studies" className="text-white/65 hover:text-primary transition-colors">Case Studies</a></li>
+              <li><a href="/#contact" className="text-white/65 hover:text-primary transition-colors">Contact</a></li>
             </ul>
           </div>
 
           {/* Contact */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Contact</h3>
-            <ul className="space-y-3">
-              <li className="flex items-center space-x-3">
-                <Mail className="h-4 w-4 text-primary" />
-                <span className="text-secondary-foreground/80">hello@formaautomate.com</span>
+            <h3 className="eyebrow text-white mb-5">Contact</h3>
+            <ul className="space-y-3 text-sm">
+              <li>
+                <a
+                  href="mailto:arif@formaautomate.com"
+                  className="flex items-center gap-3 text-white/65 hover:text-primary transition-colors"
+                >
+                  <Mail className="h-4 w-4 text-primary shrink-0" />
+                  arif@formaautomate.com
+                </a>
               </li>
-              <li className="flex items-center space-x-3">
-                <Phone className="h-4 w-4 text-primary" />
-                <span className="text-secondary-foreground/80">+447970291460</span>
+              <li>
+                <a
+                  href="tel:+447970291460"
+                  className="flex items-center gap-3 text-white/65 hover:text-primary transition-colors"
+                >
+                  <Phone className="h-4 w-4 text-primary shrink-0" />
+                  +44 7970 291460
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/in/arifgulma/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 text-white/65 hover:text-primary transition-colors"
+                >
+                  <Linkedin className="h-4 w-4 text-primary shrink-0" />
+                  LinkedIn
+                </a>
               </li>
             </ul>
           </div>
         </div>
 
-        <div className="border-t border-secondary-foreground/20 mt-12 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-secondary-foreground/60 text-sm">
-              © 2024 Forma Automate. All rights reserved.
-            </p>
-            <div className="flex space-x-6 mt-4 md:mt-0">
-              <a href="#" className="text-secondary-foreground/60 hover:text-primary text-sm transition-colors">
-                Privacy Policy
-              </a>
-              <a href="#" className="text-secondary-foreground/60 hover:text-primary text-sm transition-colors">
-                Terms of Service
-              </a>
-              <a href="#" className="text-secondary-foreground/60 hover:text-primary text-sm transition-colors">
-                Cookie Policy
-              </a>
-            </div>
-          </div>
+        <div className="border-t border-white/10 mt-14 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+          <p className="text-white/50 text-xs">
+            © {year} Forma Automate. Registered in England & Wales. All rights reserved.
+          </p>
+          <p className="text-white/40 text-xs">
+            Microsoft, Power Platform and related marks are trademarks of Microsoft Corporation.
+          </p>
         </div>
       </div>
     </footer>

@@ -1,87 +1,82 @@
-
 const TrustedBy = () => {
   const clients = [
     {
       name: "Crossrail",
-      logo: "/fa-uploads/crossrail-logo.png"
+      logo: "/fa-uploads/crossrail-logo.png",
+      alt: "Crossrail logo — Forma Automate transport automation client",
     },
     {
       name: "Dentons",
-      logo: "/fa-uploads/dentons-logo.png"
+      logo: "/fa-uploads/dentons-logo.png",
+      alt: "Dentons logo — legal sector transformation using Power Apps and automation",
     },
     {
       name: "easyJet",
-      logo: "/fa-uploads/easyJet-logo.png"
+      logo: "/fa-uploads/easyJet-logo.png",
+      alt: "EasyJet logo — Forma Automate Power Platform project in airline sector",
     },
     {
       name: "Bermuda Monetary Authority",
-      logo: "/fa-uploads/bma-logo.png"
+      logo: "/fa-uploads/bma-logo.png",
+      alt: "Bermuda Monetary Authority logo — regulatory sector Power Platform solutions by Forma Automate",
     },
     {
       name: "Office of Rail and Road",
-      logo: "/fa-uploads/orr-logo.png"
+      logo: "/fa-uploads/orr-logo.png",
+      alt: "Office of Rail and Road logo — sector collaboration with Forma Automate",
     },
     {
       name: "QinetiQ",
-      logo: "/fa-uploads/QinetiQ-logo.png"
+      logo: "/fa-uploads/QinetiQ-logo.png",
+      alt: "QinetiQ logo — Forma Automate client in advanced engineering services",
     },
     {
       name: "Transport for London",
-      logo: "/fa-uploads/TfL-logo.png"
+      logo: "/fa-uploads/TfL-logo.png",
+      alt: "TfL logo — Forma Automate Power Platform work in public transport",
     },
     {
       name: "SharkNinja",
-      logo: "/fa-uploads/sharkninja-logo.svg"
-    }
+      logo: "/fa-uploads/sharkninja-logo.svg",
+      alt: "SharkNinja logo — consumer products Power Platform solutions by Forma Automate",
+    },
   ];
 
   return (
-    <section className="py-16 bg-muted/30">
+    <section className="py-20 md:py-24 bg-background border-y border-border">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Trusted by Leading Aviation, Legal & Public Sector Organisations
-          </h2>
-          <p className="text-xl text-muted-foreground text-center max-w-3xl mx-auto mb-8">
-            Power Platform solutions delivering real results for leading organisations across transport, aviation, legal, financial regulation, consumer products, and government sectors
-          </p>
+        <div className="flex items-center justify-between mb-10">
+          <span className="eyebrow text-muted-foreground">Trusted by teams at</span>
+          <span className="font-mono text-xs text-muted-foreground hidden sm:inline">UK · EU · GLOBAL</span>
         </div>
 
-        <div className="relative overflow-hidden">
-          <div className="flex animate-scroll space-x-4 md:space-x-16 will-change-transform">
+        <div className="relative overflow-hidden marquee-mask">
+          {/* Duplicating once renders 12 items; CSS keyframes `scroll` translates by -83.33% */}
+          <div className="flex animate-scroll gap-10 md:gap-20 will-change-transform items-center">
             {[...clients, ...clients, ...clients, ...clients].map((client, index) => (
               <div
-                key={index}
-                className="flex-shrink-0 h-20 w-24 md:w-40 flex items-center justify-center bg-transparent rounded-lg hover:scale-105 transition-transform duration-300"
+                key={`${client.name}-${index}`}
+                className="flex-shrink-0 h-16 md:h-20 w-32 md:w-44 flex items-center justify-center"
               >
                 <img
                   src={client.logo}
-                  alt={
-                    client.name === "Crossrail" ? "Crossrail logo — Forma Automate transport automation client" :
-                    client.name === "Dentons" ? "Dentons logo — legal sector transformation using Power Apps and automation" :
-                    client.name === "easyJet" ? "EasyJet logo — Forma Automate Power Platform project in airline sector" :
-                    client.name === "Bermuda Monetary Authority" ? "Bermuda Monetary Authority logo — regulatory sector Power Platform solutions by Forma Automate" :
-                    client.name === "Office of Rail and Road" ? "Office of Rail and Road logo — sector collaboration with Forma Automate" :
-                    client.name === "QinetiQ" ? "QinetiQ logo — Forma Automate client in advanced engineering services" :
-                    client.name === "Transport for London" ? "TfL logo — Forma Automate Power Platform work in public transport" :
-                    client.name === "SharkNinja" ? "SharkNinja logo — consumer products Power Platform solutions by Forma Automate" :
-                    `${client.name} - Power Platform consulting client for Microsoft 365 and automation solutions`
+                  alt={client.alt}
+                  className={
+                    client.name === "Bermuda Monetary Authority"
+                      ? "max-h-12 max-w-28 md:max-w-36 object-contain"
+                      : "max-h-14 md:max-h-16 max-w-32 md:max-w-44 object-contain"
                   }
-                  className={client.name === "Bermuda Monetary Authority" 
-                    ? "max-h-12 max-w-24 md:max-w-32 object-contain" 
-                    : "max-h-16 max-w-32 md:max-w-40 object-contain"}
+                  loading="lazy"
                 />
               </div>
             ))}
           </div>
         </div>
 
-        <div className="text-center mt-12">
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            From aviation giants like easyJet to legal leaders like Dentons and transport authorities like TfL - 
-            each partnership reflects our Power Platform expertise delivering measurable results across diverse sectors.
-          </p>
-        </div>
+        <p className="text-base text-muted-foreground max-w-2xl mt-12 text-pretty">
+          From aviation giants like easyJet to legal leaders like Dentons and transport authorities like TfL —
+          each partnership reflects Power Platform expertise delivering measurable results across diverse sectors.
+        </p>
       </div>
     </section>
   );

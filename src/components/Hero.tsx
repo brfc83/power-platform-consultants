@@ -1,52 +1,64 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useMemo } from "react";
 import { Helmet } from "react-helmet-async";
-import heroImage from "@/assets/hero-dashboard-canvas-en.jpg";
 
 const Hero = () => {
   const sectors = ["Real Estate", "Defence", "Infrastructure", "Public Sector", "Legal", "Regulation", "Aviation"];
   const [currentSectorIndex, setCurrentSectorIndex] = useState(0);
 
+  // Auto-updating availability line — "May 2026" today, "June 2026" next month, etc.
+  const availability = useMemo(() => {
+    const d = new Date();
+    return d.toLocaleString("en-GB", { month: "long", year: "numeric" });
+  }, []);
+
   const CountUpNumber = ({ end, duration = 2000, suffix = "" }: { end: number; duration?: number; suffix?: string }) => {
-    const hasAnimatedBefore = typeof window !== 'undefined' && sessionStorage.getItem('fa_stats_animated') === '1'
-    const [count, setCount] = useState<number>(hasAnimatedBefore ? end : 0)
-    const startedRef = (typeof window !== 'undefined' ? (window as any).__faStatsStartedRef : undefined) || { current: false }
+    const hasAnimatedBefore = typeof window !== "undefined" && sessionStorage.getItem("fa_stats_animated") === "1";
+    const [count, setCount] = useState<number>(hasAnimatedBefore ? end : 0);
+    const startedRef = (typeof window !== "undefined" ? (window as any).__faStatsStartedRef : undefined) || { current: false };
 
     useEffect(() => {
-      const alreadyAnimated = typeof window !== 'undefined' && sessionStorage.getItem('fa_stats_animated') === '1'
-      if (alreadyAnimated || startedRef.current) return
-      // Mark as started immediately to avoid React StrictMode double-invoke
-      startedRef.current = true
-      try { sessionStorage.setItem('fa_stats_animated', '1') } catch {}
+      const alreadyAnimated = typeof window !== "undefined" && sessionStorage.getItem("fa_stats_animated") === "1";
+      if (alreadyAnimated || startedRef.current) return;
+      startedRef.current = true;
+      try { sessionStorage.setItem("fa_stats_animated", "1"); } catch {}
 
-      let raf = 0
-      const startTime = performance.now()
+      let raf = 0;
+      const startTime = performance.now();
       const animate = (now: number) => {
-        const elapsed = now - startTime
-        const progress = Math.min(elapsed / duration, 1)
-        const easeOutQuart = 1 - Math.pow(1 - progress, 4)
-        setCount(Math.floor(end * easeOutQuart))
+        const elapsed = now - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        const easeOutQuart = 1 - Math.pow(1 - progress, 4);
+        setCount(Math.floor(end * easeOutQuart));
         if (progress < 1) {
-          raf = requestAnimationFrame(animate)
+          raf = requestAnimationFrame(animate);
         } else {
-          setCount(end)
+          setCount(end);
         }
-      }
-      raf = requestAnimationFrame(animate)
-      return () => cancelAnimationFrame(raf)
-    }, [end, duration])
+      };
+      raf = requestAnimationFrame(animate);
+      return () => cancelAnimationFrame(raf);
+    }, [end, duration]);
 
-    return <span>{count}{suffix}</span>
+    return <span>{count}{suffix}</span>;
   };
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSectorIndex((prev) => (prev + 1) % sectors.length);
-    }, 2000);
-
+    }, 2200);
     return () => clearInterval(interval);
   }, [sectors.length]);
+
+  const stack = [
+    { name: "Power Apps", sub: "Canvas + model-driven", accent: false },
+    { name: "Power Automate", sub: "Cloud + desktop flows", accent: true },
+    { name: "Copilot Studio", sub: "Conversational agents", accent: false },
+    { name: "Power BI", sub: "Reports + semantic models", accent: false },
+    { name: "Dynamics 365", sub: "Sales · Service · Field", accent: false },
+    { name: "SharePoint", sub: "IA + document workflows", accent: false },
+  ];
 
   return (
     <>
@@ -54,67 +66,109 @@ const Hero = () => {
         <title>Power Platform Consulting | Forma Automate</title>
         <meta name="description" content="Forma Automate provides Power Platform consulting for Real Estate, Defence, Infrastructure, Public Sector, Legal, Regulation, and Aviation—streamlining workflows and driving digital transformation." />
       </Helmet>
-      <section className="pt-24 pb-16 bg-gradient-hero text-primary-foreground">
+      <section className="pt-28 md:pt-32 pb-20 md:pb-24 bg-background">
         <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-10 lg:gap-16 items-end">
+            {/* Left: headline */}
             <div className="space-y-8">
-              <div className="space-y-4">
-                <h1 className="text-4xl md:text-6xl font-bold leading-tight">
-                  Power Platform Consulting
+              <div className="inline-flex items-center gap-2.5">
+                <span className="w-2 h-2 rounded-full bg-primary" />
+                <span className="eyebrow text-primary">UK Power Platform Consultancy</span>
+              </div>
+
+              <div className="space-y-6">
+                <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold leading-[0.95] tracking-tight text-foreground">
+                  Power Platform,
+                  <br />
+                  <span className="font-serif-italic font-normal">delivered properly.</span>
                 </h1>
-                <div className="h-16 md:h-20 flex items-center">
-                  <h2 className="text-2xl md:text-4xl font-semibold text-primary-foreground flex items-center">
-                    <span className="mr-2">For</span>
-                    <span className="inline-block min-w-[200px] md:min-w-[300px] text-left relative">
-                      <span 
-                        key={currentSectorIndex}
-                        className="inline-block animate-pop-in bg-gradient-primary text-primary-foreground px-4 py-2 rounded-lg shadow-glow transform transition-all duration-300 hover:scale-105 relative overflow-hidden"
-                      >
-                        <span className="relative z-10">
-                          {sectors[currentSectorIndex]}
-                        </span>
-                        <div className="absolute inset-0 bg-gradient-to-r from-primary-light/20 to-primary/20 opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
-                      </span>
-                    </span>
-                  </h2>
+
+                <div className="flex flex-wrap items-center gap-3 text-2xl md:text-3xl font-semibold">
+                  <span className="text-muted-foreground">For</span>
+                  <span
+                    key={currentSectorIndex}
+                    className="inline-block animate-pop-in bg-gradient-primary text-primary-foreground px-4 py-1.5 rounded-lg shadow-glow"
+                  >
+                    {sectors[currentSectorIndex]}
+                  </span>
                 </div>
-                <p className="text-xl md:text-2xl text-primary-foreground/90 leading-relaxed">
-                  Forma Automate delivers Microsoft Power Platform solutions, digital transformation and operational automation. Trusted by sector leaders, we streamline workflows, reduce manual effort and build intuitive systems that teams actually want to use.
+
+                <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-xl text-pretty">
+                  Forma Automate delivers Microsoft Power Platform solutions, digital transformation and
+                  operational automation. Trusted by sector leaders, we streamline workflows, reduce manual
+                  effort and build intuitive systems that teams actually want to use.
                 </p>
               </div>
-              
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button variant="hero" size="xl" className="group" asChild>
-                  <a href="https://calendly.com/arif-formaautomate/30min?month=2025-07" target="_blank" rel="noopener noreferrer">
+
+              <div className="flex flex-wrap gap-3">
+                <Button variant="cta" size="xl" className="rounded-full group" asChild>
+                  <a href="https://calendly.com/arif-formaautomate/30min" target="_blank" rel="noopener noreferrer">
                     Start Your Transformation
-                    <ArrowRight className="group-hover:translate-x-1 transition-transform" />
+                    <ArrowRight className="h-5 w-5 ml-1 group-hover:translate-x-1 transition-transform" />
                   </a>
                 </Button>
+                <Button variant="outline" size="xl" className="rounded-full" asChild>
+                  <a href="/case-studies">See recent work</a>
+                </Button>
               </div>
-              
-              <div className="flex items-center space-x-8 pt-8">
-                <div className="text-center">
-                  <div className="text-3xl font-bold">
+
+              <div className="flex items-center gap-10 pt-6">
+                <div>
+                  <div className="text-4xl md:text-5xl font-extrabold tracking-tight text-foreground">
                     <CountUpNumber end={50} suffix="+" />
                   </div>
-                  <div className="text-primary-foreground/80">Projects Completed</div>
+                  <div className="text-sm text-muted-foreground mt-1">Projects Completed</div>
                 </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold">
+                <div>
+                  <div className="text-4xl md:text-5xl font-extrabold tracking-tight text-foreground">
                     <CountUpNumber end={20} suffix="+" />
                   </div>
-                  <div className="text-primary-foreground/80">Years Experience</div>
+                  <div className="text-sm text-muted-foreground mt-1">Years Experience</div>
                 </div>
               </div>
             </div>
-            
+
+            {/* Right: dark stack panel */}
             <div className="relative">
-              <div className="bg-gradient-primary rounded-2xl p-8 shadow-glow">
-                <img 
-                  src={heroImage} 
-                  alt="Forma Automate Power Platform consulting dashboard showing digital transformation solutions for Real Estate, Defence, Infrastructure, Public Sector, Legal, Regulation, and Aviation sectors"
-                  className="w-full h-auto rounded-xl object-cover"
+              <div
+                className="rounded-3xl p-7 text-white relative overflow-hidden flex flex-col gap-6 min-h-[540px]"
+                style={{ backgroundColor: "hsl(var(--navy-deep))" }}
+              >
+                <div
+                  className="absolute inset-0 opacity-[0.06] pointer-events-none"
+                  style={{
+                    backgroundImage: "radial-gradient(circle at 1px 1px, #fff 1px, transparent 0)",
+                    backgroundSize: "20px 20px",
+                  }}
                 />
+                <div className="relative flex justify-between items-start">
+                  <span className="eyebrow text-primary">The Practice</span>
+                  <span className="font-mono text-xs opacity-50">v.2026</span>
+                </div>
+
+                <div className="relative grid gap-2.5 flex-1">
+                  {stack.map((s, i) => (
+                    <div
+                      key={s.name}
+                      className={`flex items-center justify-between px-4 py-3 rounded-xl border ${
+                        s.accent
+                          ? "bg-primary text-white border-transparent"
+                          : "bg-white/[0.06] border-white/10"
+                      }`}
+                    >
+                      <div>
+                        <div className="text-[15px] font-bold tracking-tight">{s.name}</div>
+                        <div className={`text-xs mt-0.5 ${s.accent ? "opacity-80" : "opacity-55"}`}>{s.sub}</div>
+                      </div>
+                      <div className="font-mono text-[11px] opacity-60">0{i + 1}</div>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="relative flex items-center gap-2.5 text-xs font-mono opacity-70">
+                  <span className="inline-block w-1.5 h-1.5 rounded-full bg-primary" />
+                  Available for new engagements · {availability}
+                </div>
               </div>
             </div>
           </div>

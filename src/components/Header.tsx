@@ -1,77 +1,92 @@
 import { Button } from "@/components/ui/button";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Menu } from "lucide-react";
-import { useState } from "react";
+import { Menu, ArrowRight } from "lucide-react";
+import { useState, useMemo } from "react";
 
 const Header = () => {
   const location = useLocation();
   const navigate = useNavigate();
   const [isOpen, setIsOpen] = useState(false);
-  
+
+  // Auto-updating availability — always reads "current month"
+  const availability = useMemo(() => {
+    return new Date().toLocaleString("en-GB", { month: "long" });
+  }, []);
+
   const handleSectionClick = (sectionId: string) => {
-    setIsOpen(false); // Close mobile menu
-    if (location.pathname === '/') {
-      // If on home page, scroll to section
+    setIsOpen(false);
+    if (location.pathname === "/") {
       const element = document.getElementById(sectionId);
       if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
+        element.scrollIntoView({ behavior: "smooth" });
       }
     } else {
-      // If on other page, navigate to home page with hash
       navigate(`/#${sectionId}`);
     }
   };
+
   return (
-    <header className="fixed top-0 w-full bg-background/95 backdrop-blur-sm border-b z-50">
-      <div className="container mx-auto px-4 py-1">
-        <div className="flex items-center justify-between">
-          <Link to="/" className="flex items-center">
-            <img 
+    <header className="fixed top-0 w-full bg-background/85 backdrop-blur-md border-b border-border z-50">
+      <div className="container mx-auto px-4 py-3">
+        <div className="flex items-center justify-between gap-4">
+          <Link to="/" className="flex items-center shrink-0" onClick={() => window.scrollTo(0, 0)}>
+            <img
               src="/fa-uploads/forma-automate-brand-logo.png"
               alt="Forma Automate brand identity — workflow and Power Platform consultancy"
-              className="h-20 w-auto -my-4 object-contain cursor-pointer hover:opacity-80 transition-opacity"
+              className="h-14 md:h-16 w-auto object-contain hover:opacity-80 transition-opacity"
             />
           </Link>
-          
-          <nav className="hidden md:flex items-center space-x-8">
-            <button 
-              onClick={() => handleSectionClick('services')} 
-              className="text-foreground hover:text-primary transition-colors"
+
+          <nav className="hidden md:flex items-center gap-8">
+            <button
+              onClick={() => handleSectionClick("services")}
+              className="text-sm font-medium text-foreground/85 hover:text-primary transition-colors"
             >
               Services
             </button>
-            <button 
-              onClick={() => handleSectionClick('expertise')} 
-              className="text-foreground hover:text-primary transition-colors"
+            <button
+              onClick={() => handleSectionClick("expertise")}
+              className="text-sm font-medium text-foreground/85 hover:text-primary transition-colors"
             >
               Expertise
             </button>
-            <Link 
-              to="/case-studies" 
-              className="text-foreground hover:text-primary transition-colors"
+            <Link
+              to="/case-studies"
               onClick={() => window.scrollTo(0, 0)}
+              className="text-sm font-medium text-foreground/85 hover:text-primary transition-colors"
             >
               Case Studies
             </Link>
-            <button 
-              onClick={() => handleSectionClick('contact')} 
-              className="text-foreground hover:text-primary transition-colors"
+            <button
+              onClick={() => handleSectionClick("who-we-are")}
+              className="text-sm font-medium text-foreground/85 hover:text-primary transition-colors"
+            >
+              About
+            </button>
+            <button
+              onClick={() => handleSectionClick("contact")}
+              className="text-sm font-medium text-foreground/85 hover:text-primary transition-colors"
             >
               Contact
             </button>
           </nav>
-          
-          <div className="flex items-center gap-4">
-            <Button 
-              variant="cta" 
-              size="lg" 
-              className="hidden md:inline-flex"
-              onClick={() => handleSectionClick('contact')}
+
+          <div className="flex items-center gap-3">
+            <span className="hidden lg:inline-flex items-center gap-2 text-xs text-muted-foreground">
+              <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
+              UK · Available {availability}
+            </span>
+            <Button
+              variant="cta"
+              size="lg"
+              className="hidden md:inline-flex rounded-full"
+              onClick={() => handleSectionClick("contact")}
             >
-              Get Started
+              Book a call
+              <ArrowRight className="h-4 w-4 ml-1" />
             </Button>
-            
+
             {/* Mobile Menu */}
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
               <SheetTrigger asChild>
@@ -79,44 +94,35 @@ const Header = () => {
                   <Menu className="h-6 w-6" />
                 </Button>
               </SheetTrigger>
-              <SheetContent side="right" className="w-[300px]">
-                <nav className="flex flex-col space-y-6 mt-8">
-                  <button 
-                    onClick={() => handleSectionClick('services')} 
-                    className="text-left text-lg text-foreground hover:text-primary transition-colors"
+              <SheetContent side="right" className="w-[320px]">
+                <nav className="flex flex-col gap-1 mt-12">
+                  {[
+                    { label: "Services", action: () => handleSectionClick("services") },
+                    { label: "Expertise", action: () => handleSectionClick("expertise") },
+                    { label: "Case Studies", action: () => { setIsOpen(false); navigate("/case-studies"); window.scrollTo(0, 0); } },
+                    { label: "About", action: () => handleSectionClick("who-we-are") },
+                    { label: "Contact", action: () => handleSectionClick("contact") },
+                  ].map((item) => (
+                    <button
+                      key={item.label}
+                      onClick={item.action}
+                      className="text-left text-xl font-semibold tracking-tight text-foreground hover:text-primary transition-colors py-3 border-b border-border last:border-b-0"
+                    >
+                      {item.label}
+                    </button>
+                  ))}
+                  <Button
+                    variant="cta"
+                    size="lg"
+                    className="mt-6 w-full rounded-full"
+                    onClick={() => handleSectionClick("contact")}
                   >
-                    Services
-                  </button>
-                  <button 
-                    onClick={() => handleSectionClick('expertise')} 
-                    className="text-left text-lg text-foreground hover:text-primary transition-colors"
-                  >
-                    Expertise
-                  </button>
-                  <Link 
-                    to="/case-studies" 
-                    className="text-left text-lg text-foreground hover:text-primary transition-colors"
-                    onClick={() => {
-                      setIsOpen(false);
-                      window.scrollTo(0, 0);
-                    }}
-                  >
-                    Case Studies
-                  </Link>
-                  <button 
-                    onClick={() => handleSectionClick('contact')} 
-                    className="text-left text-lg text-foreground hover:text-primary transition-colors"
-                  >
-                    Contact
-                  </button>
-                  <Button 
-                    variant="cta" 
-                    size="lg" 
-                    className="mt-4"
-                    onClick={() => handleSectionClick('contact')}
-                  >
-                    Get Started
+                    Book a call
+                    <ArrowRight className="h-4 w-4 ml-1" />
                   </Button>
+                  <p className="text-xs text-muted-foreground mt-4 text-center">
+                    UK · Available {availability}
+                  </p>
                 </nav>
               </SheetContent>
             </Sheet>
