@@ -5,7 +5,7 @@ const WhoWeAre = () => {
   const stats = [
     { k: "20+", v: "years inside Microsoft 365 estates" },
     { k: "50+", v: "apps, flows and Copilots shipped" },
-    { k: "8", v: "client logos in active rotation" },
+    { k: "8", v: "enterprise clients across 6 sectors" },
     { k: "100%", v: "UK-based, sole-consultant delivery" },
   ];
 
