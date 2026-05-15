@@ -4,9 +4,6 @@ import { useEffect, useState, useMemo } from "react";
 import { Helmet } from "react-helmet-async";
 
 const Hero = () => {
-  const sectors = ["Real Estate", "Defence", "Infrastructure", "Public Sector", "Legal", "Regulation", "Aviation"];
-  const [currentSectorIndex, setCurrentSectorIndex] = useState(0);
-
   // Auto-updating availability line — "May 2026" today, "June 2026" next month, etc.
   const availability = useMemo(() => {
     const d = new Date();
@@ -44,13 +41,6 @@ const Hero = () => {
     return <span>{count}{suffix}</span>;
   };
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentSectorIndex((prev) => (prev + 1) % sectors.length);
-    }, 2200);
-    return () => clearInterval(interval);
-  }, [sectors.length]);
-
   const stack = [
     { name: "Power Apps", sub: "Canvas + model-driven", accent: false },
     { name: "Power Automate", sub: "Cloud + desktop flows", accent: true },
@@ -66,7 +56,7 @@ const Hero = () => {
         <title>Power Platform Consulting | Forma Automate</title>
         <meta name="description" content="Forma Automate provides Power Platform consulting for Real Estate, Defence, Infrastructure, Public Sector, Legal, Regulation, and Aviation—streamlining workflows and driving digital transformation." />
       </Helmet>
-      <section className="pt-28 md:pt-32 pb-20 md:pb-24 bg-background">
+      <section className="pt-36 md:pt-40 pb-20 md:pb-24 bg-background">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-10 lg:gap-16 items-end">
             {/* Left: headline */}
@@ -83,27 +73,16 @@ const Hero = () => {
                   <span className="font-serif-italic font-normal">delivered properly.</span>
                 </h1>
 
-                <div className="flex flex-wrap items-center gap-3 text-2xl md:text-3xl font-semibold">
-                  <span className="text-muted-foreground">For</span>
-                  <span
-                    key={currentSectorIndex}
-                    className="inline-block animate-pop-in bg-gradient-primary text-primary-foreground px-4 py-1.5 rounded-lg shadow-glow"
-                  >
-                    {sectors[currentSectorIndex]}
-                  </span>
-                </div>
-
                 <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-xl text-pretty">
-                  Forma Automate delivers Microsoft Power Platform solutions, digital transformation and
-                  operational automation. Trusted by sector leaders, we streamline workflows, reduce manual
-                  effort and build intuitive systems that teams actually want to use.
+                  I'm Forma Automate — independent Power Platform consultancy for UK organisations who want
+                  apps, automations and Copilots built once, built right.
                 </p>
               </div>
 
               <div className="flex flex-wrap gap-3">
                 <Button variant="cta" size="xl" className="rounded-full group" asChild>
                   <a href="https://calendly.com/arif-formaautomate/30min" target="_blank" rel="noopener noreferrer">
-                    Start Your Transformation
+                    Start a project
                     <ArrowRight className="h-5 w-5 ml-1 group-hover:translate-x-1 transition-transform" />
                   </a>
                 </Button>

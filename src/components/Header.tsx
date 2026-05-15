@@ -27,7 +27,12 @@ const Header = () => {
   };
 
   return (
-    <header className="fixed top-0 w-full bg-background/85 backdrop-blur-md border-b border-border z-50">
+    <div className="fixed top-0 w-full z-50">
+      {/* Promo strip */}
+      <div className="bg-secondary text-secondary-foreground text-center py-2 px-4 text-xs md:text-sm font-medium">
+        Free 30-minute Power Platform discovery call — book this week and we&apos;ll scope your first automation, no commitment.
+      </div>
+    <header className="w-full bg-background/85 backdrop-blur-md border-b border-border">
       <div className="container mx-auto px-4 py-3">
         <div className="flex items-center justify-between gap-4">
           <Link to="/" className="flex items-center shrink-0" onClick={() => window.scrollTo(0, 0)}>
@@ -49,7 +54,7 @@ const Header = () => {
               onClick={() => handleSectionClick("expertise")}
               className="text-sm font-medium text-foreground/85 hover:text-primary transition-colors"
             >
-              Expertise
+              Process
             </button>
             <Link
               to="/case-studies"
@@ -98,7 +103,7 @@ const Header = () => {
                 <nav className="flex flex-col gap-1 mt-12">
                   {[
                     { label: "Services", action: () => handleSectionClick("services") },
-                    { label: "Expertise", action: () => handleSectionClick("expertise") },
+                    { label: "Process", action: () => handleSectionClick("expertise") },
                     { label: "Case Studies", action: () => { setIsOpen(false); navigate("/case-studies"); window.scrollTo(0, 0); } },
                     { label: "About", action: () => handleSectionClick("who-we-are") },
                     { label: "Contact", action: () => handleSectionClick("contact") },
@@ -130,6 +135,7 @@ const Header = () => {
         </div>
       </div>
     </header>
+    </div>
   );
 };
 
