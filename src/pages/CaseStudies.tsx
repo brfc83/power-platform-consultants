@@ -51,7 +51,7 @@ const CaseStudies = () => {
       id: 2,
       title: "Compliance & IT Hygiene Automation",
       client: "Internal Ops – HR & IT",
-      sector: "Public Sector / Governance",
+      sector: "Aviation",
       challenge:
         "Disabled accounts were still showing as 'Active' in internal resource lists, creating risks for data misuse, compliance issues, and confusion across teams.",
       solution:

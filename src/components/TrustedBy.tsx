@@ -40,6 +40,11 @@ const TrustedBy = () => {
       logo: "/fa-uploads/sharkninja-logo.svg",
       alt: "SharkNinja logo — consumer products Power Platform solutions by Forma Automate",
     },
+    {
+      name: "Cushman & Wakefield",
+      logo: "/fa-uploads/cushman-wakefield-logo.png",
+      alt: "Cushman & Wakefield logo — real estate sector SharePoint migration by Forma Automate",
+    },
   ];
 
   return (
