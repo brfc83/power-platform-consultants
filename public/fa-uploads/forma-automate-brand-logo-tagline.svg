@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 140" width="460" height="140">
+  <title>Forma Automate — Power Platform · UK</title>
+  <desc>Forma Automate wordmark with tagline.</desc>
+  <defs>
+    
+  </defs>
+  <text x="0" y="70" class="fa-word" textLength="148" lengthAdjust="spacingAndGlyphs">forma</text>
+  <g transform="translate(154, 50)" fill="none" stroke="#00AFAA" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <line x1="0" y1="0" x2="22" y2="0"></line>
+    <polyline points="13,-7 22,0 13,7"></polyline>
+  </g>
+  <text x="188" y="70" class="fa-word" textLength="248" lengthAdjust="spacingAndGlyphs">automate</text>
+  <text x="2" y="118" class="fa-tag" textLength="226" lengthAdjust="spacingAndGlyphs">Power Platform · UK</text>
+</svg>

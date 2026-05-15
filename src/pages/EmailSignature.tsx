@@ -9,47 +9,44 @@ const EmailSignature = () => {
 <p style="font-family: Arial, Helvetica, sans-serif; color: #002B3D; font-size: 14px; margin: 0 0 16px 0;">Warm regards,</p>
 <table cellpadding="0" cellspacing="0" border="0" style="font-family: Arial, Helvetica, sans-serif; color: #002B3D;">
   <tr>
-    <td style="padding-right: 20px; vertical-align: top; border-right: 3px solid #1DB9A0;">
-      <img src="https://www.formaautomate.com/fa-uploads/forma-automate-brand-logo.png" alt="Forma Automate" width="140" style="display: block;" />
+    <td style="padding-right: 24px; vertical-align: top; border-right: 2px solid #1DB9A0;">
+      <img src="https://www.formaautomate.com/fa-uploads/forma-automate-brand-logo-tagline.png" alt="Forma Automate" width="160" style="display: block;" />
     </td>
-    <td style="padding-left: 20px; vertical-align: top;">
+    <td style="padding-left: 24px; vertical-align: top;">
       <table cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td style="font-size: 18px; font-weight: 700; color: #002B3D; padding-bottom: 2px;">
-            Your Name
+          <td style="font-size: 17px; font-weight: 700; color: #002B3D; padding-bottom: 2px;">
+            Arif Gulma
           </td>
         </tr>
         <tr>
-          <td style="font-size: 13px; font-weight: 500; color: #1DB9A0; padding-bottom: 12px; text-transform: uppercase; letter-spacing: 0.5px;">
-            Founder &amp; Director
+          <td style="font-size: 13px; color: #6B7280; padding-bottom: 6px;">
+            Founder &amp; Power Platform Consultant
+          </td>
+        </tr>
+        <tr>
+          <td style="font-size: 11px; font-weight: 700; color: #1DB9A0; letter-spacing: 0.08em; text-transform: uppercase; padding-bottom: 10px;">
+            FORMA AUTOMATE &middot; UK
           </td>
         </tr>
         <tr>
           <td style="font-size: 13px; color: #002B3D; padding-bottom: 4px;">
             <a href="mailto:arif@formaautomate.com" style="color: #002B3D; text-decoration: none;">arif@formaautomate.com</a>
-          </td>
-        </tr>
-        <tr>
-          <td style="font-size: 13px; color: #002B3D; padding-bottom: 4px;">
+            &nbsp;&middot;&nbsp;
             <a href="tel:+447970291460" style="color: #002B3D; text-decoration: none;">+44 7970 291 460</a>
           </td>
         </tr>
         <tr>
-          <td style="font-size: 13px; color: #002B3D; padding-bottom: 4px;">
+          <td style="font-size: 13px; color: #002B3D; padding-bottom: 12px;">
             <a href="https://www.formaautomate.com" style="color: #002B3D; text-decoration: none;">formaautomate.com</a>
+            &nbsp;&middot;&nbsp;
+            <a href="https://www.linkedin.com/in/arifgulma/" style="color: #002B3D; text-decoration: none;">LinkedIn</a>
           </td>
         </tr>
         <tr>
-          <td style="padding-top: 8px;">
-            <a href="https://www.linkedin.com/in/arifgulma/" style="text-decoration: none;">
-              <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" width="20" height="20" style="display: inline-block; vertical-align: middle;" />
-            </a>
-          </td>
-        </tr>
-        <tr>
-          <td style="padding-top: 14px; border-top: 1px solid #E5E7EB; margin-top: 12px;">
-            <p style="font-size: 11px; color: #6B7280; margin: 8px 0 0 0; line-height: 1.4; max-width: 320px;">
-              Design-led Power Platform consulting — streamlining workflows for aviation, legal, financial regulation &amp; beyond.
+          <td style="border-top: 1px solid #E5E7EB; padding-top: 10px;">
+            <p style="font-size: 11px; color: #9CA3AF; margin: 0; font-style: italic;">
+              Independent Microsoft Power Platform consultancy &middot; United Kingdom
             </p>
           </td>
         </tr>
@@ -67,14 +64,14 @@ const EmailSignature = () => {
   return (
     <div className="min-h-screen bg-muted/30 py-16 px-4">
       <div className="max-w-3xl mx-auto">
-        <h1 className="text-3xl font-bold text-foreground mb-2">Email Signature Preview</h1>
+        <h1 className="text-3xl font-bold text-foreground mb-2">Email Signature</h1>
         <p className="text-muted-foreground mb-8">
-          Preview your branded email signature below. Replace "Your Name" and "Founder & Director" with your details, then copy the HTML.
+          Copy the HTML below and paste it into your email client signature settings.
         </p>
 
         {/* Live Preview */}
         <div className="bg-white rounded-xl shadow-lg p-8 mb-6 border">
-          <p className="text-xs text-muted-foreground uppercase tracking-wider mb-4 font-medium">Live Preview</p>
+          <p className="text-xs text-muted-foreground uppercase tracking-wider mb-4 font-medium">Preview</p>
           <div dangerouslySetInnerHTML={{ __html: signatureHtml }} />
         </div>
 

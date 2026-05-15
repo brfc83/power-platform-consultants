@@ -29,7 +29,7 @@ const Header = () => {
   return (
     <div className="fixed top-0 w-full z-50">
       {/* Promo strip */}
-      <div className="bg-secondary text-secondary-foreground text-center py-2 px-4 text-xs md:text-sm font-medium">
+      <div style={{ backgroundColor: "hsl(var(--navy-deep))" }} className="text-white text-center py-2 px-4 text-xs md:text-sm font-medium">
         Free 30-minute Power Platform discovery call — book this week and we&apos;ll scope your first automation, no commitment.
       </div>
     <header className="w-full bg-background/85 backdrop-blur-md border-b border-border">
@@ -37,9 +37,9 @@ const Header = () => {
         <div className="flex items-center justify-between gap-4">
           <Link to="/" className="flex items-center shrink-0" onClick={() => window.scrollTo(0, 0)}>
             <img
-              src="/fa-uploads/forma-automate-brand-logo.png"
+              src="/fa-uploads/forma-automate-brand-logo-tagline.svg"
               alt="Forma Automate brand identity — workflow and Power Platform consultancy"
-              className="h-14 md:h-16 w-auto object-contain hover:opacity-80 transition-opacity"
+              className="h-10 md:h-12 w-auto object-contain hover:opacity-80 transition-opacity"
             />
           </Link>
 

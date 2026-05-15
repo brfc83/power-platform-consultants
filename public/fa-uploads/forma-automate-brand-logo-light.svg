@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 100" width="460" height="100">
+  <title>Forma Automate (light)</title>
+  <desc>Forma Automate wordmark — light version for dark backgrounds.</desc>
+  <defs>
+    
+  </defs>
+  <text x="0" y="70" class="fa-word-light" textLength="148" lengthAdjust="spacingAndGlyphs">forma</text>
+  <g transform="translate(154, 50)" fill="none" stroke="#00AFAA" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <line x1="0" y1="0" x2="22" y2="0"></line>
+    <polyline points="13,-7 22,0 13,7"></polyline>
+  </g>
+  <text x="188" y="70" class="fa-word-light" textLength="248" lengthAdjust="spacingAndGlyphs">automate</text>
+</svg>

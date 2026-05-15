@@ -23,6 +23,15 @@ interface CaseStudy {
   accent: Accent;
 }
 
+interface AccentStyle {
+  card: string;
+  resBg: string;
+  resBgColor?: string;
+  resFg: string;
+  chip: string;
+  metaBorder: string;
+}
+
 const CaseStudies = () => {
   const caseStudies: CaseStudy[] = [
     {
@@ -115,7 +124,7 @@ const CaseStudies = () => {
     },
   ];
 
-  const accentClasses: Record<Accent, { card: string; resBg: string; resFg: string; chip: string; metaBorder: string }> = {
+  const accentClasses: Record<Accent, AccentStyle> = {
     teal: {
       card: "bg-background text-foreground",
       resBg: "bg-primary text-white",
@@ -126,14 +135,16 @@ const CaseStudies = () => {
     cream: {
       card: "text-foreground",
       resBg: "text-white",
+      resBgColor: "hsl(var(--navy-deep))",
       resFg: "text-white",
       chip: "border border-foreground/10 text-foreground/60",
       metaBorder: "border-foreground/10",
     },
     navy: {
       card: "text-white",
-      resBg: "bg-primary text-foreground",
-      resFg: "text-foreground",
+      resBg: "text-white",
+      resBgColor: "hsl(var(--navy-deep))",
+      resFg: "text-white",
       chip: "border border-white/20 text-white/70",
       metaBorder: "border-white/15",
     },
@@ -197,8 +208,10 @@ const CaseStudies = () => {
                           alt={study.logoAlt}
                           className={
                             study.accent === "navy"
-                              ? "h-10 w-auto object-contain brightness-0 invert"
-                              : "h-10 w-auto object-contain"
+                              ? "h-14 w-auto max-w-[140px] object-contain brightness-0 invert"
+                              : study.accent === "cream"
+                              ? "h-14 w-auto max-w-[140px] object-contain brightness-0 invert"
+                              : "h-14 w-auto max-w-[140px] object-contain"
                           }
                         />
                         <span
@@ -264,7 +277,10 @@ const CaseStudies = () => {
 
                   {/* Results panel */}
                   <div className={flip ? "lg:order-1" : ""}>
-                    <div className={`rounded-2xl p-8 md:p-10 h-full flex flex-col justify-between gap-8 min-h-[420px] ${acc.resBg}`}>
+                    <div
+                      className={`rounded-2xl p-8 md:p-10 h-full flex flex-col justify-between gap-8 min-h-[420px] ${acc.resBg}`}
+                      style={acc.resBgColor ? { backgroundColor: acc.resBgColor } : undefined}
+                    >
                       <div className="font-mono text-[11px] font-bold tracking-[0.12em] opacity-70">
                         RESULTS — 0{i + 1}
                       </div>
