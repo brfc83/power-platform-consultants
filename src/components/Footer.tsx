@@ -9,9 +9,9 @@ const Footer = () => {
           {/* Company Info */}
           <div className="space-y-5">
             <img
-              src="/fa-uploads/forma-automate-brand-logo.png"
+              src="/fa-uploads/forma-automate-brand-logo-light.png"
               alt="Forma Automate brand identity — workflow and Power Platform consultancy"
-              className="h-14 w-auto brightness-0 invert"
+              className="h-14 w-auto"
             />
             <p className="text-white/65 leading-relaxed max-w-sm text-pretty">
               Microsoft Power Platform specialists trusted by Dentons, TfL, Crossrail, easyJet, the Bermuda
