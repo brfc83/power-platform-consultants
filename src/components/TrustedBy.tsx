@@ -57,7 +57,7 @@ const TrustedBy = () => {
 
         <div className="relative overflow-hidden marquee-mask">
           {/* Two copies — each item has symmetric px padding so every slot is equal width; -50% loops exactly */}
-          <div className="flex animate-scroll will-change-transform items-center">
+          <div className="flex w-max animate-scroll will-change-transform items-center">
             {[...clients, ...clients].map((client, index) => (
               <div
                 key={`${client.name}-${index}`}
