@@ -27,7 +27,7 @@ const WhoWeAre = () => {
           <div>
             <span className="eyebrow text-primary">— About</span>
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.05] mt-4 text-balance">
-              Hello, I'm <span className="font-serif-italic font-normal">Arif Gulma</span> — the consultant behind
+              Hello, I'm <span className="font-serif-italic font-normal">Arif</span> — the consultant behind
               Forma Automate.
             </h2>
             <p className="text-lg text-white/70 leading-relaxed mt-8 max-w-xl text-pretty">

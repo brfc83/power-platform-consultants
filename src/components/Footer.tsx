@@ -3,7 +3,7 @@ import { Mail, Phone, Linkedin } from "lucide-react";
 const Footer = () => {
   const year = new Date().getFullYear();
   return (
-    <footer className="bg-foreground text-white">
+    <footer className="text-white" style={{ backgroundColor: "hsl(var(--navy-deep))" }}>
       <div className="container mx-auto px-4 py-16 md:py-20">
         <div className="grid md:grid-cols-2 lg:grid-cols-[2fr_1fr_1fr_1fr] gap-10 md:gap-12">
           {/* Company Info */}
@@ -84,7 +84,7 @@ const Footer = () => {
 
         <div className="border-t border-white/10 mt-14 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-white/50 text-xs">
-            © {year} Forma Automate. Registered in England & Wales. All rights reserved.
+            © {year} Forma Automate. London, United Kingdom. Registered in England & Wales. All rights reserved.
           </p>
           <p className="text-white/40 text-xs">
             Microsoft, Power Platform and related marks are trademarks of Microsoft Corporation.

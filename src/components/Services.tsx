@@ -3,7 +3,7 @@ import {
   Smartphone,
   Database,
   Users,
-  BarChart3,
+  Bot,
   Workflow,
   Settings,
   ArrowRight,
@@ -26,11 +26,11 @@ const Services = () => {
       features: ["Process Automation", "System Integration", "Approval Workflows", "Document Management"],
     },
     {
-      icon: BarChart3,
-      title: "Power BI Analytics",
+      icon: Bot,
+      title: "Copilot Studio Agents",
       description:
-        "Enterprise Power BI dashboards and reporting solutions for aviation, transport, and public sector organisations with real-time data insights.",
-      features: ["Custom Dashboards", "Real-time Analytics", "Data Modeling", "Report Automation"],
+        "Conversational AI agents built on Microsoft Copilot Studio — deployed across Teams, websites, and internal tools. From knowledge-base bots to multi-turn agents connected to your Power Platform data and flows.",
+      features: ["Conversational AI Agents", "Teams & Web Deployment", "Knowledge Source Integration", "Power Automate Actions"],
     },
     {
       icon: Database,

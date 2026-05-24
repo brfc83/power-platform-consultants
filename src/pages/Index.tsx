@@ -6,6 +6,7 @@ import Expertise from "@/components/Expertise";
 import Services from "@/components/Services";
 import ClientTestimonials from "@/components/ClientTestimonials";
 import ContactForm from "@/components/ContactForm";
+import FAQ from "@/components/FAQ";
 import Footer from "@/components/Footer";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
@@ -43,6 +44,7 @@ const Index = () => {
       <div id="contact">
         <ContactForm />
       </div>
+      <FAQ />
       <Footer />
     </div>
   );

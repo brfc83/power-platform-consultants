@@ -1,4 +1,4 @@
-import { CheckCircle, Database, Zap, Users, Settings, BarChart3 } from "lucide-react";
+import { CheckCircle, Database, Zap, Users, Settings, Bot } from "lucide-react";
 
 const Expertise = () => {
   const expertiseAreas = [
@@ -31,11 +31,11 @@ const Expertise = () => {
       metrics: "95% process automation success",
     },
     {
-      icon: BarChart3,
-      title: "Enterprise Analytics",
+      icon: Bot,
+      title: "Copilot Studio",
       description:
-        "Transform business data into actionable insights with Power BI, custom dashboards, and real-time reporting solutions.",
-      metrics: "Data-driven decision making",
+        "Build and deploy intelligent conversational agents using Microsoft Copilot Studio. Whether it's an internal helpdesk bot or a customer-facing assistant, agents connect directly to your Dataverse, SharePoint, and Power Automate flows.",
+      metrics: "AI agents built and deployed",
     },
     {
       icon: CheckCircle,

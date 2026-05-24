@@ -2,14 +2,38 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.formaautomate.com/</loc>
-    <lastmod>2026-05-15</lastmod>
+    <lastmod>2026-05-23</lastmod>
     <priority>1.0</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://www.formaautomate.com/case-studies</loc>
-    <lastmod>2026-05-15</lastmod>
+    <lastmod>2026-05-23</lastmod>
     <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://www.formaautomate.com/case-studies/meeting-scheduling-automation-easyjet</loc>
+    <lastmod>2026-05-23</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://www.formaautomate.com/case-studies/compliance-it-hygiene-automation-easyjet</loc>
+    <lastmod>2026-05-23</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://www.formaautomate.com/case-studies/cross-region-billing-automation-dentons</loc>
+    <lastmod>2026-05-23</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://www.formaautomate.com/case-studies/sharepoint-migration-cushman-wakefield</loc>
+    <lastmod>2026-05-23</lastmod>
+    <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
 </urlset>
