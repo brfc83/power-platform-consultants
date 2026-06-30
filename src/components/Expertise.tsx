@@ -1,4 +1,5 @@
-import { CheckCircle, Database, Zap, Users, Settings, Bot } from "lucide-react";
+import { CheckCircle, Database, Zap, Users, Settings, Bot, ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const Expertise = () => {
   const expertiseAreas = [
@@ -105,14 +106,17 @@ const Expertise = () => {
               </p>
             </div>
             <div className="flex md:justify-end">
-              <a
-                href="https://calendly.com/arif-formaautomate/30min"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center bg-white text-foreground px-8 py-4 rounded-full font-semibold hover:bg-white/90 transition-colors whitespace-nowrap"
+              <Button
+                variant="outline"
+                size="lg"
+                className="rounded-full bg-white text-foreground border-white hover:bg-white/90 hover:text-foreground whitespace-nowrap"
+                asChild
               >
-                Book Your Free Strategy Call
-              </a>
+                <a href="https://calendly.com/arif-formaautomate/30min" target="_blank" rel="noopener noreferrer">
+                  Book Your Free Strategy Call
+                  <ArrowRight className="h-4 w-4 ml-1" />
+                </a>
+              </Button>
             </div>
           </div>
         </div>

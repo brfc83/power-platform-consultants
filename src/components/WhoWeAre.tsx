@@ -42,7 +42,7 @@ const WhoWeAre = () => {
             </p>
 
             <div className="flex flex-wrap gap-3 mt-10">
-              <Button variant="cta" size="lg" className="rounded-full bg-white text-foreground hover:bg-white/90" asChild>
+              <Button variant="outline" size="lg" className="rounded-full bg-white text-foreground border-white hover:bg-white/90 hover:text-foreground" asChild>
                 <a href="#contact">
                   Get in touch
                   <ArrowRight className="h-4 w-4 ml-1" />

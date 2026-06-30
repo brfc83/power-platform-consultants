@@ -135,9 +135,9 @@ const CaseStudyDetail = () => {
                 {study.results.map((r, ri) => (
                   <div
                     key={ri}
-                    className={`p-5 ${ri % 2 === 0 ? "border-r border-white/20" : ""} ${ri < 2 ? "border-b border-white/20" : ""}`}
+                    className={`p-3 md:p-5 ${ri % 2 === 0 ? "border-r border-white/20" : ""} ${ri < 2 ? "border-b border-white/20" : ""}`}
                   >
-                    <div className="text-4xl md:text-5xl font-extrabold tracking-tight leading-none">{r.value}</div>
+                    <div className="text-2xl md:text-4xl lg:text-5xl font-extrabold tracking-tight leading-none">{r.value}</div>
                     <div className="text-xs opacity-75 mt-2 leading-snug">{r.label}</div>
                   </div>
                 ))}
